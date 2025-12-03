@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/</loc>
+    <loc>http://localhost:1313/Naswell-Site/posts/hello-naswell/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/posts/</loc>
+    <loc>http://localhost:1313/Naswell-Site/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/categories/</loc>
+    <loc>http://localhost:1313/Naswell-Site/posts/</loc>
+    <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/tags/</loc>
+    <loc>http://localhost:1313/Naswell-Site/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/Naswell-Site/tags/</loc>
   </url>
 </urlset>
