@@ -3,11 +3,14 @@ languageCode = "en-us"
 title = "Naswell – Stories & Coaching"
 theme = "PaperMod"
 
-paginate = 10
+[pagination]
+  pagerSize = 10
+
 enableRobotsTXT = true
 
+
 [params]
-  defaultTheme = "auto"        # light/dark auto
+  defaultTheme = "auto"
   disableThemeToggle = false
 
   # Branding
@@ -16,47 +19,44 @@ enableRobotsTXT = true
   keywords = ["coaching", "stories", "personal growth", "self-improvement", "Naswell"]
   author = "Nasir Ahmed Ayanleh"
 
-  # Home layout mode
-  homeInfoParams = { 
-    Title = "Your story isn’t fixed.",
-    Content = "Naswell is a space where your experiences become raw material for growth — not evidence against you. We work with your story, your emotions and your ambition to build a life that finally feels like **you**."
-  }
+[params.homeInfoParams]
+  Title = "Your story isn't fixed."
+  Content = "Naswell is a space where your experiences become raw material for growth — not evidence against you. We work with your story, your emotions and your ambition to build a life that finally feels like you."
 
-  # Socials (we can fill real links later)
-  [[params.socialIcons]]
-    name = "email"
-    url  = "mailto:hello@naswellstories.com"
+[[params.socialIcons]]
+  name = "email"
+  url  = "mailto:hello@naswellstories.com"
 
-  [[params.socialIcons]]
-    name = "instagram"
-    url  = "#"
+[[params.socialIcons]]
+  name = "instagram"
+  url  = "#"
 
-  [[params.socialIcons]]
-    name = "youtube"
-    url  = "#"
+[[params.socialIcons]]
+  name = "youtube"
+  url  = "#"
 
 [menu]
 
-  [[menu.main]]
-    identifier = "stories"
-    name       = "Stories"
-    url        = "/stories/"
-    weight     = 10
+[[menu.main]]
+  identifier = "stories"
+  name       = "Stories"
+  url        = "/stories/"
+  weight     = 10
 
-  [[menu.main]]
-    identifier = "coaching"
-    name       = "Coaching"
-    url        = "/coaching/"
-    weight     = 20
+[[menu.main]]
+  identifier = "coaching"
+  name       = "Coaching"
+  url        = "/coaching/"
+  weight     = 20
 
-  [[menu.main]]
-    identifier = "about"
-    name       = "About Nasir"
-    url        = "/about/"
-    weight     = 30
+[[menu.main]]
+  identifier = "about"
+  name       = "About Nasir"
+  url        = "/about/"
+  weight     = 30
 
-  [[menu.main]]
-    identifier = "contact"
-    name       = "Contact"
-    url        = "/contact/"
-    weight     = 40
+[[menu.main]]
+  identifier = "contact"
+  name       = "Contact"
+  url        = "/contact/"
+  weight     = 40
