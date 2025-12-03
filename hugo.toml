@@ -1,6 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://naswell-stories.github.io/Naswell-Site/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "ananke"
-publishDir = 'docs'
-
+title = 'Naswell – Stories & Coaching'
+theme = 'ananke'
