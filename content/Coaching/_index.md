@@ -1,22 +1,21 @@
 +++
-title = "Coaching with Naswell"
+title = "Coaching"
 +++
 
 ## Coaching with Naswell
 
-This is not “fix yourself quickly” coaching.
+My style is:
 
-We work with three pillars:
+- **Warm but honest** – I will not attack you, and I will not lie to you.  
+- **Structured** – clear goals, notes, and follow-ups.  
+- **Story-driven** – we look at concrete situations from your life, not theory.
 
-1. **Story** – What have you been telling yourself about who you are?  
-2. **Structure** – What does your day, week, and environment actually look like?  
-3. **Self-respect** – Where are you shrinking, people-pleasing, or abandoning yourself?
+### Focus areas
 
-### How sessions work
+- Confidence and self-respect  
+- Boundaries and difficult conversations  
+- Life transitions and “stuck” phases  
+- Building a life rhythm you can actually sustain
 
-- 1:1 online sessions (video or audio).
-- You bring one real situation: work, relationships, identity, confidence.
-- We unpack it, name what’s really going on, and design one or two **concrete moves**.
-
-For coaching inquiries:  
-📩 `coaching@naswellstories.com`
+📩 To ask about coaching or availability:  
+[coaching@naswellstories.com](mailto:coaching@naswellstories.com)

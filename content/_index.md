@@ -1,39 +1,43 @@
 +++
 title = "Naswell – Stories & Coaching"
+description = "Emotionally intelligent, story-driven coaching to help you turn your life into a story worth telling."
 +++
 
-## Hello, I’m Nasir. Welcome to Naswell.
+## Welcome to Naswell
 
-Naswell was born from one simple truth: most of us are not broken — **our stories are just unfinished**.
+You’ve done a lot of thinking.  
+Now it’s time to **live a story you’re proud of.**
 
-Here, we don’t pretend everything is fine, and we don’t drown in drama either.  
-We take your real story — the wins, the shame, the stuck parts, the secret hopes — and we work with it.
+Naswell is where coaching, storytelling, and honest conversation meet.  
+I help you:
 
----
-
-### What happens at Naswell?
-
-- **Stories** – Real, honest reflections and lessons from everyday life. No fake perfection.  
-- **Coaching** – One-to-one work to help you untangle your thoughts, stand up for yourself, and act with confidence.  
-- **Tools** – Simple, repeatable practices to help you track progress, not chase motivation.
+- untangle what’s going on in your head,
+- make decisions you can stand behind,
+- and turn your next chapter into intentional, confident action.
 
 ---
 
-### Who is this for?
+### What I do
 
-- You overthink but rarely act.  
-- You’re emotionally intelligent, but that sometimes turns into self-blame.  
-- You want to build a life that is **strong, kind and sane** — not a hustle circus.
-
-If that sounds like you, you’re in the right place.
+- **1:1 Coaching** – structured, practical sessions grounded in empathy and accountability.  
+- **Story-Driven Reflection** – we use your own life stories to find patterns, strengths, and blind spots.  
+- **Gentle but Direct Guidance** – no fake positivity, no harsh judgment. Just clear, respectful truth.
 
 ---
 
-### Your next steps
+### Who Naswell is for
 
-- 👉 **Read a story** – Start with the moments that changed everything.  
-- 👉 **Explore coaching** – See how we can work together.  
-- 👉 **Share your story** – Email `stories@naswellstories.com` if you want to be heard.
+- People who feel “stuck between chapters” – not broken, but not where they want to be.  
+- High-functioning overthinkers who are good at helping others but harsh on themselves.  
+- Anyone who wants emotional clarity *and* concrete steps, not just theories.
 
-This is not about becoming a different person.  
-It’s about becoming the person you already are — **on purpose**.
+---
+
+### Start your next chapter
+
+- 📩 **General questions:** [hello@naswellstories.com](mailto:hello@naswellstories.com)  
+- 🧭 **Coaching & sessions:** [coaching@naswellstories.com](mailto:coaching@naswellstories.com)  
+- 📖 **Share your story:** [stories@naswellstories.com](mailto:stories@naswellstories.com)
+
+Your life is already a story.  
+Let’s make the next pages intentional.

@@ -2,13 +2,12 @@
 title = "Contact"
 +++
 
-## Contact Naswell
+## Contact
 
-You can reach me directly at:
+- General questions: **[hello@naswellstories.com](mailto:hello@naswellstories.com)**  
+- Coaching & sessions: **[coaching@naswellstories.com](mailto:coaching@naswellstories.com)**  
+- Share your story: **[stories@naswellstories.com](mailto:stories@naswellstories.com)**  
+- Media & collaborations: **[media@naswellstories.com](mailto:media@naswellstories.com)**  
 
-- General inquiries: **hello@naswellstories.com**  
-- Coaching requests: **coaching@naswellstories.com**  
-- Media / collaborations: **media@naswellstories.com**  
-- Share your story: **stories@naswellstories.com**
-
-Or simply write from your usual email to **hello@naswellstories.com** and introduce yourself.
+You can also simply reply to any email you receive from me.  
+I read everything personally.

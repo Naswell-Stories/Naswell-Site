@@ -8,8 +8,8 @@ theme = "PaperMod"
 
 enableRobotsTXT = true
 
-
 [params]
+  # General look & feel
   defaultTheme = "auto"
   disableThemeToggle = false
 
@@ -19,13 +19,26 @@ enableRobotsTXT = true
   keywords = ["coaching", "stories", "personal growth", "self-improvement", "Naswell"]
   author = "Nasir Ahmed Ayanleh"
 
-[params.homeInfoParams]
-  Title = "Your story isn't fixed."
-  Content = "Naswell is a space where your experiences become raw material for growth — not evidence against you. We work with your story, your emotions and your ambition to build a life that finally feels like you."
+  # PaperMod quality-of-life options (safe defaults)
+  showReadingTime = true
+  showShareButtons = false
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  disableScrollToTop = false
 
+  # IMPORTANT: we are NOT setting homeInfoParams here
+  # so that the homepage uses content/_index.md instead
+  # of the small “card” layout.
+
+# Social icons in the header/footer
 [[params.socialIcons]]
   name = "email"
   url  = "mailto:hello@naswellstories.com"
+
+[[params.socialIcons]]
+  name = "stories"
+  url  = "mailto:stories@naswellstories.com"
 
 [[params.socialIcons]]
   name = "instagram"
@@ -35,6 +48,7 @@ enableRobotsTXT = true
   name = "youtube"
   url  = "#"
 
+# Top navigation menu
 [menu]
 
 [[menu.main]]

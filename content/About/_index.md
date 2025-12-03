@@ -1,19 +1,19 @@
 +++
-title = "About Nasir"
+title = "About Naswell"
 +++
 
-## About Nasir
+## About Naswell
 
-I’m Nasir, the voice behind Naswell.
+Naswell is built on a simple belief:
 
-I’m not here as a flawless guru. I’m here as someone who has:
-- stayed stuck for years in analysis and fear,
-- tolerated situations that didn’t respect his values,
-- slowly rebuilt his confidence through small, honest actions.
+> When you understand your story, you stop living on autopilot.
 
-Naswell exists so you don’t have to do that alone.
+I combine:
+- **coaching**,  
+- **storytelling**, and  
+- **psychology-informed reflection**
 
-Here you’ll find:
-- clear structure,
-- grounded emotional awareness,
-- and a deep respect for your lived experience.
+to help you see yourself clearly and act with more self-respect and courage.
+
+This isn’t motivational noise.  
+It’s calm, grounded work on the real patterns in your life.

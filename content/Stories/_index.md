@@ -2,17 +2,15 @@
 title = "Stories"
 +++
 
-## Naswell Stories
+## Share your story
 
-This is where the work becomes real.
+Some people process best by **writing it out**.
 
-Here you’ll find:
-- reflections from my own life,
-- insights from coaching (with identities changed),
-- and stories shared by readers who gave permission to publish.
+If you want to share your story privately:
 
-If you’d like to share your story, you can email:
+- Email it to **[stories@naswellstories.com](mailto:stories@naswellstories.com)**  
+- Write in whatever language you’re most comfortable with (Arabic or English)  
+- Tell me if you want feedback, or if you just want someone to finally read it
 
-📩 **stories@naswellstories.com**
-
-Tell me what happened, what you learned (or haven’t yet), and whether you’d like it to be anonymous.
+In the future, selected stories (with full consent and anonymity options) may be
+used in content to help others feel less alone.
