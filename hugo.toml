@@ -1,4 +1,4 @@
-baseURL = 'https://naswell-stories.github.io/Naswell-Site/'
+baseURL = "https://naswellstories.com/"
 languageCode = 'en-us'
 title = 'Naswell – Stories & Coaching'
 theme = 'ananke'
