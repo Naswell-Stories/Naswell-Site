@@ -76,3 +76,5 @@ enableRobotsTXT = true
     name       = "Contact"
     url        = "/contact/"
     weight     = 40
+  [params.assets]
+  disableFingerprinting = true
