@@ -2,85 +2,60 @@ baseURL = "https://naswellstories.com/"
 languageCode = "en-us"
 title = "Naswell – Stories & Coaching"
 theme = "PaperMod"
-
-# Always build into /docs so GitHub Pages can serve it
 publishDir = "docs"
-
-# General Hugo options
-
 enableRobotsTXT = true
 
 [params]
-  # Basic branding
-  title = "Naswell – Stories & Coaching"
-  description = "Emotionally intelligent, story-driven coaching to help you rewrite your life story with intention."
-  keywords = ["coaching", "stories", "personal growth", "self-improvement", "Naswell"]
-  author = "Nasir Ahmed Ayanleh"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
 
-  # Theme behaviour
-  env = "production"
-  defaultTheme = "auto"       # light / dark / auto
-  disableThemeToggle = false
+[params.homeInfoParams]
+  Title = "Welcome to Naswell"
+  Content = "Coaching, storytelling, and honest conversation meet here."
 
-  # UI options
-  showReadingTime   = true
-  showBreadCrumbs   = true
-  showPostNavLinks  = true
-  showShareButtons  = false
-  showCodeCopyButtons = true
-  disableScrollToTop = false
-
-  # Misc
-  hideSummary = false
-
-  # Social icons in header/footer
-  [[params.socialIcons]]
-    name = "email"
-    url  = "mailto:hello@naswellstories.com"
-
-  [[params.socialIcons]]
-    name = "coaching"
-    url  = "mailto:coaching@naswellstories.com"
-
-  [[params.socialIcons]]
-    name = "stories"
-    url  = "mailto:stories@naswellstories.com"
-
-# IMPORTANT: turn off fingerprinting/SRI so CSS is not blocked
 [params.assets]
   disableFingerprinting = true
   disableHLJS = true
 
-# Menus (top navigation)
-[menu]
+[pagination]
+  pagerSize = 10
 
-  [[menu.main]]
-    identifier = "stories"
-    name       = "Stories"
-    url        = "/stories/"
-    weight     = 10
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 10
 
-  [[menu.main]]
-    identifier = "coaching"
-    name       = "Coaching"
-    url        = "/coaching/"
-    weight     = 20
+[[menu.main]]
+identifier = "stories"
+name = "Stories"
+url = "/stories/"
+weight = 20
 
-  [[menu.main]]
-    identifier = "about"
-    name       = "About Nasir"
-    url        = "/about/"
-    weight     = 30
+[[menu.main]]
+identifier = "coaching"
+name = "Coaching"
+url = "/coaching/"
+weight = 30
 
-  [[menu.main]]
-    identifier = "contact"
-    name       = "Contact"
-    url        = "/contact/"
-    weight     = 40
+[[menu.main]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+weight = 40
 
- [menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog/"
-    weight = 30
+[[menu.main]]
+identifier = "about"
+name = "About Nasir"
+url = "/about/"
+weight = 50
+
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = 60
