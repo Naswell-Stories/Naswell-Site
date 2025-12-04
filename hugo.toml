@@ -49,6 +49,7 @@ enableRobotsTXT = true
 # IMPORTANT: turn off fingerprinting/SRI so CSS is not blocked
 [params.assets]
   disableFingerprinting = true
+  disableHLJS = true
 
 # Menus (top navigation)
 [menu]
@@ -76,5 +77,5 @@ enableRobotsTXT = true
     name       = "Contact"
     url        = "/contact/"
     weight     = 40
-  [params.assets]
-  disableFingerprinting = true
+
+ 
