@@ -2,25 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/posts/hello-naswell/</loc>
+    <loc>https://naswellstories.com/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/</loc>
+    <loc>https://naswellstories.com/posts/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/posts/</loc>
-    <lastmod>2025-12-03T22:21:25+04:00</lastmod>
+    <loc>https://naswellstories.com/about/</loc>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/about/</loc>
+    <loc>https://naswellstories.com/categories/</loc>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/categories/</loc>
+    <loc>https://naswellstories.com/coaching/</loc>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/coaching/</loc>
+    <loc>https://naswellstories.com/contact/</loc>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/contact/</loc>
+    <loc>https://naswellstories.com/stories/</loc>
   </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/stories/</loc>
-  </url><url>
-    <loc>https://naswell-stories.github.io/Naswell-Site/tags/</loc>
+    <loc>https://naswellstories.com/tags/</loc>
   </url>
 </urlset>

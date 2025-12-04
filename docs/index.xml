@@ -2,18 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Naswell – Stories &amp; Coaching</title>
-    <link>https://naswell-stories.github.io/Naswell-Site/</link>
+    <link>https://naswellstories.com/</link>
     <description>Recent content on Naswell – Stories &amp; Coaching</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Dec 2025 22:21:25 +0400</lastBuildDate>
-    <atom:link href="https://naswell-stories.github.io/Naswell-Site/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello Naswell - Here we go!</title>
-      <link>https://naswell-stories.github.io/Naswell-Site/posts/hello-naswell/</link>
-      <pubDate>Wed, 03 Dec 2025 22:21:25 +0400</pubDate>
-      <guid>https://naswell-stories.github.io/Naswell-Site/posts/hello-naswell/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://naswellstories.com/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
