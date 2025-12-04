@@ -1,7 +1,8 @@
-baseURL = "https://naswellstories.com"
+baseURL    = "https://naswellstories.com/"
 languageCode = "en-us"
-title = "Naswell – Stories & Coaching"
-theme = "PaperMod"
+title      = "Naswell – Stories & Coaching"
+theme      = "PaperMod"
+publishDir = "docs"
 
 [pagination]
   pagerSize = 10
