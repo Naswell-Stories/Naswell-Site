@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/hello-naswell/</loc>
+    <loc>http://localhost:1313/Naswell-Site/posts/hello-naswell/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/Naswell-Site/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/Naswell-Site/posts/</loc>
     <lastmod>2025-12-03T22:21:25+04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/Naswell-Site/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/Naswell-Site/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/coaching/</loc>
+    <loc>http://localhost:1313/Naswell-Site/coaching/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>http://localhost:1313/Naswell-Site/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/stories/</loc>
+    <loc>http://localhost:1313/Naswell-Site/stories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/Naswell-Site/tags/</loc>
   </url>
 </urlset>
