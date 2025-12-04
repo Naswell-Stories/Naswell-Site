@@ -49,6 +49,12 @@ url = "/blog/"
 weight = 40
 
 [[menu.main]]
+identifier = "booking"
+name = "Book Session"
+url = "/booking/"
+weight = 45
+
+[[menu.main]]
 identifier = "about"
 name = "About Nasir"
 url = "/about/"
