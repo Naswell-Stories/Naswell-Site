@@ -1,77 +1,78 @@
 baseURL = "https://naswell-stories.github.io/Naswell-Site/"
 languageCode = "en-us"
-title      = "Naswell – Stories & Coaching"
-theme      = "PaperMod"
+title = "Naswell – Stories & Coaching"
+theme = "PaperMod"
+
+# Always build into /docs so GitHub Pages can serve it
 publishDir = "docs"
 
-[pagination]
-  pagerSize = 10
-
+# General Hugo options
+paginate = 10
 enableRobotsTXT = true
 
 [params]
-  # General look & feel
-  defaultTheme = "auto"
-  disableThemeToggle = false
-
-  # Branding
+  # Basic branding
   title = "Naswell – Stories & Coaching"
   description = "Emotionally intelligent, story-driven coaching to help you rewrite your life story with intention."
   keywords = ["coaching", "stories", "personal growth", "self-improvement", "Naswell"]
   author = "Nasir Ahmed Ayanleh"
 
-  # PaperMod quality-of-life options (safe defaults)
-  showReadingTime = true
-  showShareButtons = false
-  showPostNavLinks = true
-  showBreadCrumbs = true
+  # Theme behaviour
+  env = "production"
+  defaultTheme = "auto"       # light / dark / auto
+  disableThemeToggle = false
+
+  # UI options
+  showReadingTime   = true
+  showBreadCrumbs   = true
+  showPostNavLinks  = true
+  showShareButtons  = false
   showCodeCopyButtons = true
   disableScrollToTop = false
 
-  # IMPORTANT: we are NOT setting homeInfoParams here
-  # so that the homepage uses content/_index.md instead
-  # of the small “card” layout.
+  # Misc
+  hideSummary = false
 
-# Social icons in the header/footer
-[[params.socialIcons]]
-  name = "email"
-  url  = "mailto:hello@naswellstories.com"
+  # Social icons in header/footer
+  [[params.socialIcons]]
+    name = "email"
+    url  = "mailto:hello@naswellstories.com"
 
-[[params.socialIcons]]
-  name = "stories"
-  url  = "mailto:stories@naswellstories.com"
+  [[params.socialIcons]]
+    name = "coaching"
+    url  = "mailto:coaching@naswellstories.com"
 
-[[params.socialIcons]]
-  name = "instagram"
-  url  = "#"
+  [[params.socialIcons]]
+    name = "stories"
+    url  = "mailto:stories@naswellstories.com"
 
-[[params.socialIcons]]
-  name = "youtube"
-  url  = "#"
+# IMPORTANT: turn off fingerprinting/SRI so CSS is not blocked
+[params.assets]
+  disableFingerprinting = true
 
-# Top navigation menu
+# Menus (top navigation)
 [menu]
 
-[[menu.main]]
-  identifier = "stories"
-  name       = "Stories"
-  url        = "/stories/"
-  weight     = 10
+  [[menu.main]]
+    identifier = "stories"
+    name       = "Stories"
+    url        = "/stories/"
+    weight     = 10
 
-[[menu.main]]
-  identifier = "coaching"
-  name       = "Coaching"
-  url        = "/coaching/"
-  weight     = 20
+  [[menu.main]]
+    identifier = "coaching"
+    name       = "Coaching"
+    url        = "/coaching/"
+    weight     = 20
 
-[[menu.main]]
-  identifier = "about"
-  name       = "About Nasir"
-  url        = "/about/"
-  weight     = 30
+  [[menu.main]]
+    identifier = "about"
+    name       = "About Nasir"
+    url        = "/about/"
+    weight     = 30
 
-[[menu.main]]
-  identifier = "contact"
-  name       = "Contact"
-  url        = "/contact/"
-  weight     = 40
+  [[menu.main]]
+    identifier = "contact"
+    name       = "Contact"
+    url        = "/contact/"
+    weight     = 40
