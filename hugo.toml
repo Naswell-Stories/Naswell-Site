@@ -78,4 +78,9 @@ enableRobotsTXT = true
     url        = "/contact/"
     weight     = 40
 
- 
+ [menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 30
