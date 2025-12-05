@@ -41,3 +41,15 @@ I help you:
 
 Your life is already a story.  
 Let’s make the next pages intentional.
+---
+
+## What People Say
+
+> *"Nasir helped me see patterns I'd been missing for years. His approach is direct but deeply empathetic."*  
+> **— Sarah M., Dubai**
+
+> *"Not your typical life coach. He asks the hard questions and gives you space to find real answers."*  
+> **— Ahmed K., Abu Dhabi**
+
+> *"Three sessions changed how I make decisions. I finally feel like I'm living intentionally."*  
+> **— Layla S., Sharjah**
