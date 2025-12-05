@@ -4,6 +4,7 @@ title = "Naswell – Stories & Coaching"
 theme = "PaperMod"
 publishDir = "docs"
 enableRobotsTXT = true
+googleAnalytics = "G-1PMB8PYWNJ"
 
 [languages]
   [languages.en]
