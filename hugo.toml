@@ -136,3 +136,27 @@ identifier = "contact"
 name = "تواصل"
 url = "/ar/contact/"
 weight = 60
+
+[[params.socialIcons]]
+name = "reddit"
+url = "https://reddit.com/u/YOUR_USERNAME"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/YOUR_PROFILE"
+
+[[params.socialIcons]]
+name = "youtube"
+url = "https://youtube.com/@YOUR_CHANNEL"
+
+[[params.socialIcons]]
+name = "facebook"
+url = "https://facebook.com/YOUR_PAGE"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://instagram.com/YOUR_HANDLE"
+
+[[params.socialIcons]]
+name = "tiktok"
+url = "https://tiktok.com/@YOUR_USERNAME"
