@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://naswellstories.com/en/sitemap.xml</loc><lastmod>2025-12-03T22:21:25+04:00</lastmod></sitemap><sitemap><loc>https://naswellstories.com/ar/sitemap.xml</loc></sitemap></sitemapindex>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:60326/en/sitemap.xml</loc>
+    
+      <lastmod>2025-12-03T22:21:25+04:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:60326/ar/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>
