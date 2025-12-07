@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:60326/ar/categories/</loc>
+    <loc>http://localhost:1314/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60326/categories/"
+                href="http://localhost:1314/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:60326/ar/categories/"
+                href="http://localhost:1314/ar/categories/"
                 />
   </url><url>
-    <loc>http://localhost:60326/ar/</loc>
+    <loc>http://localhost:1314/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60326/"
+                href="http://localhost:1314/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:60326/ar/"
+                href="http://localhost:1314/ar/"
                 />
   </url><url>
-    <loc>http://localhost:60326/ar/tags/</loc>
+    <loc>http://localhost:1314/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:60326/tags/"
+                href="http://localhost:1314/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="http://localhost:60326/ar/tags/"
+                href="http://localhost:1314/ar/tags/"
                 />
   </url>
 </urlset>
