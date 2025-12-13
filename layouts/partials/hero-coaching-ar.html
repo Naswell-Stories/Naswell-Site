@@ -1,0 +1,163 @@
+<!-- Arabic Hero Section - RTL Optimized -->
+<section class="hero-coaching" dir="rtl">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line">اعثر</span>
+        <span class="hero-line-small">على طريقك</span>
+      </h1>
+      <h1 class="hero-title">
+        <span class="hero-line">ابنِ</span>
+        <span class="hero-line-small">ثقتك بنفسك</span>
+      </h1>
+      <h1 class="hero-title">
+        <span class="hero-line">كن</span>
+        <span class="hero-line-small">الشخص الذي تريد أن تكونه</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        جلسات تدريب مجانية للشباب الذين يتنقلون في الحياة بعد كوفيد
+      </p>
+      
+      <a href="https://wa.me/971XXXXXXXXX?text=مرحباً%20نصير،%20أود%20حجز%20جلسة%20تدريب%20مجانية" 
+         class="hero-cta" 
+         target="_blank" 
+         rel="noopener">
+        احجز جلستك المجانية ←
+      </a>
+      
+      <p class="hero-note">محدود ب 15 مقعداً • ثنائي اللغة (عربي/إنجليزي)</p>
+    </div>
+    
+    <div class="hero-image">
+      <img src="/images/nasir-hero.jpg" alt="نصير - مدرب الحياة" loading="eager">
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-coaching {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+  padding: 2rem 0;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  direction: rtl;
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+  text-align: right;
+}
+
+.hero-title {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.hero-line {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #2d2d2d;
+  letter-spacing: -0.01em;
+}
+
+.hero-line-small {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: #5a5a5a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: #4a4a4a;
+  margin: 2rem 0 2.5rem 0;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+  background: #20bd5a;
+}
+
+.hero-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+.hero-image {
+  position: relative;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>

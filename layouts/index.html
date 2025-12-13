@@ -1,0 +1,15 @@
+{{- define "main" }}
+
+{{- if eq .Site.Language.Lang "ar" }}
+  {{- partial "hero-coaching-ar.html" . }}
+{{- else }}
+  {{- partial "hero-coaching.html" . }}
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- .Content }}
+</div>
+{{- end }}
+
+{{- end }}

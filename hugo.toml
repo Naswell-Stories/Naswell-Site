@@ -27,10 +27,9 @@ googleAnalytics = "G-1PMB8PYWNJ"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-
-[languages.en.params.homeInfoParams]
-  Title = "Welcome to Naswell"
-  Content = "Coaching, storytelling, and honest conversation meet here."
+  # Disabled homeInfoParams to use custom hero sections
+  # homeInfoParams.Title = "Welcome to Naswell"
+  # homeInfoParams.Content = "Coaching, storytelling, and honest conversation meet here."
 
 [languages.ar.params]
   defaultTheme = "dark"
@@ -39,23 +38,9 @@ googleAnalytics = "G-1PMB8PYWNJ"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-
-[languages.ar.params.homeInfoParams]
-  Title = "مرحباً بك في نصويل"
-  Content = "حيث يلتقي التدريب وسرد القصص والمحادثة الصادقة."
-
-# Podcast Configuration
-[params.podcast]
-  title = "Naswell Stories Podcast"
-  subtitle = "Life After COVID - Bilingual Podcast"
-  author = "Naswell Stories"
-  email = "naswell.stories@gmail.com"
-  category = "Society & Culture"
-  subcategory = "Personal Journals"
-  explicit = "no"
-  language = "en"
-  image = "https://naswellstories.com/podcast-cover.jpg"
-  description = "Helping young adults navigate life post-COVID through bilingual storytelling and honest conversations."
+  # Disabled homeInfoParams to use custom hero sections
+  # homeInfoParams.Title = "مرحباً بك في نصويل"
+  # homeInfoParams.Content = "حيث يلتقي التدريب وسرد القصص والمحادثة الصادقة."
 
 [params.assets]
   disableFingerprinting = true
@@ -63,15 +48,6 @@ googleAnalytics = "G-1PMB8PYWNJ"
 
 [pagination]
   pagerSize = 10
-
-# Enable RSS feeds
-[outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
-
-[outputFormats.RSS]
-  mediatype = "application/rss+xml"
-  baseName = "feed"
 
 # English Menu
 [[languages.en.menu.main]]
@@ -97,12 +73,6 @@ identifier = "blog"
 name = "Blog"
 url = "/blog/"
 weight = 40
-
-[[languages.en.menu.main]]
-identifier = "podcast"
-name = "Podcast"
-url = "/podcast/"
-weight = 42
 
 [[languages.en.menu.main]]
 identifier = "booking"
@@ -146,12 +116,6 @@ identifier = "blog"
 name = "المدونة"
 url = "/ar/blog/"
 weight = 40
-
-[[languages.ar.menu.main]]
-identifier = "podcast"
-name = "البودكاست"
-url = "/ar/podcast/"
-weight = 42
 
 [[languages.ar.menu.main]]
 identifier = "booking"
