@@ -27,9 +27,6 @@ googleAnalytics = "G-1PMB8PYWNJ"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  # Disabled homeInfoParams to use custom hero sections
-  # homeInfoParams.Title = "Welcome to Naswell"
-  # homeInfoParams.Content = "Coaching, storytelling, and honest conversation meet here."
 
 [languages.ar.params]
   defaultTheme = "dark"
@@ -38,9 +35,6 @@ googleAnalytics = "G-1PMB8PYWNJ"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  # Disabled homeInfoParams to use custom hero sections
-  # homeInfoParams.Title = "مرحباً بك في نصويل"
-  # homeInfoParams.Content = "حيث يلتقي التدريب وسرد القصص والمحادثة الصادقة."
 
 [params.assets]
   disableFingerprinting = true
@@ -73,6 +67,12 @@ identifier = "blog"
 name = "Blog"
 url = "/blog/"
 weight = 40
+
+[[languages.en.menu.main]]
+identifier = "podcast"
+name = "Podcast"
+url = "/podcast/"
+weight = 42
 
 [[languages.en.menu.main]]
 identifier = "booking"
@@ -118,6 +118,12 @@ url = "/ar/blog/"
 weight = 40
 
 [[languages.ar.menu.main]]
+identifier = "podcast"
+name = "بودكاست"
+url = "/ar/podcast/"
+weight = 42
+
+[[languages.ar.menu.main]]
 identifier = "booking"
 name = "احجز جلسة"
 url = "/ar/booking/"
@@ -135,26 +141,31 @@ name = "تواصل"
 url = "/ar/contact/"
 weight = 60
 
+# Social Media Links
 [[params.socialIcons]]
-name = "reddit"
-url = "https://reddit.com/u/YOUR_USERNAME"
+name = "youtube"
+url = "https://www.youtube.com/@NaswellStories"
+
+[[params.socialIcons]]
+name = "spotify"
+url = "https://open.spotify.com/show/3n9RfnMAXog7TfuFrNJOCA"
 
 [[params.socialIcons]]
 name = "linkedin"
-url = "https://linkedin.com/in/YOUR_PROFILE"
-
-[[params.socialIcons]]
-name = "youtube"
-url = "https://youtube.com/@YOUR_CHANNEL"
-
-[[params.socialIcons]]
-name = "facebook"
-url = "https://facebook.com/YOUR_PAGE"
+url = "https://www.linkedin.com/in/naswell-stories-7b9b52389/"
 
 [[params.socialIcons]]
 name = "instagram"
-url = "https://instagram.com/YOUR_HANDLE"
+url = "https://www.instagram.com/naswellstories/"
 
 [[params.socialIcons]]
 name = "tiktok"
-url = "https://tiktok.com/@YOUR_USERNAME"
+url = "https://www.tiktok.com/@naswellstories"
+
+[[params.socialIcons]]
+name = "facebook"
+url = "https://www.facebook.com/profile.php?id=61583661584843"
+
+[[params.socialIcons]]
+name = "reddit"
+url = "https://www.reddit.com/user/naswell_stories/"
