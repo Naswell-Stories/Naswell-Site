@@ -143,6 +143,10 @@ weight = 60
 
 # Social Media Links
 [[params.socialIcons]]
+name = "x"
+url = "https://x.com/naswellstories"
+
+[[params.socialIcons]]
 name = "youtube"
 url = "https://www.youtube.com/@NaswellStories"
 
