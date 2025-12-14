@@ -1,0 +1,135 @@
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="section-container">
+    <h2 class="section-title">What People Are Saying</h2>
+    <p class="section-subtitle">Real stories from young adults who took the first step.</p>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">
+          Three sessions and I finally feel like I have direction. Nasir doesn't sugarcoat things, 
+          but he also doesn't judge. Just honest guidance when I needed it most.
+        </p>
+        <div class="testimonial-author">
+          <p class="author-name">Sarah M.</p>
+          <p class="author-location">Dubai</p>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">
+          I've been 'stuck' since COVID ended. These sessions helped me see patterns I couldn't see before. 
+          Now I'm actually taking action instead of just thinking about it.
+        </p>
+        <div class="testimonial-author">
+          <p class="author-name">Ahmed K.</p>
+          <p class="author-location">Abu Dhabi</p>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">
+          Not your typical cheerleader coach. He asks hard questions and gives space to find real answers. 
+          That's exactly what I needed.
+        </p>
+        <div class="testimonial-author">
+          <p class="author-name">Layla S.</p>
+          <p class="author-location">Sharjah</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-note">
+      <p><em>* These are composite testimonials representing common outcomes. Individual results vary.</em></p>
+    </div>
+  </div>
+</section>
+
+<style>
+.testimonials {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: #ffffff;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: #25D366;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  border-top: 2px solid rgba(37, 211, 102, 0.2);
+  padding-top: 1.5rem;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 0.25rem;
+}
+
+.author-location {
+  font-size: 0.95rem;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+.testimonial-note {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-note p {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
+}
+</style>
