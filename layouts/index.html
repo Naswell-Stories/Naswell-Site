@@ -2,14 +2,10 @@
 
 {{- if eq .Site.Language.Lang "ar" }}
   {{- partial "hero-coaching-ar.html" . }}
+  {{- partial "how-it-works-ar.html" . }}
 {{- else }}
   {{- partial "hero-coaching.html" . }}
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content">
-  {{- .Content }}
-</div>
+  {{- partial "how-it-works.html" . }}
 {{- end }}
 
 {{- end }}
