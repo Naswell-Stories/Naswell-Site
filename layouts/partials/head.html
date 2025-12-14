@@ -1,1 +1,28 @@
-$(cat /tmp/head-updated.html)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Naswell Stories</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for young adults navigating post-COVID transitions{{ end }}">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Title }} - Naswell Stories">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for young adults{{ end }}">
+    <meta property="og:image" content="https://naswellstories.com/images/logo-icon-512.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@NaswellStories">
+    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories">
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for young adults{{ end }}">
+    <meta name="twitter:image" content="https://naswellstories.com/images/logo-icon-512.png">
+</head>
