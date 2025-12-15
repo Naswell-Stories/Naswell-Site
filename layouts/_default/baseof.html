@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ if eq .Site.Language.Lang "ar" }}rtl{{ else }}ltr{{ end }}">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "header.html" . }}
+    
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+</body>
+</html>
