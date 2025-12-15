@@ -13,6 +13,17 @@
                 <a href="/booking">Book Session</a>
                 <a href="/stories">Stories</a>
                 <a href="/contact">Contact</a>
+                
+                <!-- Language Switcher -->
+                {{ if .IsTranslated }}
+                <div class="lang-switch">
+                    {{ range .Translations }}
+                    <a href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+                        {{ if eq .Language.Lang "ar" }}🇦🇪 العربية{{ else }}🇬🇧 EN{{ end }}
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
             </div>
         </div>
     </nav>
