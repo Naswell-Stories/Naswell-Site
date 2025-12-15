@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="page-content">
+    <div class="container">
+        <article class="content-article">
+            <div class="article-header">
+                <h1>{{ .Title }}</h1>
+                <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+            </div>
+            <div class="article-body">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}
