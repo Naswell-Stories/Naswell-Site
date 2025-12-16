@@ -1,47 +1,115 @@
-<!-- لماذا جلسات مجانية؟ - نسخة عربية -->
+<!-- لماذا النموذج الهجين؟ -->
 <section class="why-free" dir="rtl">
   <div class="section-container">
-    <div class="why-free-content">
-      <h2 class="section-title">لماذا جلسات مجانية؟</h2>
-      <div class="why-free-text">
+    <h2 class="section-title">لماذا النموذج الهجين؟</h2>
+    
+    <div class="content-wrapper">
+      <p class="reason-text">
+        يحصل الجميع على <strong>جلسة استكشافية مجانية</strong> لمعرفة ما إذا كنا مناسبين—دون أي شروط.
+      </p>
+      
+      <p class="reason-text">
+        لأول <strong>10 عملاء مؤسسين</strong>، أقدم باقة 3 جلسات مقابل <strong>200 درهم</strong> (خصم 50% من السعر العادي 400 درهم).
+      </p>
+      
+      <div class="commitment-box">
+        <h3>لماذا الحد على 10؟</h3>
         <p>
-          أنا أبني ممارستي في التدريب، وأفضل طريقة للقيام بذلك هي مساعدة الناس فعلاً.
-          هذه الجلسات ليست تجربة أو عرض مبيعات—إنها تدريب حقيقي.
+          أريد أن أعطي كل عميل مؤسس الاهتمام المناسب وجمع شهادات حقيقية. بعد امتلاء هذه الأماكن، يتم تطبيق التسعير العادي.
         </p>
-        <p>
-          في المقابل، أطلب تعليقات صادقة، وإذا ساعدتك، شهادة يمكنني مشاركتها.
-          هذا كل شيء. لا شروط، لا عروض إضافية.
-        </p>
-        <p>
-          <strong>محدودة ب 15 مكانًا</strong> لأنني أريد أن أعطي كل شخص الاهتمام الذي يستحقه.
-          بمجرد ملء هذه الأماكن، سأنتقل إلى هيكل رسوم منتظم.
-        </p>
-      </div>
-      <div class="why-free-cta">
-        <a href="https://wa.me/971XXXXXXXXX?text=مرحبا%20نصير%2C%20أود%20حجز%20جلسة%20تدريب%20مجانية" 
-           class="secondary-cta" 
-           target="_blank" 
-           rel="noopener">
-          احجز جلستك المجانية ←
-        </a>
-        <p class="spots-remaining">أماكن محدودة متبقية</p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-.why-free[dir="rtl"] {
+.why-free {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
   font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
-.why-free[dir="rtl"] .section-title,
-.why-free[dir="rtl"] .why-free-text p,
-.why-free[dir="rtl"] .spots-remaining {
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reason-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.commitment-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-right: 5px solid #25D366;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 3rem;
+}
+
+.commitment-box h3 {
+  color: #25D366;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   text-align: right;
 }
 
-.why-free[dir="rtl"] .why-free-cta {
-  align-items: center;
+.commitment-box p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+  text-align: right;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .why-free {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .section-title {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .reason-text {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .commitment-box {
+  background: #2d2d2d;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .commitment-box p {
+  color: #b8b8b8;
+}
+
+@media (max-width: 768px) {
+  .reason-text {
+    font-size: 1.1rem;
+  }
+  
+  .commitment-box {
+    padding: 2rem;
+  }
 }
 </style>

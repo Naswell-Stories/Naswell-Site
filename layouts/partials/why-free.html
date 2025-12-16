@@ -1,30 +1,22 @@
-<!-- Why Free Sessions Section -->
+<!-- Why The Hybrid Model Section -->
 <section class="why-free">
   <div class="section-container">
-    <div class="why-free-content">
-      <h2 class="section-title">Why Free Sessions?</h2>
-      <div class="why-free-text">
+    <h2 class="section-title">Why The Hybrid Model?</h2>
+    
+    <div class="content-wrapper">
+      <p class="reason-text">
+        Everyone gets a <strong>free discovery session</strong> to see if we're a good fit—no strings attached.
+      </p>
+      
+      <p class="reason-text">
+        For the first <strong>10 founding clients</strong>, I'm offering a 3-session package for <strong>200 AED</strong> (50% off the regular 400 AED price).
+      </p>
+      
+      <div class="commitment-box">
+        <h3>Why limit it to 10?</h3>
         <p>
-          I'm building my coaching practice, and the best way to do that is to actually help people. 
-          These sessions aren't a trial or a sales pitch—they're real coaching.
+          I want to give each founding client proper attention and gather genuine testimonials. After these spots fill, regular pricing applies.
         </p>
-        <p>
-          In return, I ask for honest feedback and, if it helps you, a testimonial I can share. 
-          That's it. No strings, no upsells.
-        </p>
-        <p>
-          <strong>Limited to 15 spots</strong> because I want to give each person the attention they deserve. 
-          Once those are filled, I'll transition to a regular fee structure.
-        </p>
-      </div>
-      <div class="why-free-cta">
-        <a href="https://wa.me/971XXXXXXXXX?text=Hi%20Nasir%2C%20I%27d%20like%20to%20book%20a%20free%20coaching%20session" 
-           class="secondary-cta" 
-           target="_blank" 
-           rel="noopener">
-          Claim Your Free Session →
-        </a>
-        <p class="spots-remaining">Limited spots remaining</p>
       </div>
     </div>
   </div>
@@ -33,88 +25,88 @@
 <style>
 .why-free {
   padding: clamp(4rem, 8vw, 8rem) 0;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
 }
 
-.why-free-content {
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+.content-wrapper {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.why-free .section-title {
-  color: #1b5e20;
+.reason-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2d2d2d;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
-.why-free-text {
+.commitment-box {
   background: white;
-  padding: 3rem;
-  border-radius: 20px;
-  margin-bottom: 3rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 5px solid #25D366;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 3rem;
 }
 
-.why-free-text p {
-  font-size: 1.15rem;
-  color: #2d2d2d;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-
-.why-free-text p:last-child {
-  margin-bottom: 0;
-}
-
-.why-free-text strong {
+.commitment-box h3 {
   color: #25D366;
-  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.why-free-cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.secondary-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #25D366;
-  color: white;
-  padding: 1.2rem 3rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
-}
-
-.secondary-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 40px rgba(37, 211, 102, 0.5);
-  background: #20bd5a;
-}
-
-.spots-remaining {
-  font-size: 0.95rem;
-  color: #1b5e20;
-  font-weight: 600;
+.commitment-box p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a4a4a;
   margin: 0;
 }
 
+/* Dark Mode */
+[data-theme="dark"] .why-free {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .section-title {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .reason-text {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .commitment-box {
+  background: #2d2d2d;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .commitment-box p {
+  color: #b8b8b8;
+}
+
 @media (max-width: 768px) {
-  .why-free-text {
-    padding: 2rem;
+  .reason-text {
+    font-size: 1.1rem;
   }
   
-  .secondary-cta {
-    width: 100%;
-    justify-content: center;
-    padding: 1rem 2rem;
+  .commitment-box {
+    padding: 2rem;
   }
 }
 </style>
