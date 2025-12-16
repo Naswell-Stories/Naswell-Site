@@ -44,9 +44,9 @@
       </div>
       
       <div class="faq-item">
-        <h3 class="faq-question">What happens after the 15 free spots are filled?</h3>
+        <h3 class="faq-question">What happens after the 10 founding client spots are filled?</h3>
         <p class="faq-answer">
-          I'll transition to a regular fee structure. If you book now while it's free, 
+          Regular pricing will apply. If you book now as a founding client, 
           you'll have access to discounted rates for future sessions.
         </p>
       </div>
@@ -60,22 +60,26 @@
   background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
 }
 
+[data-theme="dark"] .faq {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
 .faq-list {
   max-width: 900px;
   margin: 0 auto;
 }
 
 .faq-item {
-  background: white;
+  background: var(--bg-secondary);
   padding: 2.5rem;
   border-radius: 15px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px var(--shadow);
   transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px var(--shadow);
   transform: translateX(5px);
 }
 
@@ -86,7 +90,7 @@
 .faq-question {
   font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   font-weight: 700;
-  color: #2d2d2d;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   position: relative;
   padding-left: 2rem;
@@ -102,7 +106,7 @@
 
 .faq-answer {
   font-size: 1.1rem;
-  color: #4a4a4a;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin: 0;
   padding-left: 2rem;
