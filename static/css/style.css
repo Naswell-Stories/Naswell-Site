@@ -38,6 +38,12 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Arabic Typography */
+[dir="rtl"],
+[lang="ar"] {
+    font-family: 'Cairo', 'Tajawal', 'Amiri', 'Noto Sans Arabic', sans-serif;
+}
+
 /* Header & Navigation */
 .main-nav {
     background: var(--bg-secondary);
@@ -113,6 +119,30 @@ body {
 .lang-switch a:hover {
     background: var(--accent-color);
     color: #fff !important;
+}
+
+/* Shared Section Styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
 }
 
 /* Page Content */
@@ -444,6 +474,14 @@ body {
     padding-right: 1rem;
     border-left: none;
     border-right: 2px solid var(--border-color);
+}
+
+[dir="rtl"] .article-body ul,
+[dir="rtl"] .article-body ol {
+    margin-right: 1.5rem;
+    margin-left: 0;
+    padding-right: 1rem;
+    padding-left: 0;
 }
 
 @media (max-width: 768px) {
