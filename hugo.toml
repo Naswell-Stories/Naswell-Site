@@ -16,7 +16,7 @@ googleAnalytics = "G-1PMB8PYWNJ"
   [languages.ar]
     languageName = "العربية"
     weight = 2
-    contentDir = "content"
+    contentDir = "content/ar"
     languageCode = "ar"
     languageDirection = "rtl"
 
