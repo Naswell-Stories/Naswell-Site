@@ -40,25 +40,95 @@
 </section>
 
 <style>
+.who-this-is-for {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: linear-gradient(135deg, #e8ddd3 0%, #d4c4b7 100%);
+}
+
 .who-this-is-for[dir="rtl"] {
   font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
-.who-this-is-for[dir="rtl"] .section-title,
-.who-this-is-for[dir="rtl"] .section-subtitle,
-.who-this-is-for[dir="rtl"] .pain-title,
-.who-this-is-for[dir="rtl"] .pain-description,
-.who-this-is-for[dir="rtl"] .for-you-statement p {
+[data-theme="dark"] .who-this-is-for {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.pain-points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.pain-card {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px var(--shadow);
+}
+
+.pain-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-right: 1.5rem;
   text-align: right;
 }
 
-.who-this-is-for[dir="rtl"] .pain-title {
-  padding-left: 0;
-  padding-right: 1.5rem;
+.pain-title::before {
+  content: '•';
+  position: absolute;
+  right: 0;
+  color: #25D366;
+  font-size: 1.5em;
 }
 
-.who-this-is-for[dir="rtl"] .pain-title::before {
-  left: auto;
-  right: 0;
+.pain-description {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: right;
+}
+
+.for-you-statement {
+  text-align: center;
+  background: var(--bg-secondary);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(37, 211, 102, 0.15);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.for-you-statement p {
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.for-you-statement strong {
+  color: #25D366;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .pain-points-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .for-you-statement {
+    padding: 2rem;
+  }
 }
 </style>
