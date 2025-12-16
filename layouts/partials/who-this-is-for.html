@@ -45,6 +45,10 @@
   background: linear-gradient(135deg, #e8ddd3 0%, #d4c4b7 100%);
 }
 
+[data-theme="dark"] .who-this-is-for {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
 .pain-points-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -53,22 +57,22 @@
 }
 
 .pain-card {
-  background: white;
+  background: var(--bg-secondary);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 40px var(--shadow);
   transition: all 0.3s ease;
 }
 
 .pain-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 15px 50px var(--shadow);
 }
 
 .pain-title {
   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   font-weight: 700;
-  color: #2d2d2d;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   position: relative;
   padding-left: 1.5rem;
@@ -84,13 +88,13 @@
 
 .pain-description {
   font-size: 1.05rem;
-  color: #4a4a4a;
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
 .for-you-statement {
   text-align: center;
-  background: white;
+  background: var(--bg-secondary);
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(37, 211, 102, 0.15);
@@ -100,7 +104,7 @@
 
 .for-you-statement p {
   font-size: clamp(1.15rem, 2.5vw, 1.35rem);
-  color: #2d2d2d;
+  color: var(--text-primary);
   line-height: 1.6;
   margin: 0;
 }

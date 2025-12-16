@@ -2,14 +2,14 @@
 <section class="testimonials">
   <div class="section-container">
     <h2 class="section-title">What People Are Saying</h2>
-    <p class="section-subtitle">Real stories from young adults who took the first step.</p>
+    <p class="section-subtitle">Real stories from adults who took the first step.</p>
     
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="quote-icon">"</div>
         <p class="testimonial-text">
-          Three sessions and I finally feel like I have direction. Nasir doesn't sugarcoat things, 
-          but he also doesn't judge. Just honest guidance when I needed it most.
+          Three sessions and I finally feel like I have direction. No sugarcoating, 
+          but also no judgment. Just honest guidance when I needed it most.
         </p>
         <div class="testimonial-author">
           <p class="author-name">Sarah M.</p>
@@ -32,7 +32,7 @@
       <div class="testimonial-card">
         <div class="quote-icon">"</div>
         <p class="testimonial-text">
-          Not your typical cheerleader coach. He asks hard questions and gives space to find real answers. 
+          Not your typical cheerleader coach. Hard questions with space to find real answers. 
           That's exactly what I needed.
         </p>
         <div class="testimonial-author">
@@ -51,7 +51,7 @@
 <style>
 .testimonials {
   padding: clamp(4rem, 8vw, 8rem) 0;
-  background: #ffffff;
+  background: var(--bg-secondary);
 }
 
 .testimonials-grid {
@@ -66,13 +66,17 @@
   padding: 3rem;
   border-radius: 20px;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px var(--shadow);
   transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .testimonial-card {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 40px var(--shadow);
 }
 
 .quote-icon {
@@ -86,7 +90,7 @@
 
 .testimonial-text {
   font-size: 1.1rem;
-  color: #2d2d2d;
+  color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 2rem;
   font-style: italic;
@@ -100,13 +104,13 @@
 .author-name {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #2d2d2d;
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 
 .author-location {
   font-size: 0.95rem;
-  color: #5a5a5a;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -118,7 +122,7 @@
 
 .testimonial-note p {
   font-size: 0.9rem;
-  color: #6b6b6b;
+  color: var(--text-muted);
   margin: 0;
 }
 
