@@ -1,0 +1,122 @@
+<section class="why-free">
+  <div class="why-free-container">
+    <h2 class="section-title">Why This Hybrid Model?</h2>
+    
+    <div class="reason-grid">
+      <div class="reason-card">
+        <div class="reason-icon">🎯</div>
+        <h3>Test the Method</h3>
+        <p>The Storytelling Method is unconventional. The free discovery session lets you experience it firsthand before committing.</p>
+      </div>
+      
+      <div class="reason-card">
+        <div class="reason-icon">🤝</div>
+        <h3>Build Together</h3>
+        <p>As a founding client, your feedback shapes the program. You're not just a client—you're a partner in creating something meaningful.</p>
+      </div>
+      
+      <div class="reason-card">
+        <div class="reason-icon">💪</div>
+        <h3>Skin in the Game</h3>
+        <p>The 200 AED investment (less than a gym membership) ensures commitment. Free sessions often go unused. A small fee creates accountability.</p>
+      </div>
+      
+      <div class="reason-card">
+        <div class="reason-icon">🌟</div>
+        <h3>Limited Capacity</h3>
+        <p>Only 10 founding client spots available. This ensures personalized attention and genuine care for each person's journey.</p>
+      </div>
+    </div>
+    
+    <div class="value-proposition">
+      <p><strong>You Get:</strong> 3 full coaching sessions + discovery session + WhatsApp support for just 200 AED</p>
+      <p><strong>I Get:</strong> Real feedback, refined approach, and the chance to prove this method works</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.why-free {
+  padding: 4rem 2rem;
+  background: var(--bg-primary);
+}
+
+.why-free-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.reason-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow);
+}
+
+.reason-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.reason-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.value-proposition {
+  background: var(--bg-accent);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.value-proposition p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.value-proposition strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .reason-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+[dir="rtl"] .value-proposition {
+  border-left: none;
+  border-right: 4px solid var(--accent-color);
+}
+</style>

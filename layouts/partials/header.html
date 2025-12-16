@@ -1,18 +1,14 @@
 <header>
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/" class="logo-link" title="Naswell Stories Home">
+            <a href="{{ if eq .Site.Language.Lang "ar" }}/ar/{{ else }}/{{ end }}" class="logo-link" title="Naswell Stories Home">
                 <img src="/images/naswell-logo.png" alt="Naswell Stories" class="site-logo">
             </a>
             
             <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/podcast">Podcast</a>
-                <a href="/blog">Blog</a>
-                <a href="/booking">Book Session</a>
-                <a href="/stories">Stories</a>
-                <a href="/contact">Contact</a>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
                 
                 <!-- Dark Mode Toggle -->
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -58,7 +54,7 @@ themeToggle.addEventListener('click', () => {
 <style>
 .theme-toggle {
   background: none;
-  border: 2px solid var(--text-color, #2d2d2d);
+  border: 2px solid var(--text-primary, #2d2d2d);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -77,24 +73,10 @@ themeToggle.addEventListener('click', () => {
 }
 
 [data-theme="dark"] .theme-toggle {
-  border-color: #e8e8e8;
+  border-color: var(--text-primary);
 }
 
 [data-theme="dark"] .theme-toggle:hover {
   background: rgba(255,255,255,0.1);
-}
-
-/* Dark mode navigation */
-[data-theme="dark"] .main-nav {
-  background: #1a1a1a;
-  border-bottom-color: #333;
-}
-
-[data-theme="dark"] .nav-links a {
-  color: #e8e8e8;
-}
-
-[data-theme="dark"] .nav-links a:hover {
-  color: #fff;
 }
 </style>
