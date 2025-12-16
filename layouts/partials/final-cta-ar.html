@@ -1,14 +1,14 @@
-<!-- CTA النهائي - نسخة عربية -->
+<!-- الدعوة النهائية -->
 <section class="final-cta" dir="rtl">
   <div class="section-container">
     <div class="final-cta-content">
-      <h2 class="final-cta-title">مستعد للبدء؟</h2>
+      <h2 class="final-cta-title">هل أنت مستعد للبدء؟</h2>
       <p class="final-cta-subtitle">
-        لقد قرأت حتى هنا. هذا يعني شيئًا.
+        لقد قرأت حتى الآن. هذا يعني شيئًا.
         توقف عن التفكير الزائد واتخذ الخطوة الأولى.
       </p>
       
-      <a href="https://wa.me/971XXXXXXXXX?text=مرحبا%20نصير%2C%20أود%20حجز%20جلسة%20تدريب%20مجانية" 
+      <a href="https://wa.me/971XXXXXXXXX?text=مرحبًا%2C%20أود%20حجز%20جلسة%20تدريب%20مجانية" 
          class="final-cta-button" 
          target="_blank" 
          rel="noopener">
@@ -16,20 +16,77 @@
       </a>
       
       <p class="final-cta-note">
-        محدودة ب 15 مكانًا • ثنائية اللغة (عربي/إنجليزي) • لا يلزم التزام
+        محدودة بـ 10 أماكن • ثنائية اللغة (عربي/إنجليزي) • بدون التزام
       </p>
     </div>
   </div>
 </section>
 
 <style>
+.final-cta {
+  padding: clamp(5rem, 10vw, 10rem) 0;
+  background: linear-gradient(135deg, var(--bg-accent) 0%, var(--bg-primary) 100%);
+  text-align: center;
+}
+
 .final-cta[dir="rtl"] {
   font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
-.final-cta[dir="rtl"] .final-cta-title,
-.final-cta[dir="rtl"] .final-cta-subtitle,
-.final-cta[dir="rtl"] .final-cta-note {
-  text-align: center;
+.final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.final-cta-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: white;
+  padding: 1.5rem 3.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  margin-bottom: 2rem;
+}
+
+.final-cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+  background: #20bd5a;
+}
+
+.final-cta-note {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .final-cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+  }
 }
 </style>

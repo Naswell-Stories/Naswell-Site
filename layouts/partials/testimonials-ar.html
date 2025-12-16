@@ -1,15 +1,15 @@
-<!-- الشهادات - نسخة عربية -->
+<!-- ماذا يقول الناس -->
 <section class="testimonials" dir="rtl">
   <div class="section-container">
     <h2 class="section-title">ماذا يقول الناس</h2>
-    <p class="section-subtitle">قصص حقيقية من شباب اتخذوا الخطوة الأولى.</p>
+    <p class="section-subtitle">قصص حقيقية من بالغين اتخذوا الخطوة الأولى.</p>
     
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <div class="quote-icon">"</div>
+        <div class="quote-icon">"؟</div>
         <p class="testimonial-text">
-          ثلاث جلسات وأخيرًا أشعر أن لدي اتجاه. نصير لا يحاول تجميل الأمور،
-          لكنه أيضًا لا يحكم. فقط توجيه صادق عندما احتجته أكثر.
+          ثلاث جلسات وأخيرًا أشعر بأنني لدي اتجاه. بدون تجميل،
+          ولكن أيضًا بدون حكم. فقط إرشاد صادق عندما كنت في أمس الحاجة إليه.
         </p>
         <div class="testimonial-author">
           <p class="author-name">سارة م.</p>
@@ -18,22 +18,22 @@
       </div>
       
       <div class="testimonial-card">
-        <div class="quote-icon">"</div>
+        <div class="quote-icon">"؟</div>
         <p class="testimonial-text">
-          كنت "عالقًا" منذ انتهى كوفيد. هذه الجلسات ساعدتني أرى أنماطًا لم أستطع رؤيتها من قبل.
-          الآن أنا فعلاً أتخذ إجراءات بدلاً من مجرد التفكير فيها.
+          كنت 'عالقًا' منذ انتهى كوفيد. ساعدتني هذه الجلسات على رؤية أنماط لم أكن أراها من قبل.
+          الآن أقوم باتخاذ إجراء فعلي بدلاً من مجرد التفكير فيه.
         </p>
         <div class="testimonial-author">
           <p class="author-name">أحمد ك.</p>
-          <p class="author-location">أبو ظبي</p>
+          <p class="author-location">أبوظبي</p>
         </div>
       </div>
       
       <div class="testimonial-card">
-        <div class="quote-icon">"</div>
+        <div class="quote-icon">"؟</div>
         <p class="testimonial-text">
-          ليس مدربك المشجع النمطي. يطرح أسئلة صعبة ويعطي مساحة لإيجاد إجابات حقيقية.
-          هذا بالضبط ما احتجته.
+          ليس مدربًا مشجعًا نمطيًا. أسئلة صعبة مع مساحة لإيجاد إجابات حقيقية.
+          هذا بالضبط ما كنت بحاجة إليه.
         </p>
         <div class="testimonial-author">
           <p class="author-name">ليلى س.</p>
@@ -43,25 +43,104 @@
     </div>
     
     <div class="testimonial-note">
-      <p><em>* هذه شهادات مركبة تمثل النتائج الشائعة. النتائج الفردية تختلف.</em></p>
+      <p><em>* هذه شهادات مجمعة تمثل نتائج شائعة. النتائج الفردية تختلف.</em></p>
     </div>
   </div>
 </section>
 
 <style>
+.testimonials {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--bg-secondary);
+}
+
 .testimonials[dir="rtl"] {
   font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
-.testimonials[dir="rtl"] .section-title,
-.testimonials[dir="rtl"] .section-subtitle,
-.testimonials[dir="rtl"] .testimonial-text,
-.testimonials[dir="rtl"] .author-name,
-.testimonials[dir="rtl"] .author-location {
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .testimonial-card {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: #25D366;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
   text-align: right;
 }
 
-.testimonials[dir="rtl"] .quote-icon {
+.testimonial-text {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-style: italic;
   text-align: right;
+}
+
+.testimonial-author {
+  border-top: 2px solid rgba(37, 211, 102, 0.2);
+  padding-top: 1.5rem;
+  text-align: right;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.author-location {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.testimonial-note {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-note p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
 }
 </style>

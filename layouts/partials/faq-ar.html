@@ -1,53 +1,53 @@
-<!-- الأسئلة الشائعة - نسخة عربية -->
+<!-- الأسئلة الشائعة -->
 <section class="faq" dir="rtl">
   <div class="section-container">
     <h2 class="section-title">أسئلة شائعة</h2>
-    <p class="section-subtitle">دعنا نتناول ما تتساءل عنه على الأرجح.</p>
+    <p class="section-subtitle">دعنا نتناول ما قد تتساءل عنه.</p>
     
     <div class="faq-list">
       <div class="faq-item">
         <h3 class="faq-question">كم مدة كل جلسة؟</h3>
         <p class="faq-answer">
-          60 دقيقة. وقت كافٍ للتعمق دون الشعور بالاندفاع، لكن منظم بما يكفي للبقاء مركزًا.
+          60 دقيقة. وقت كافٍ للتعمق دون الشعور بالعجلة، ولكن منظم بما يكفي للبقاء مركزًا.
         </p>
       </div>
       
       <div class="faq-item">
         <h3 class="faq-question">هل هذا علاج أم تدريب؟</h3>
         <p class="faq-answer">
-          تدريب. نركز على المضي قدمًا، وليس فك الصدمات. إذا كنت بحاجة للعلاج،
-          سأكون صادقًا بشأن ذلك ويمكنني اقتراح موارد.
+          تدريب. نركز على المضي قدمًا، وليس فك الصدمات. إذا كنت بحاجة إلى علاج،
+          سأكون صريحًا بشأن ذلك ويمكنني اقتراح مصادر.
         </p>
       </div>
       
       <div class="faq-item">
-        <h3 class="faq-question">هل يجب أن ألتزم بجلسات متعددة؟</h3>
+        <h3 class="faq-question">هل يجب علي الالتزام بجلسات متعددة؟</h3>
         <p class="faq-answer">
-          لا. ابدأ بواحدة. إذا ساعدت، يمكننا الاستمرار. إذا لم تساعد، لا مشاعر سيئة.
-          أنت المتحكم في رحلتك.
+          لا. ابدأ بواحدة. إذا ساعدت، يمكننا الاستمرار. إذا لم تساعد، لا مشاعر قاسية.
+          أنت مسيطر على رحلتك.
         </p>
       </div>
       
       <div class="faq-item">
-        <h3 class="faq-question">ماذا لو لم أكن متأكدًا مما أحتاج مساعدة فيه؟</h3>
+        <h3 class="faq-question">ماذا لو لم أكن متأكدًا مما أحتاجه مساعدة فيه؟</h3>
         <p class="faq-answer">
-          هذا بالضبط سبب حجز جلسة. نصف المعركة هو الحصول على وضوح حول ما يحدث فعلاً.
-          سنكتشف ذلك معًا.
+          هذا بالضبط سبب حجز جلسة. نصف المعركة هو الحصول على وضوح بشأن ما يحدث فعلًا.
+          سنكتشفه معًا.
         </p>
       </div>
       
       <div class="faq-item">
         <h3 class="faq-question">هل هذا متاح بالعربية والإنجليزية؟</h3>
         <p class="faq-answer">
-          نعم. يمكن إجراء الجلسات بأي من اللغتين، أو مزيج من كليهما إذا كان ذلك أكثر راحة.
+          نعم. يمكن إجراء الجلسات بأي لغة، أو مزيج من كليهما إذا كان ذلك أكثر راحة.
         </p>
       </div>
       
       <div class="faq-item">
-        <h3 class="faq-question">ماذا يحدث بعد ملء الـ 15 مكانًا المجاني؟</h3>
+        <h3 class="faq-question">ماذا يحدث بعد امتلاء أماكن العملاء المؤسسين العشرة؟</h3>
         <p class="faq-answer">
-          سأنتقل إلى هيكل رسوم منتظم. إذا حجزت الآن بينما مجاني،
-          سيكون لديك وصول إلى أسعار مخفضة للجلسات المستقبلية.
+          سيتم تطبيق التسعير العادي. إذا حجزت الآن كعميل مؤسس،
+          ستحصل على أسعار مخفضة للجلسات المستقبلية.
         </p>
       </div>
     </div>
@@ -55,44 +55,80 @@
 </section>
 
 <style>
+.faq {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+}
+
 .faq[dir="rtl"] {
   font-family: 'Cairo', 'Tajawal', sans-serif;
 }
 
-.faq[dir="rtl"] .section-title,
-.faq[dir="rtl"] .section-subtitle,
-.faq[dir="rtl"] .faq-question,
-.faq[dir="rtl"] .faq-answer {
-  text-align: right;
+[data-theme="dark"] .faq {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
-.faq[dir="rtl"] .faq-item:hover {
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 20px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 30px var(--shadow);
   transform: translateX(-5px);
 }
 
-.faq[dir="rtl"] .faq-question {
-  padding-left: 0;
-  padding-right: 2rem;
+.faq-item:last-child {
+  margin-bottom: 0;
 }
 
-.faq[dir="rtl"] .faq-question::before {
-  content: ':س';
-  left: auto;
+.faq-question {
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+.faq-question::before {
+  content: 'س:';
+  position: absolute;
   right: 0;
+  color: #25D366;
+  font-weight: 800;
 }
 
-.faq[dir="rtl"] .faq-answer {
-  padding-left: 0;
+.faq-answer {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
   padding-right: 2rem;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
-  .faq[dir="rtl"] .faq-item:hover {
+  .faq-item {
+    padding: 2rem;
+  }
+  
+  .faq-item:hover {
     transform: translateX(0);
   }
   
-  .faq[dir="rtl"] .faq-question,
-  .faq[dir="rtl"] .faq-answer {
+  .faq-question,
+  .faq-answer {
     padding-right: 1.5rem;
   }
 }
