@@ -1,10 +1,11 @@
-baseURL = "https://naswellstories.com/"
+baseURL = "/"
 defaultContentLanguage = "en"
 title = "Naswell – Stories & Coaching"
 theme = "PaperMod"
 publishDir = "docs"
 enableRobotsTXT = true
 googleAnalytics = "G-1PMB8PYWNJ"
+relativeURLs = true
 
 [languages]
   [languages.en]
