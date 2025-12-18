@@ -1,0 +1,26 @@
+<div class="booking-countdown" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 30px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h3 style="margin: 0 0 10px 0; font-size: 1.5em;">🔥 Limited Spots Available</h3>
+    <div style="font-size: 3em; font-weight: bold; margin: 15px 0;" id="spots-remaining">10</div>
+    <p style="margin: 10px 0 0 0; font-size: 1.1em;">Founding Client Spots Remaining</p>
+    <p style="margin: 5px 0 0 0; font-size: 0.9em; opacity: 0.9;">First come, first served!</p>
+</div>
+
+<script>
+// Simple countdown - you'll need to manually update this or connect to a backend
+// For now, this creates visual urgency
+const spotsElement = document.getElementById('spots-remaining');
+if (spotsElement) {
+    // You can update this number manually or connect it to a tracking system
+    const remainingSpots = 10; // Update this manually as bookings come in
+    spotsElement.textContent = remainingSpots;
+    
+    // Optional: Add animation
+    spotsElement.style.transition = 'transform 0.3s ease';
+    spotsElement.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+    });
+    spotsElement.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+}
+</script>
