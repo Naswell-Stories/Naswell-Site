@@ -1,8 +1,6 @@
 {{- define "main" }}
 
-{{- $isArabic := or (eq .Language.Lang "ar") (eq .Lang "ar") (in .RelPermalink "/ar/") }}
-
-{{- if $isArabic }}
+{{- if eq .Site.Language.Lang "ar" }}
 
 <div style="max-width: 800px; margin: 4rem auto; padding: 0 2rem; font-family: system-ui, -apple-system, sans-serif; direction: rtl; text-align: right;">
 
