@@ -1,1 +1,205 @@
-<!-- Custom Hero Section for Coaching -->\n<section class=\"hero-coaching\">\n  <div class=\"hero-container\">\n    <div class=\"hero-content\">\n      <h1 class=\"hero-title\">\n        <span class=\"hero-line\">FIND</span>\n        <span class=\"hero-line-small\">your path.</span>\n      </h1>\n      <h1 class=\"hero-title\">\n        <span class=\"hero-line\">BUILD</span>\n        <span class=\"hero-line-small\">confidence.</span>\n      </h1>\n      <h1 class=\"hero-title\">\n        <span class=\"hero-line\">BECOME</span>\n        <span class=\"hero-line-small\">who you're meant to be.</span>\n      </h1>\n      \n      <p class=\"hero-subtitle\">\n        Free discovery sessions for adults who haven't gotten back on their feet after COVID\n      </p>\n      \n      <a href=\"https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session\" \n         class=\"hero-cta\" \n         target=\"_blank\" \n         rel=\"noopener\">\n        Book Your Free Discovery Session →\n      </a>\n      \n      <p class=\"hero-note\">Limited to 10 founding client spots • Bilingual (Arabic/English)</p>\n    </div>\n    \n    <div class=\"hero-image\">\n      <img src=\"/images/naswell-logo.png\" alt=\"Naswell Stories - Progress Through Stories\" loading=\"eager\">\n    </div>\n  </div>\n</section>\n\n<style>\n.hero-coaching {\n  min-height: 85vh;\n  display: flex;\n  align-items: center;\n  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);\n  padding: 2rem 0;\n}\n\n.hero-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 0 2rem;\n  display: grid;\n  grid-template-columns: 1.2fr 1fr;\n  gap: 4rem;\n  align-items: center;\n}\n\n.hero-content {\n  animation: fadeInUp 0.8s ease-out;\n}\n\n.hero-title {\n  margin: 0 0 0.5rem 0;\n  line-height: 1;\n}\n\n.hero-line {\n  display: block;\n  font-size: clamp(2.5rem, 6vw, 4.5rem);\n  font-weight: 800;\n  color: #2d2d2d;\n  letter-spacing: -0.02em;\n}\n\n.hero-line-small {\n  display: block;\n  font-size: clamp(1.5rem, 3.5vw, 2.5rem);\n  font-weight: 400;\n  color: #5a5a5a;\n  margin-bottom: 1.5rem;\n}\n\n.hero-subtitle {\n  font-size: clamp(1.1rem, 2.5vw, 1.35rem);\n  color: #4a4a4a;\n  margin: 2rem 0 2.5rem 0;\n  line-height: 1.6;\n  max-width: 500px;\n}\n\n.hero-cta {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.5rem;\n  background: #25D366;\n  color: white;\n  padding: 1.2rem 2.5rem;\n  border-radius: 50px;\n  font-weight: 600;\n  font-size: 1.1rem;\n  text-decoration: none;\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);\n}\n\n.hero-cta:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);\n  background: #20bd5a;\n}\n\n.hero-note {\n  margin-top: 1.5rem;\n  font-size: 0.9rem;\n  color: #6b6b6b;\n}\n\n.hero-image {\n  position: relative;\n  animation: fadeIn 1s ease-out 0.3s both;\n}\n\n.hero-image img {\n  width: 100%;\n  max-width: 350px;\n  height: auto;\n  border-radius: 20px;\n  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);\n}\n\n/* Animations */\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(30px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n@keyframes fadeIn {\n  from { opacity: 0; }\n  to { opacity: 1; }\n}\n\n/* Dark Mode */\n[data-theme=\"dark\"] .hero-coaching {\n  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);\n}\n\n[data-theme=\"dark\"] .hero-line {\n  color: #e8e8e8;\n}\n\n[data-theme=\"dark\"] .hero-line-small {\n  color: #b8b8b8;\n}\n\n[data-theme=\"dark\"] .hero-subtitle {\n  color: #b8b8b8;\n}\n\n[data-theme=\"dark\"] .hero-note {\n  color: #888888;\n}\n\n[data-theme=\"dark\"] .hero-image img {\n  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);\n}\n\n/* Mobile Responsive */\n@media (max-width: 768px) {\n  .hero-container {\n    grid-template-columns: 1fr;\n    gap: 2rem;\n  }\n  \n  .hero-image {\n    order: -1;\n  }\n  \n  .hero-image img {\n    max-width: 250px;\n    margin: 0 auto;\n    display: block;\n  }\n  \n  .hero-cta {\n    width: 100%;\n    justify-content: center;\n  }\n}\n\n/* RTL Support for Arabic */\n[dir=\"rtl\"] .hero-container {\n  grid-template-columns: 1fr 1.2fr;\n}\n\n[dir=\"rtl\"] .hero-title,\n[dir=\"rtl\"] .hero-subtitle,\n[dir=\"rtl\"] .hero-note {\n  text-align: right;\n}\n</style>
+<!-- Custom Hero Section for Coaching -->
+<section class="hero-coaching">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-line">FIND</span>
+        <span class="hero-line-small">your path.</span>
+      </h1>
+      <h1 class="hero-title">
+        <span class="hero-line">BUILD</span>
+        <span class="hero-line-small">confidence.</span>
+      </h1>
+      <h1 class="hero-title">
+        <span class="hero-line">BECOME</span>
+        <span class="hero-line-small">who you're meant to be.</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Free discovery sessions for adults who haven't gotten back on their feet after COVID
+      </p>
+      
+      <a href="https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session" 
+         class="hero-cta" 
+         target="_blank" 
+         rel="noopener">
+        Book Your Free Discovery Session →
+      </a>
+      
+      <p class="hero-note">Limited to 10 founding client spots • Bilingual (Arabic/English)</p>
+    </div>
+    
+    <div class="hero-image">
+      <img src="/images/naswell-logo.png" alt="Naswell Stories - Progress Through Stories" loading="eager">
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-coaching {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+  padding: 2rem 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+
+.hero-line {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: #2d2d2d;
+  letter-spacing: -0.02em;
+}
+
+.hero-line-small {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  color: #5a5a5a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: #4a4a4a;
+  margin: 2rem 0 2.5rem 0;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+  background: #20bd5a;
+}
+
+.hero-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+.hero-image {
+  position: relative;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Dark Mode */
+[data-theme="dark"] .hero-coaching {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .hero-line {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .hero-line-small {
+  color: #b8b8b8;
+}
+
+[data-theme="dark"] .hero-subtitle {
+  color: #b8b8b8;
+}
+
+[data-theme="dark"] .hero-note {
+  color: #888888;
+}
+
+[data-theme="dark"] .hero-image img {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-image img {
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* RTL Support for Arabic */
+[dir="rtl"] .hero-container {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+[dir="rtl"] .hero-title,
+[dir="rtl"] .hero-subtitle,
+[dir="rtl"] .hero-note {
+  text-align: right;
+}
+</style>
