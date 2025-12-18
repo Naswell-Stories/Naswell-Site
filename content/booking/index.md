@@ -9,6 +9,8 @@ description: "Free coaching for adults navigating post-COVID life"
 
 I'm offering **FREE discovery sessions** followed by affordable coaching packages to the first 10 founding clients.
 
+{{< booking-countdown >}}
+
 ## What You'll Get
 
 - Free Discovery Session (30 minutes)
