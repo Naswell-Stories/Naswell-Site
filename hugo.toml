@@ -156,7 +156,7 @@ name = "spotify"
 url = "https://open.spotify.com/show/3n9RfnMAXog7TfuFrNJOCA"
 
 [[params.socialIcons]]
-name = "substack"
+name = "stack"
 url = "https://naswellstories.substack.com"
 
 [[params.socialIcons]]
