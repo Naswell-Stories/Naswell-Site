@@ -1,0 +1,217 @@
+{{- define "main" }}
+
+{{- if eq .Site.Language.Lang "ar" }}
+
+<div class="coaching-page" dir="rtl">
+
+<div class="coaching-container">
+  <h1 class="coaching-title">التدريب</h1>
+  
+  <div class="coaching-card">
+    <h2 class="coaching-subtitle">التدريب مع ناسويل</h2>
+    
+    <p class="coaching-text">أسلوبي هو:</p>
+    
+    <ul class="coaching-list">
+      <li><strong>دافئ لكن صادق</strong> – لن أهاجمك، ولن أكذب عليك.</li>
+      <li><strong>منظم</strong> – أهداف واضحة، ملاحظات، ومتابعة.</li>
+      <li><strong>معتمد على القصص</strong> – ننظر إلى مواقف ملموسة من حياتك، وليس النظرية.</li>
+    </ul>
+    
+    <h3 class="coaching-heading">مجالات التركيز</h3>
+    
+    <ul class="coaching-list">
+      <li>الثقة واحترام الذات</li>
+      <li>الحدود والمحادثات الصعبة</li>
+      <li>المراحل الانتقالية في الحياة ومراحل "العلق"</li>
+      <li>بناء إيقاع حياة يمكنك الحفاظ عليه فعلياً</li>
+    </ul>
+    
+    <div class="coaching-cta-section">
+      <p class="coaching-cta-text">📩 للسؤال عن التدريب أو التوفر:</p>
+      <a href="https://wa.me/971525704399?text=مرحباً%2C%20أود%20السؤال%20عن%20التدريب" 
+         class="coaching-cta-button">
+        تواصل عبر واتساب
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{- else }}
+
+<div class="coaching-page">
+
+<div class="coaching-container">
+  <h1 class="coaching-title">Coaching</h1>
+  
+  <div class="coaching-card">
+    <h2 class="coaching-subtitle">Coaching with Naswell</h2>
+    
+    <p class="coaching-text">My style is:</p>
+    
+    <ul class="coaching-list">
+      <li><strong>Warm but honest</strong> – I will not attack you, and I will not lie to you.</li>
+      <li><strong>Structured</strong> – clear goals, notes, and follow-ups.</li>
+      <li><strong>Story-driven</strong> – we look at concrete situations from your life, not theory.</li>
+    </ul>
+    
+    <h3 class="coaching-heading">Focus areas</h3>
+    
+    <ul class="coaching-list">
+      <li>Confidence and self-respect</li>
+      <li>Boundaries and difficult conversations</li>
+      <li>Life transitions and "stuck" phases</li>
+      <li>Building a life rhythm you can actually sustain</li>
+    </ul>
+    
+    <div class="coaching-cta-section">
+      <p class="coaching-cta-text">📩 To ask about coaching or availability:</p>
+      <a href="https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20coaching" 
+         class="coaching-cta-button">
+        Contact via WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{{- end }}
+
+<style>
+.coaching-page {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.coaching-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.coaching-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+.coaching-card {
+  background: #f5f1ed;
+  padding: 3rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.coaching-subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2d2d2d;
+}
+
+.coaching-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+}
+
+.coaching-list {
+  font-size: 1.125rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+  padding-left: 1.5rem;
+}
+
+[dir="rtl"] .coaching-list {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  list-style-position: inside;
+}
+
+.coaching-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #2d2d2d;
+}
+
+.coaching-cta-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.coaching-cta-text {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.coaching-cta-button {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.coaching-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .coaching-title {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .coaching-card {
+  background: #2d2d2d;
+}
+
+[data-theme="dark"] .coaching-subtitle {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .coaching-text {
+  color: #b8b8b8;
+}
+
+[data-theme="dark"] .coaching-list {
+  color: #b8b8b8;
+}
+
+[data-theme="dark"] .coaching-heading {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .coaching-cta-text {
+  color: #b8b8b8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .coaching-title {
+    font-size: 2rem;
+  }
+  
+  .coaching-card {
+    padding: 2rem;
+  }
+  
+  .coaching-subtitle {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+{{- end }}
