@@ -156,6 +156,10 @@ name = "spotify"
 url = "https://open.spotify.com/show/3n9RfnMAXog7TfuFrNJOCA"
 
 [[params.socialIcons]]
+name = "substack"
+url = "https://naswellstories.substack.com"
+
+[[params.socialIcons]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/naswell-stories-7b9b52389/"
 
