@@ -1,6 +1,8 @@
 {{- define "main" }}
 
-{{- if eq .Language.Lang "ar" }}
+{{- $isArabic := or (eq .Language.Lang "ar") (eq .Lang "ar") (in .RelPermalink "/ar/") }}
+
+{{- if $isArabic }}
 
 <div style="max-width: 800px; margin: 4rem auto; padding: 0 2rem; font-family: system-ui, -apple-system, sans-serif; direction: rtl; text-align: right;">
 
@@ -13,7 +15,7 @@
   
   <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem; color: #4a4a4a;">أسلوبي هو:</p>
   
-  <ul style="font-size: 1.125rem; line-height: 2; margin-bottom: 2rem; color: #4a4a4a;">
+  <ul style="font-size: 1.125rem; line-height: 2; margin-bottom: 2rem; color: #4a4a4a; list-style-position: inside;">
     <li><strong>دافئ لكن صادق</strong> – لن أهاجمك، ولن أكذب عليك.</li>
     <li><strong>منظم</strong> – أهداف واضحة، ملاحظات، ومتابعة.</li>
     <li><strong>معتمد على القصص</strong> – ننظر إلى مواقف ملموسة من حياتك، وليس النظرية.</li>
@@ -21,7 +23,7 @@
   
   <h3 style="font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: #2d2d2d;">مجالات التركيز</h3>
   
-  <ul style="font-size: 1.125rem; line-height: 2; margin-bottom: 2rem; color: #4a4a4a;">
+  <ul style="font-size: 1.125rem; line-height: 2; margin-bottom: 2rem; color: #4a4a4a; list-style-position: inside;">
     <li>الثقة واحترام الذات</li>
     <li>الحدود والمحادثات الصعبة</li>
     <li>المراحل الانتقالية في الحياة ومراحل "العلق"</li>

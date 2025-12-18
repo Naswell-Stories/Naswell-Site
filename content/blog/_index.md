@@ -1,20 +1,21 @@
 ---
 title: "Blog"
-description: "Thoughts on coaching, storytelling, and personal growth"
+description: "Articles and thoughts on life after COVID"
 ---
 
 # Blog
 
-Welcome to my blog where I share insights on life coaching, storytelling, and personal development.
+Welcome to the Naswell blog. Here you'll find articles and thoughts on navigating life after the COVID-19 pandemic.
+
+## Topics
+
+- Mental health
+- Adapting to change
+- Personal growth
+- Success stories
+
+Articles coming soon. Follow us for regular updates!
+
 ---
 
-## What People Say
-
-> *"Nasir helped me see patterns I'd been missing for years. His approach is direct but deeply empathetic."*  
-> **— Sarah M., Dubai**
-
-> *"Not your typical life coach. He asks the hard questions and gives you space to find real answers."*  
-> **— Ahmed K., Abu Dhabi**
-
-> *"Three sessions changed how I make decisions. I finally feel like I'm living intentionally."*  
-> **— Layla S., Sharjah**
+📨 **Subscribe to our newsletter:** [naswellstories.substack.com](https://naswellstories.substack.com)
