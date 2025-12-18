@@ -1,17 +1,8 @@
 <div class="booking-countdown">
     <div class="countdown-label">Spots Remaining</div>
-    <div class="countdown-number" id="spots-remaining">10</div>
+    <div class="countdown-number">10</div>
     <div class="countdown-sublabel">Limited Founding Client Offer</div>
 </div>
-
-<script>
-// Simple countdown - update this number manually as bookings come in
-const spotsElement = document.getElementById('spots-remaining');
-if (spotsElement) {
-    const remainingSpots = 10; // Update this manually as bookings come in
-    spotsElement.textContent = remainingSpots;
-}
-</script>
 
 <style>
 .booking-countdown {
@@ -19,9 +10,9 @@ if (spotsElement) {
     padding: 2.5rem 2rem;
     margin: 2.5rem auto;
     max-width: 400px;
-    background: var(--bg-accent, #f5f1ed);
+    background: #f5f1ed;
     border-radius: 12px;
-    border: 2px solid var(--text-primary, #2d2d2d);
+    border: 2px solid #2d2d2d;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -35,7 +26,7 @@ if (spotsElement) {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-secondary, #5a5a5a);
+    color: #5a5a5a;
     margin-bottom: 0.5rem;
 }
 
@@ -43,36 +34,17 @@ if (spotsElement) {
     font-size: 5rem;
     font-weight: 800;
     line-height: 1;
-    color: var(--text-primary, #2d2d2d);
+    color: #2d2d2d;
     margin: 0.5rem 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .countdown-sublabel {
     font-size: 0.85rem;
-    color: var(--text-muted, #6b6b6b);
+    color: #6b6b6b;
     margin-top: 0.5rem;
 }
 
-/* Dark Mode Support */
-[data-theme="dark"] .booking-countdown {
-    background: var(--bg-accent, #2d2d2d);
-    border-color: var(--text-primary, #e8e8e8);
-}
-
-[data-theme="dark"] .countdown-label {
-    color: var(--text-secondary, #b8b8b8);
-}
-
-[data-theme="dark"] .countdown-number {
-    color: var(--text-primary, #e8e8e8);
-}
-
-[data-theme="dark"] .countdown-sublabel {
-    color: var(--text-muted, #888888);
-}
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .booking-countdown {
         margin: 2rem 1rem;
