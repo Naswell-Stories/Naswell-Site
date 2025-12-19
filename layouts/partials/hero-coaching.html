@@ -1,35 +1,41 @@
-<!-- Custom Hero Section for Coaching -->
+<!-- Custom Hero Section for Coaching with Animations -->
 <section class="hero-coaching">
   <div class="hero-container">
     <div class="hero-content">
-      <h1 class="hero-title">
+      <!-- Animated hero titles with staggered delays -->
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
         <span class="hero-line">FIND</span>
         <span class="hero-line-small">your path.</span>
       </h1>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         <span class="hero-line">BUILD</span>
         <span class="hero-line-small">confidence.</span>
       </h1>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <span class="hero-line">BECOME</span>
         <span class="hero-line-small">who you're meant to be.</span>
       </h1>
       
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
         Free discovery sessions for adults who haven't gotten back on their feet after COVID
       </p>
       
       <a href="https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session" 
          class="hero-cta" 
+         data-aos="fade-up" 
+         data-aos-duration="800" 
+         data-aos-delay="800"
          target="_blank" 
          rel="noopener">
         Book Your Free Discovery Session →
       </a>
       
-      <p class="hero-note">Limited to 10 founding client spots • Bilingual (Arabic/English)</p>
+      <p class="hero-note" data-aos="fade-in" data-aos-duration="600" data-aos-delay="1000">
+        Limited to 10 founding client spots • Bilingual (Arabic/English)
+      </p>
     </div>
     
-    <div class="hero-image">
+    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
       <img src="/images/naswell-logo.png" alt="Naswell Stories - Progress Through Stories" loading="eager">
     </div>
   </div>
@@ -55,7 +61,7 @@
 }
 
 .hero-content {
-  animation: fadeInUp 0.8s ease-out;
+  /* Animation handled by AOS */
 }
 
 .hero-title {
@@ -102,10 +108,15 @@
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
 }
 
+/* Enhanced hover effect (micro-interaction) */
 .hero-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
   background: #20bd5a;
+}
+
+.hero-cta:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .hero-note {
@@ -116,7 +127,6 @@
 
 .hero-image {
   position: relative;
-  animation: fadeIn 1s ease-out 0.3s both;
 }
 
 .hero-image img {
@@ -125,23 +135,11 @@
   height: auto;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.hero-image img:hover {
+  transform: scale(1.02);
 }
 
 /* Dark Mode */
@@ -201,5 +199,21 @@
 [dir="rtl"] .hero-subtitle,
 [dir="rtl"] .hero-note {
   text-align: right;
+}
+
+/* Accessibility: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta,
+  .hero-image img {
+    transition: none;
+  }
+  
+  .hero-cta:hover {
+    transform: none;
+  }
+  
+  .hero-image img:hover {
+    transform: none;
+  }
 }
 </style>

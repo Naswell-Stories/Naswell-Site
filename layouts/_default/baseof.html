@@ -9,5 +9,27 @@
     </main>
     
     {{ partial "footer.html" . }}
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // Initialize AOS with custom settings
+      AOS.init({
+        duration: 800,        // Animation duration in milliseconds
+        easing: 'ease-out',   // Smooth easing function
+        once: true,           // Only animate once (performance boost)
+        offset: 100,          // Trigger animations 100px before element is in view
+        delay: 0,             // No global delay
+        anchorPlacement: 'top-bottom'  // When to trigger
+      });
+      
+      // Accessibility: Respect user's motion preferences
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        AOS.init({
+          duration: 0,
+          once: true
+        });
+      }
+    </script>
 </body>
 </html>
