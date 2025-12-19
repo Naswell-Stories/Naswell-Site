@@ -19,15 +19,3 @@ If you're feeling stuck or overwhelmed, we can work together to find that clarit
 I hold multiple certifications across diverse fields including artificial intelligence, coding and programming, social sciences, and Teaching English as a Foreign Language (TEFL). These qualifications reflect my commitment to continuous learning and professional development.
 
 In addition to my work in life coaching, I provide freelance services in these areas. Whether you're looking for technical guidance, educational support, or expertise in any of these domains, I'd be glad to share what I know and explore how I might be able to help.
-
----
-
-<div dir="rtl" lang="ar" style="text-align: right; margin: 2rem 0; padding: 1.5rem; background: #f0f7ff; border-radius: 8px;">
-
-## الخلفية المهنية
-
-أحمل شهادات متعددة في مجالات متنوعة تشمل الذكاء الاصطناعي، البرمجة والتطوير، العلوم الاجتماعية، وتدريس اللغة الإنجليزية كلغة أجنبية (TEFL). تعكس هذه المؤهلات التزامي بالتعلم المستمر والتطوير المهني.
-
-بالإضافة إلى عملي في مجال التدريب على الحياة، أقدم خدمات مستقلة في هذه المجالات. سواء كنت تبحث عن إرشاد تقني، دعم تعليمي، أو خبرة في أي من هذه المجالات، سأكون سعيدًا بمشاركة ما أعرفه واستكشاف كيف يمكنني المساعدة.
-
-</div>
