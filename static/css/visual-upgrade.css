@@ -16,6 +16,28 @@
     }
 }
 
+/* HERO TEXT - Bright and readable */
+.hero-section h1,
+.hero-section p,
+.hero-section a {
+    color: white !important;
+}
+
+.hero-section h1 span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section a[href="#book-session"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.6);
+}
+
+.hero-section a[href="#book-session"]:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.8);
+}
+
+/* STEP ICONS */
 .step-icon {
     width: 64px;
     height: 64px;
@@ -40,18 +62,58 @@
     color: white;
 }
 
-.section-pattern {
+/* STEP CARDS - Clean white with NO purple backgrounds */
+.step-card {
+    background: white !important;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     position: relative;
-    background-image: 
-        linear-gradient(135deg, #f8f9fa 25%, transparent 25%),
-        linear-gradient(225deg, #f8f9fa 25%, transparent 25%),
-        linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
-        linear-gradient(315deg, #f8f9fa 25%, transparent 25%);
-    background-position: 20px 0, 20px 0, 0 0, 0 0;
-    background-size: 40px 40px;
-    background-repeat: repeat;
+    z-index: 10;
 }
 
+.step-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+}
+
+/* Remove any background from card content */
+.step-card > div {
+    background: transparent !important;
+}
+
+.step-card h3,
+.step-card p {
+    background: transparent !important;
+}
+
+/* Step number circles */
+.step-card .inline-flex {
+    background: rgb(243, 232, 255) !important;
+    color: rgb(124, 58, 237) !important;
+    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+}
+
+/* Section pattern - very subtle */
+.section-pattern {
+    position: relative;
+    background: linear-gradient(to bottom, #f9fafb, white);
+}
+
+/* No pattern overlays on cards */
+.section-pattern .step-card {
+    background: white !important;
+}
+
+/* Content images */
 .content-image-wrapper {
     position: relative;
     border-radius: 12px;
@@ -74,47 +136,4 @@
 
 .content-image-wrapper:hover img {
     transform: scale(1.05);
-}
-
-/* STEP CARDS - White background with shadows */
-.step-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.step-card:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    transform: translateY(-4px);
-}
-
-/* HERO TEXT - Make bright and readable */
-.hero-section h1,
-.hero-section p,
-.hero-section a {
-    color: white !important;
-}
-
-.hero-section h1 span {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Ensure CTA button stands out */
-.hero-section a[href="#book-session"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.6);
-}
-
-.hero-section a[href="#book-session"]:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.8);
-}
-
-/* Step number circles */
-.step-card .inline-flex {
-    background: rgb(243, 232, 255);
-    color: rgb(124, 58, 237);
-    font-weight: bold;
 }
