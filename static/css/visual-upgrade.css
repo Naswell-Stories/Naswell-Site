@@ -1,8 +1,9 @@
-/* HERO BACKGROUND IMAGE WITH OVERLAY - OPTION C: ABSTRACT GROWTH PATH */
-.hero-section {
+/* ADD BACKGROUND IMAGE TO YOUR EXISTING HERO */
+.hero-coaching,
+section.py-20.lg\:py-32:first-of-type {
     position: relative;
     background-image: 
-        linear-gradient(135deg, rgba(28, 40, 51, 0.85) 0%, rgba(28, 40, 51, 0.7) 50%, rgba(28, 40, 51, 0.6) 100%),
+        linear-gradient(135deg, rgba(28, 40, 51, 0.75) 0%, rgba(28, 40, 51, 0.6) 100%),
         url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -11,129 +12,58 @@
 }
 
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-coaching,
+    section.py-20.lg\:py-32:first-of-type {
         background-attachment: scroll;
     }
 }
 
-/* HERO TEXT - Bright and readable */
-.hero-section h1,
-.hero-section p,
-.hero-section a {
-    color: white !important;
+/* Ensure your existing text is readable on background */
+.hero-coaching h1,
+.hero-coaching p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-.hero-section h1 span {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-section a[href="#book-session"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.6);
-}
-
-.hero-section a[href="#book-session"]:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.8);
-}
-
-/* STEP ICONS */
-.step-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+/* Style YOUR existing green button nicely */
+.hero-coaching a[href*="book"] {
+    box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.4);
     transition: all 0.3s ease;
 }
 
-.step-card:hover .step-icon {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.6);
+.hero-coaching a[href*="book"]:hover {
+    box-shadow: 0 6px 20px 0 rgba(34, 197, 94, 0.6);
+    transform: translateY(-2px);
 }
 
-.step-icon svg {
-    width: 32px;
-    height: 32px;
-    color: white;
-}
-
-/* STEP CARDS - Clean white with NO purple backgrounds */
-.step-card {
-    background: white !important;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 10;
-}
-
-.step-card:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    transform: translateY(-4px);
-}
-
-/* Remove any background from card content */
-.step-card > div {
-    background: transparent !important;
-}
-
-.step-card h3,
-.step-card p {
-    background: transparent !important;
-}
-
-/* Step number circles */
-.step-card .inline-flex {
-    background: rgb(243, 232, 255) !important;
-    color: rgb(124, 58, 237) !important;
-    font-weight: bold;
-    width: 3rem;
-    height: 3rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    margin-bottom: 1rem;
-}
-
-/* Section pattern - very subtle */
-.section-pattern {
-    position: relative;
+/* Add subtle pattern to How It Works section */
+.how-it-works-section {
     background: linear-gradient(to bottom, #f9fafb, white);
 }
 
-/* No pattern overlays on cards */
-.section-pattern .step-card {
-    background: white !important;
-}
-
-/* Content images */
-.content-image-wrapper {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+/* Enhance YOUR existing step circles */
+.step-number,
+[class*="w-16 h-16"],
+[class*="w-20 h-20"] {
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
     transition: all 0.3s ease;
 }
 
-.content-image-wrapper:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+.step-number:hover,
+[class*="w-16 h-16"]:hover,
+[class*="w-20 h-20"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.5);
 }
 
-.content-image-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+/* Better card shadows for your existing cards */
+.bg-white.p-8,
+.bg-white.rounded-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
 }
 
-.content-image-wrapper:hover img {
-    transform: scale(1.05);
+.bg-white.p-8:hover,
+.bg-white.rounded-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
 }
