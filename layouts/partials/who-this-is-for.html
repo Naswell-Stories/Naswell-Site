@@ -4,50 +4,55 @@
     <p class="section-subtitle">You're in the right place if you're feeling:</p>
     
     <div class="pain-points-grid">
-      <div class="pain-card stuck">
-        <div class="pain-icon-wrapper">
-          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-            <path d="M2 17l10 5 10-5"/>
-            <path d="M2 12l10 5 10-5"/>
-          </svg>
+      <div class="pain-card">
+        <div class="pain-image-wrapper">
+          <img src="https://source.unsplash.com/u0vgcIOQG08/800x600" 
+               alt="Stuck between chapters" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Stuck Between Chapters</h3>
-        <p class="pain-description">
-          Not who you were.<br>
-          Not yet who you want to be.<br>
-          Caught in transition.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Stuck Between Chapters</h3>
+          <p class="pain-description">
+            Not who you were.<br>
+            Not yet who you want to be.<br>
+            Caught in transition.
+          </p>
+        </div>
       </div>
       
-      <div class="pain-card overthink">
-        <div class="pain-icon-wrapper">
-          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 8v4l3 3"/>
-          </svg>
+      <div class="pain-card">
+        <div class="pain-image-wrapper">
+          <img src="https://source.unsplash.com/BuNWp1bL0nc/800x600" 
+               alt="Overthinking everything" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Overthinking Everything</h3>
-        <p class="pain-description">
-          Analyze every decision to death.<br>
-          Struggle to take action.<br>
-          Paralysis by analysis.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Overthinking Everything</h3>
+          <p class="pain-description">
+            Analyze every decision to death.<br>
+            Struggle to take action.<br>
+            Paralysis by analysis.
+          </p>
+        </div>
       </div>
       
-      <div class="pain-card exhausted">
-        <div class="pain-icon-wrapper">
-          <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
+      <div class="pain-card">
+        <div class="pain-image-wrapper">
+          <img src="https://source.unsplash.com/imAfCYq7KH0/800x600" 
+               alt="Emotionally exhausted" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Emotionally Exhausted</h3>
-        <p class="pain-description">
-          High-functioning outside.<br>
-          Running on empty inside.<br>
-          Help others, struggle with yourself.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Emotionally Exhausted</h3>
+          <p class="pain-description">
+            High-functioning outside.<br>
+            Running on empty inside.<br>
+            Help others, struggle with yourself.
+          </p>
+        </div>
       </div>
     </div>
     
@@ -81,39 +86,9 @@
 .pain-card {
   background: white;
   border-radius: 20px;
-  padding: 3rem 2rem;
-  text-align: center;
+  overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.pain-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  transition: height 0.3s ease;
-}
-
-.pain-card.stuck::before {
-  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
-}
-
-.pain-card.overthink::before {
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
-}
-
-.pain-card.exhausted::before {
-  background: linear-gradient(90deg, #a8edea, #fed6e3);
-}
-
-.pain-card:hover::before {
-  height: 100%;
-  opacity: 0.05;
 }
 
 [data-theme="dark"] .pain-card {
@@ -125,44 +100,33 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-.pain-icon-wrapper {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+.pain-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
-.stuck .pain-icon-wrapper {
-  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+.pain-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.overthink .pain-icon-wrapper {
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+.pain-card:hover .pain-image {
+  transform: scale(1.08);
 }
 
-.exhausted .pain-icon-wrapper {
-  background: linear-gradient(135deg, #a8edea, #fed6e3);
-}
-
-.pain-icon {
-  width: 40px;
-  height: 40px;
-  color: white;
-}
-
-.pain-card:hover .pain-icon-wrapper {
-  transform: scale(1.1) rotate(5deg);
+.pain-content {
+  padding: 2rem;
+  text-align: center;
 }
 
 .pain-title {
   font-size: clamp(1.3rem, 2.5vw, 1.5rem);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .pain-description {
@@ -219,8 +183,12 @@
     gap: 2rem;
   }
   
-  .pain-card {
-    padding: 2.5rem 1.5rem;
+  .pain-image-wrapper {
+    height: 180px;
+  }
+  
+  .pain-content {
+    padding: 1.5rem;
   }
   
   .for-you-statement {
