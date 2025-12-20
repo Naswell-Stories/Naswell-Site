@@ -1,4 +1,4 @@
-<!-- قسم البطل المخصص للتدريب -->
+<!-- قسم البطل المخصص للتدريب - محسّن بعمق بصري -->
 <section class="hero-coaching" dir="rtl">
   <div class="hero-container">
     <div class="hero-content">
@@ -40,9 +40,31 @@
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
+  position: relative;
+  overflow: hidden;
   padding: 2rem 0;
   font-family: 'Cairo', 'Tajawal', sans-serif;
+  /* Enhanced gradient with depth effect */
+  background: 
+    linear-gradient(135deg, 
+      rgba(245, 241, 237, 0.95) 0%, 
+      rgba(232, 221, 211, 0.95) 50%,
+      rgba(212, 196, 183, 0.95) 100%
+    );
+}
+
+/* Subtle pattern overlay for visual interest */
+.hero-coaching::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(37, 211, 102, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(37, 211, 102, 0.03) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .hero-container {
@@ -53,6 +75,8 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -149,7 +173,18 @@
 
 /* Dark Mode */
 [data-theme="dark"] .hero-coaching {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: 
+    linear-gradient(135deg, 
+      rgba(26, 26, 26, 0.95) 0%, 
+      rgba(45, 45, 45, 0.95) 50%,
+      rgba(35, 35, 35, 0.95) 100%
+    );
+}
+
+[data-theme="dark"] .hero-coaching::before {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(37, 211, 102, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(37, 211, 102, 0.05) 0%, transparent 50%);
 }
 
 [data-theme="dark"] .hero-line {
