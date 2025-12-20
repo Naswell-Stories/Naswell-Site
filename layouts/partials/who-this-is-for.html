@@ -1,57 +1,70 @@
-<!-- Who This Is For Section - Enhanced with Icons -->
+<!-- Who This Is For Section - Visual First with Pain Point Images -->
 <section class="who-this-is-for">
   <div class="section-container">
     <h2 class="section-title">Is This For You?</h2>
-    <p class="section-subtitle">This is for you if you're navigating any of these:</p>
+    <p class="section-subtitle">You're in the right place if you're feeling:</p>
     
     <div class="pain-points-grid">
+      <!-- Pain 1 -->
       <div class="pain-card">
-        <!-- Compass Icon - Stuck/Lost Direction -->
-        <div class="pain-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-          </svg>
+        <div class="pain-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" 
+               alt="Feeling stuck between life chapters" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Stuck Between Chapters</h3>
-        <p class="pain-description">
-          You're not who you used to be before COVID, but you're not quite who you want to be either. 
-          You feel caught in transition.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Stuck Between Chapters</h3>
+          <p class="pain-description">
+            Not who you were.<br>
+            Not yet who you want to be.<br>
+            Caught in transition.
+          </p>
+        </div>
       </div>
       
+      <!-- Pain 2 -->
       <div class="pain-card">
-        <!-- Brain/Mind Icon - Overthinking -->
-        <div class="pain-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-          </svg>
+        <div class="pain-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" 
+               alt="Overthinking every decision" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Overthinking Everything</h3>
-        <p class="pain-description">
-          You analyze every decision to death but struggle to actually take action. 
-          Paralysis by analysis has become your default mode.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Overthinking Everything</h3>
+          <p class="pain-description">
+            Analyze every decision to death.<br>
+            Struggle to take action.<br>
+            Paralysis by analysis.
+          </p>
+        </div>
       </div>
       
+      <!-- Pain 3 -->
       <div class="pain-card">
-        <!-- Battery Low Icon - Exhausted -->
-        <div class="pain-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
+        <div class="pain-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1517677129300-07b130802f46?w=600&q=80" 
+               alt="Emotionally exhausted but high-functioning" 
+               class="pain-image"
+               loading="lazy">
         </div>
-        <h3 class="pain-title">Emotionally Exhausted</h3>
-        <p class="pain-description">
-          You're high-functioning on the outside, but inside you're running on empty. 
-          You help everyone else but struggle to help yourself.
-        </p>
+        <div class="pain-content">
+          <h3 class="pain-title">Emotionally Exhausted</h3>
+          <p class="pain-description">
+            High-functioning outside.<br>
+            Running on empty inside.<br>
+            Help others, struggle with yourself.
+          </p>
+        </div>
       </div>
     </div>
     
     <div class="for-you-statement">
+      <div class="statement-icon">✓</div>
       <p>
-        If any of these hit home, you're in the right place. 
-        <strong>Let's turn that clarity you're craving into confident action.</strong>
+        If any of these resonate, you're in the right place.<br>
+        <strong>Let's turn clarity into confident action.</strong>
       </p>
     </div>
   </div>
@@ -71,73 +84,102 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
-  margin-bottom: 4rem;
+  margin: 3rem 0 4rem;
 }
 
 .pain-card {
-  background: var(--bg-secondary);
-  padding: 2.5rem;
+  background: white;
   border-radius: 20px;
-  box-shadow: 0 10px 40px var(--shadow);
-  transition: all 0.3s ease;
-  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .pain-card {
+  background: #2d2d2d;
 }
 
 .pain-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px var(--shadow);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* Pain Point Icons */
-.pain-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.5rem;
-  color: #25D366;
-  opacity: 0.9;
-  transition: all 0.3s ease;
+/* Pain Point Images */
+.pain-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
-.pain-icon svg {
+.pain-image {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 4px 10px rgba(37, 211, 102, 0.2));
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  filter: brightness(0.9);
 }
 
-.pain-card:hover .pain-icon {
-  transform: scale(1.1) rotate(5deg);
-  opacity: 1;
+.pain-card:hover .pain-image {
+  transform: scale(1.08);
+  filter: brightness(1);
+}
+
+/* Text Content */
+.pain-content {
+  padding: 2rem;
+  text-align: center;
 }
 
 .pain-title {
-  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .pain-description {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  text-align: center;
+  line-height: 1.9;
+  margin: 0;
 }
 
+/* Call to Action Statement */
 .for-you-statement {
   text-align: center;
-  background: var(--bg-secondary);
-  padding: 3rem;
+  background: white;
+  padding: 3rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(37, 211, 102, 0.15);
-  max-width: 800px;
+  box-shadow: 0 15px 50px rgba(37, 211, 102, 0.2);
+  max-width: 700px;
   margin: 0 auto;
+  position: relative;
+}
+
+[data-theme="dark"] .for-you-statement {
+  background: #2d2d2d;
+}
+
+.statement-icon {
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
 }
 
 .for-you-statement p {
-  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
 }
 
@@ -152,13 +194,22 @@
     gap: 2rem;
   }
   
-  .for-you-statement {
-    padding: 2rem;
+  .pain-image-wrapper {
+    height: 180px;
   }
   
-  .pain-icon {
+  .pain-content {
+    padding: 1.5rem;
+  }
+  
+  .for-you-statement {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .statement-icon {
     width: 50px;
     height: 50px;
+    font-size: 1.75rem;
   }
 }
 </style>

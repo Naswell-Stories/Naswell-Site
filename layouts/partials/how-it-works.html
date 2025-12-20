@@ -1,52 +1,57 @@
-<!-- How It Works Section - Enhanced with Icons -->
+<!-- How It Works Section - Visual First with Step Images -->
 <section class="how-it-works">
   <div class="section-container">
     <h2 class="section-title">How It Works</h2>
-    <p class="section-subtitle">Getting started is simple. Here's what to expect.</p>
+    <p class="section-subtitle">Three simple steps to get started.</p>
     
     <div class="steps-grid">
+      <!-- Step 1 -->
       <div class="step-card">
-        <div class="step-icon-wrapper">
-          <!-- Phone/WhatsApp Icon -->
-          <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-          </svg>
+        <div class="step-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" 
+               alt="Book your session via WhatsApp" 
+               class="step-image"
+               loading="lazy">
           <div class="step-number">1</div>
         </div>
         <h3 class="step-title">Book Your Session</h3>
         <p class="step-description">
-          Click the WhatsApp button and send a quick message. 
-          We'll find a time that works for both of us.
+          Quick WhatsApp message.<br>
+          Find a time that works.
         </p>
       </div>
       
+      <!-- Step 2 -->
       <div class="step-card">
-        <div class="step-icon-wrapper">
-          <!-- Chat/Conversation Icon -->
-          <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-          </svg>
+        <div class="step-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80" 
+               alt="Connect and explore in conversation" 
+               class="step-image"
+               loading="lazy">
           <div class="step-number">2</div>
         </div>
         <h3 class="step-title">Connect & Explore</h3>
         <p class="step-description">
-          We'll talk about where you are, where you want to be, 
-          and what's getting in the way. No judgment, just clarity.
+          Where you are.<br>
+          Where you want to be.<br>
+          What's in the way.
         </p>
       </div>
       
+      <!-- Step 3 -->
       <div class="step-card">
-        <div class="step-icon-wrapper">
-          <!-- Target/Action Icon -->
-          <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
+        <div class="step-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80" 
+               alt="Take action with clear next steps" 
+               class="step-image"
+               loading="lazy">
           <div class="step-number">3</div>
         </div>
         <h3 class="step-title">Take Action</h3>
         <p class="step-description">
-          Walk away with practical next steps you can actually follow through on. 
-          Real progress, not just good feelings.
+          Practical next steps.<br>
+          Real progress.<br>
+          Not just good feelings.
         </p>
       </div>
     </div>
@@ -63,80 +68,77 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
+  margin-top: 3rem;
 }
 
 .step-card {
   text-align: center;
-  padding: 2.5rem;
+  padding: 0;
   border-radius: 20px;
-  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 [data-theme="dark"] .step-card {
-  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  background: #2d2d2d;
 }
 
 .step-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon and Number Container */
-.step-icon-wrapper {
+/* Image Container */
+.step-image-wrapper {
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1.5rem;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
 }
 
-/* Background Icon */
-.step-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 120px;
-  color: #25D366;
-  opacity: 0.15;
-  transition: all 0.3s ease;
+.step-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.step-card:hover .step-icon {
-  opacity: 0.25;
-  transform: scale(1.1);
+.step-card:hover .step-image {
+  transform: scale(1.05);
 }
 
-/* Foreground Number */
+/* Number Badge */
 .step-number {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
   background: #25D366;
   color: white;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
 }
 
 .step-card:hover .step-number {
-  transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6);
 }
 
+/* Text Content */
 .step-title {
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.4rem, 3vw, 1.65rem);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin: 1.5rem 1.5rem 1rem;
   transition: color 0.3s ease;
 }
 
@@ -145,31 +147,29 @@
 }
 
 .step-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.8;
+  margin: 0 1.5rem 2rem;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
   .steps-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   
-  .step-icon-wrapper {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .step-icon {
-    width: 100px;
-    height: 100px;
+  .step-image-wrapper {
+    height: 200px;
   }
   
   .step-number {
-    width: 70px;
-    height: 70px;
-    font-size: 1.75rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    top: 15px;
+    right: 15px;
   }
 }
 </style>
