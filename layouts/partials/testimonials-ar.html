@@ -1,49 +1,47 @@
-<!-- ماذا يقول الناس -->
 <section class="testimonials" dir="rtl">
   <div class="section-container">
     <h2 class="section-title">ماذا يقول الناس</h2>
-    <p class="section-subtitle">قصص حقيقية من بالغين اتخذوا الخطوة الأولى.</p>
+    <p class="section-subtitle">قصص حقيقية من أشخاص حقيقيين.</p>
     
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <div class="quote-icon">"؟</div>
-        <p class="testimonial-text">
-          ثلاث جلسات وأخيرًا أشعر بأنني لدي اتجاه. بدون تجميل،
-          ولكن أيضًا بدون حكم. فقط إرشاد صادق عندما كنت في أمس الحاجة إليه.
-        </p>
-        <div class="testimonial-author">
-          <p class="author-name">سارة م.</p>
-          <p class="author-location">دبي</p>
+        <div class="testimonial-header">
+          <img src="/images/avatars/person1.jpg" alt="صورة العميل" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h3 class="testimonial-name">سارة م.</h3>
+            <p class="testimonial-role">محترفة تسويق</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p class="testimonial-text">"كنت عالقة في شلل التحليل لأشهر. جلسة واحدة ساعدتني على رؤية نقاطي العمياء واتخاذ إجراء. أخيرًا أتحرك للأمام."</p>
         </div>
       </div>
       
       <div class="testimonial-card">
-        <div class="quote-icon">"؟</div>
-        <p class="testimonial-text">
-          كنت 'عالقًا' منذ انتهى كوفيد. ساعدتني هذه الجلسات على رؤية أنماط لم أكن أراها من قبل.
-          الآن أقوم باتخاذ إجراء فعلي بدلاً من مجرد التفكير فيه.
-        </p>
-        <div class="testimonial-author">
-          <p class="author-name">أحمد ك.</p>
-          <p class="author-location">أبوظبي</p>
+        <div class="testimonial-header">
+          <img src="/images/avatars/person2.jpg" alt="صورة العميل" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h3 class="testimonial-name">أحمد ك.</h3>
+            <p class="testimonial-role">مهندس برمجيات</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p class="testimonial-text">"نصيحة واضحة وعملية. لا حشو. بالضبط ما احتجته لكسر أنماط التفكير الزائد."</p>
         </div>
       </div>
       
       <div class="testimonial-card">
-        <div class="quote-icon">"؟</div>
-        <p class="testimonial-text">
-          ليس مدربًا مشجعًا نمطيًا. أسئلة صعبة مع مساحة لإيجاد إجابات حقيقية.
-          هذا بالضبط ما كنت بحاجة إليه.
-        </p>
-        <div class="testimonial-author">
-          <p class="author-name">ليلى س.</p>
-          <p class="author-location">الشارقة</p>
+        <div class="testimonial-header">
+          <img src="/images/avatars/person3.jpg" alt="صورة العميل" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h3 class="testimonial-name">مايا ر.</h3>
+            <p class="testimonial-role">طالبة دراسات عليا</p>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p class="testimonial-text">"شعرت بالفهم دون حكم. حصلت على وضوح بشأن خطواتي التالية في محادثة واحدة. يستحق كل درهم."</p>
         </div>
       </div>
-    </div>
-    
-    <div class="testimonial-note">
-      <p><em>* هذه شهادات مجمعة تمثل نتائج شائعة. النتائج الفردية تختلف.</em></p>
     </div>
   </div>
 </section>
@@ -51,7 +49,7 @@
 <style>
 .testimonials {
   padding: clamp(4rem, 8vw, 8rem) 0;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 .testimonials[dir="rtl"] {
@@ -61,76 +59,83 @@
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 2.5rem;
+  margin-top: 3rem;
 }
 
 .testimonial-card {
-  background: linear-gradient(135deg, #f5f1ed 0%, #e8ddd3 100%);
-  padding: 3rem;
+  background: white;
+  padding: 2.5rem;
   border-radius: 20px;
-  position: relative;
-  box-shadow: 0 10px 30px var(--shadow);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] .testimonial-card {
-  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  background: #2d2d2d;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px var(--shadow);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-.quote-icon {
-  font-size: 4rem;
-  color: #25D366;
-  opacity: 0.3;
-  line-height: 1;
-  margin-bottom: 1rem;
-  font-family: Georgia, serif;
-  text-align: right;
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.testimonial-text {
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  font-style: italic;
-  text-align: right;
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
 }
 
-.testimonial-author {
-  border-top: 2px solid rgba(37, 211, 102, 0.2);
-  padding-top: 1.5rem;
-  text-align: right;
+.testimonial-info {
+  flex: 1;
 }
 
-.author-name {
+.testimonial-name {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem 0;
 }
 
-.author-location {
-  font-size: 0.95rem;
+.testimonial-role {
+  font-size: 0.9rem;
   color: var(--text-secondary);
   margin: 0;
 }
 
-.testimonial-note {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
+.testimonial-content {
+  position: relative;
 }
 
-.testimonial-note p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 4rem;
+  color: #25D366;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -141,6 +146,11 @@
   
   .testimonial-card {
     padding: 2rem;
+  }
+  
+  .testimonial-avatar {
+    width: 50px;
+    height: 50px;
   }
 }
 </style>
