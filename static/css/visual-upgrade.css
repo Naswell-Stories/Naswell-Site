@@ -1,38 +1,10 @@
 /* ============================================
-   HERO BACKGROUND IMAGE - OVERRIDE INLINE GRADIENT
+   VISUAL ENHANCEMENTS - NO BACKGROUND IMAGE
+   Just animations, shadows, and hover effects
    ============================================ */
 
-.hero-coaching {
-    /* Override the inline gradient with image + gradient */
-    background: linear-gradient(135deg, rgba(245, 241, 237, 0.85) 0%, rgba(232, 221, 211, 0.75) 100%),
-                url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=1920&q=80') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-}
-
-/* Mobile - disable parallax */
-@media (max-width: 768px) {
-    .hero-coaching {
-        background-attachment: scroll !important;
-    }
-}
-
 /* ============================================
-   DARK MODE - DARKER OVERLAY OVER IMAGE
-   ============================================ */
-
-[data-theme="dark"] .hero-coaching {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.85) 100%),
-                url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=1920&q=80') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-}
-
-/* ============================================
-   TEXT ENHANCEMENT - ADD SUBTLE SHADOWS
+   TEXT ENHANCEMENT - SUBTLE SHADOWS
    ============================================ */
 
 .hero-line {
@@ -106,7 +78,7 @@
 }
 
 .step-card:hover .step-number {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.15) rotate(8deg);
     box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6) !important;
 }
 
@@ -134,11 +106,6 @@
 
 .how-it-works {
     position: relative;
-    background: linear-gradient(to bottom, #f9fafb, white) !important;
-}
-
-[data-theme="dark"] .how-it-works {
-    background: linear-gradient(to bottom, #1a1a1a, #0f0f0f) !important;
 }
 
 /* Add subtle dot pattern */
@@ -168,11 +135,41 @@
 }
 
 /* ============================================
-   PRINT STYLES - REMOVE BACKGROUND IMAGE
+   ENHANCED FADE-IN ANIMATIONS
    ============================================ */
 
-@media print {
-    .hero-coaching {
-        background: #f5f1ed !important;
+.hero-content {
+    animation: fadeInUp 0.8s ease-out !important;
+}
+
+.hero-image {
+    animation: fadeIn 1s ease-out 0.3s both !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ============================================
+   STEP TITLES - SMOOTH COLOR TRANSITION
+   ============================================ */
+
+.step-title {
+    transition: color 0.3s ease;
+}
+
+.step-card:hover .step-title {
+    color: #25D366;
 }
