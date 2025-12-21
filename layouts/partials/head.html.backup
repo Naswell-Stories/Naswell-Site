@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - Naswell Stories</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults navigating post-COVID transitions{{ end }}">
+    
+    <!-- Google Fonts for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <link rel="stylesheet" href="/css/style.css?v=3">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/naswell-logo.png">
+    <link rel="apple-touch-icon" href="/images/naswell-logo.png">
+    <link rel="shortcut icon" href="/images/naswell-logo.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Title }} - Naswell Stories">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
+    <meta property="og:image" content="https://naswellstories.com/images/naswell-logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@NaswellStories">
+    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories">
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
+    <meta name="twitter:image" content="https://naswellstories.com/images/naswell-logo.png">
+</head>

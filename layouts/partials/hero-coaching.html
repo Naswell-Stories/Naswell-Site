@@ -1,47 +1,46 @@
-<!-- Hero Section - Visual First with Stock Image -->
+<!-- Full-Width Hero Section with Stair Effect -->
 <section class="hero-coaching">
-  <!-- Background Image -->
-  <div class="hero-bg-image"></div>
-  
   <div class="hero-container">
     <div class="hero-content">
-      <h1 class="hero-title">
+      <!-- Stair Effect Title Lines -->
+      <h1 class="hero-title hero-anim-1 stair-1">
         <span class="hero-line">FIND</span>
         <span class="hero-line-small">your path.</span>
       </h1>
-      <h1 class="hero-title">
+      <h1 class="hero-title hero-anim-2 stair-2">
         <span class="hero-line">BUILD</span>
         <span class="hero-line-small">confidence.</span>
       </h1>
-      <h1 class="hero-title">
+      <h1 class="hero-title hero-anim-3 stair-3">
         <span class="hero-line">BECOME</span>
         <span class="hero-line-small">who you're meant to be.</span>
       </h1>
       
-      <p class="hero-subtitle">
+      <!-- Centered Subtitle -->
+      <p class="hero-subtitle hero-anim-4">
         Post-COVID clarity sessions.<br>
         For adults still finding their footing.
       </p>
       
-      <a href="https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session" 
-         class="hero-cta" 
-         target="_blank" 
-         rel="noopener">
-        Book Free Discovery Session →
-      </a>
+      <!-- Centered CTA Button -->
+      <div class="hero-cta-wrapper">
+        <a href="https://wa.me/971525704399?text=Hi%20Nasir%2C%20I'd%20like%20to%20book%20a%20free%20discovery%20session" 
+           class="hero-cta hero-anim-5" 
+           target="_blank" 
+           rel="noopener">
+          Book Free Discovery Session →
+        </a>
+      </div>
       
-      <p class="hero-note">10 founding spots • Arabic/English</p>
-    </div>
-    
-    <div class="hero-image">
-      <img src="/images/naswell-logo.png" alt="Naswell Stories - Progress Through Stories" loading="eager">
+      <p class="hero-note hero-anim-6">10 founding spots • Arabic/English</p>
     </div>
   </div>
 </section>
 
 <style>
+/* Hero Section Base Styles */
 .hero-coaching {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -49,37 +48,7 @@
   padding: 2rem 0;
 }
 
-/* Background Image with Overlay */
-.hero-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(135deg, 
-      rgba(245, 241, 237, 0.92) 0%, 
-      rgba(232, 221, 211, 0.90) 50%,
-      rgba(212, 196, 183, 0.92) 100%
-    ),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 0;
-}
-
-[data-theme="dark"] .hero-bg-image {
-  background: 
-    linear-gradient(135deg, 
-      rgba(26, 26, 26, 0.92) 0%, 
-      rgba(45, 45, 45, 0.90) 50%,
-      rgba(35, 35, 35, 0.92) 100%
-    ),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');
-}
-
-/* Subtle pattern overlay for visual interest */
+/* Background Image Layer - Clear (40% opacity) */
 .hero-coaching::before {
   content: '';
   position: absolute;
@@ -87,10 +56,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(37, 211, 102, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(37, 211, 102, 0.03) 0%, transparent 50%);
-  pointer-events: none;
+  background-image: url('/images/snowy-mountain.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.40;
+  z-index: 0;
+}
+
+/* Gradient Overlay */
+.hero-coaching::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(245, 241, 237, 0.60) 0%, 
+    rgba(232, 221, 211, 0.65) 100%
+  );
   z-index: 1;
 }
 
@@ -98,21 +83,37 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4rem;
-  align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .hero-content {
-  animation: fadeInUp 0.8s ease-out;
+  max-width: 100%;
+  width: 100%;
 }
 
+/* Stair Effect - Each line indented progressively */
 .hero-title {
   margin: 0 0 0.5rem 0;
   line-height: 1;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stair-1 {
+  text-align: left;
+  padding-left: 0;
+}
+
+.stair-2 {
+  text-align: left;
+  padding-left: 8rem;
+}
+
+.stair-3 {
+  text-align: left;
+  padding-left: 16rem;
 }
 
 .hero-line {
@@ -121,7 +122,6 @@
   font-weight: 800;
   color: #2d2d2d;
   letter-spacing: -0.02em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-line-small {
@@ -132,13 +132,22 @@
   margin-bottom: 1.5rem;
 }
 
+/* Centered Subtitle */
 .hero-subtitle {
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-  color: #3a3a3a;
-  margin: 2rem 0 2.5rem 0;
-  line-height: 1.8;
-  max-width: 400px;
-  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: #4a4a4a;
+  margin: 3rem 0 2.5rem 0;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Centered CTA Button */
+.hero-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
 }
 
 .hero-cta {
@@ -153,36 +162,28 @@
   font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  opacity: 0;
+  transform: scale(0.9);
 }
 
 .hero-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
   background: #20bd5a;
 }
 
+/* Centered Note */
 .hero-note {
   margin-top: 1.5rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #6b6b6b;
-  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.hero-image {
-  position: relative;
-  animation: fadeIn 1s ease-out 0.3s both;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
-}
-
-/* Animations */
+/* Sequential Animation Keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -194,15 +195,52 @@
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Dark Mode */
+/* Animation Classes - Sequential Delays */
+.hero-anim-1 {
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+.hero-anim-2 {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+.hero-anim-3 {
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+}
+
+.hero-anim-4 {
+  animation: fadeInUp 0.6s ease-out 1.1s forwards;
+}
+
+.hero-anim-5 {
+  animation: fadeInScale 0.5s ease-out 1.4s forwards;
+}
+
+.hero-anim-6 {
+  animation: fadeInUp 0.5s ease-out 1.7s forwards;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .hero-coaching::after {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 26, 0.60) 0%, 
+    rgba(45, 45, 45, 0.65) 100%
+  );
+}
+
 [data-theme="dark"] .hero-line {
   color: #e8e8e8;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .hero-line-small {
@@ -210,56 +248,48 @@
 }
 
 [data-theme="dark"] .hero-subtitle {
-  color: #c8c8c8;
+  color: #b8b8b8;
 }
 
 [data-theme="dark"] .hero-note {
-  color: #999999;
-}
-
-[data-theme="dark"] .hero-image img {
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  color: #888888;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .hero-bg-image {
-    background-attachment: scroll;
+  .hero-coaching {
+    min-height: 100vh;
   }
   
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .hero-image {
-    order: -1;
-  }
-  
-  .hero-image img {
-    max-width: 250px;
-    margin: 0 auto;
-    display: block;
+  /* Remove stair effect on mobile */
+  .stair-1,
+  .stair-2,
+  .stair-3 {
+    text-align: center;
+    padding-left: 0;
   }
   
   .hero-cta {
-    width: 100%;
+    width: 90%;
     justify-content: center;
   }
-  
-  .hero-subtitle {
-    max-width: 100%;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim-1,
+  .hero-anim-2,
+  .hero-anim-3,
+  .hero-anim-4,
+  .hero-anim-5,
+  .hero-anim-6 {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
-}
-
-/* RTL Support for Arabic */
-[dir="rtl"] .hero-container {
-  grid-template-columns: 1fr 1.2fr;
-}
-
-[dir="rtl"] .hero-title,
-[dir="rtl"] .hero-subtitle,
-[dir="rtl"] .hero-note {
-  text-align: right;
+  
+  .hero-cta:hover {
+    transform: none;
+  }
 }
 </style>

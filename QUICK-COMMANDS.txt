@@ -1,0 +1,17 @@
+🚀 QUICK DEPLOYMENT COMMANDS
+============================
+
+After copying all files to C:\Users\HP\naswell-site:
+
+1. Open Git Bash in C:\Users\HP\naswell-site
+
+2. Run these commands:
+
+   bash DEPLOY-NOW.sh
+   git push origin feature/visual-upgrade
+
+3. Done! Wait 2-3 minutes for Cloudflare preview.
+
+============================
+
+That's it! Two commands and you're done! 🎉
