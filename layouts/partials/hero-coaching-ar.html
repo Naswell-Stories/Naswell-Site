@@ -22,17 +22,19 @@
         للبالغين الذين لا يزالون يبحثون عن موطئ قدم.
       </p>
       
-      <!-- زر في المنتصف -->
+      <!-- زر في المنتصف مع العداد المدمج -->
       <div class="hero-cta-wrapper">
         <a href="https://wa.me/971525704399?text=مرحباً%20ناصر%2C%20أود%20حجز%20جلسة%20استكشافية%20مجانية" 
            class="hero-cta hero-anim-5" 
            target="_blank" 
            rel="noopener">
-          احجز جلسة الاستكشاف المجانية ←
+          <span class="cta-main-text">احجز جلسة الاستكشاف المجانية ←</span>
+          <span class="cta-urgency">
+            <span class="urgency-icon">⚡</span>
+            فقط <strong>6 أماكن متبقية</strong> من 10
+          </span>
         </a>
       </div>
-      
-      <p class="hero-note hero-anim-6">فقط 6 أماكن متبقية من 10 • احجز الآن</p>
     </div>
   </div>
 </section>
@@ -144,7 +146,7 @@
   transform: translateY(30px);
 }
 
-/* زر في المنتصف */
+/* زر في المنتصف مع العداد المدمج */
 .hero-cta-wrapper {
   display: flex;
   justify-content: center;
@@ -153,14 +155,14 @@
 
 .hero-cta {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   background: #25D366;
   color: white;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 2.5rem 1rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -174,14 +176,42 @@
   background: #20bd5a;
 }
 
-/* ملاحظة في المنتصف */
-.hero-note {
-  margin-top: 1.5rem;
+.cta-main-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.cta-urgency {
   font-size: 0.9rem;
-  color: #6b6b6b;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
+  font-weight: 700;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.urgency-icon {
+  font-size: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.cta-urgency strong {
+  color: #ff8c00;
+  font-weight: 800;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+  }
 }
 
 /* إطارات الحركة */
@@ -228,10 +258,6 @@
   animation: fadeInScale 0.5s ease-out 1.4s forwards;
 }
 
-.hero-anim-6 {
-  animation: fadeInUp 0.5s ease-out 1.7s forwards;
-}
-
 /* دعم الوضع الداكن */
 [data-theme="dark"] .hero-coaching::after {
   background: linear-gradient(135deg, 
@@ -252,8 +278,12 @@
   color: #b8b8b8;
 }
 
-[data-theme="dark"] .hero-note {
-  color: #888888;
+[data-theme="dark"] .cta-urgency {
+  color: #ffb84d;
+}
+
+[data-theme="dark"] .cta-urgency strong {
+  color: #ffa500;
 }
 
 /* استجابة الهاتف المحمول */
@@ -272,7 +302,15 @@
   
   .hero-cta {
     width: 90%;
-    justify-content: center;
+    padding: 1rem 2rem 0.9rem 2rem;
+  }
+  
+  .cta-main-text {
+    font-size: 1rem;
+  }
+  
+  .cta-urgency {
+    font-size: 0.85rem;
   }
 }
 
@@ -282,8 +320,7 @@
   .hero-anim-2,
   .hero-anim-3,
   .hero-anim-4,
-  .hero-anim-5,
-  .hero-anim-6 {
+  .hero-anim-5 {
     animation: none;
     opacity: 1;
     transform: none;
@@ -291,6 +328,10 @@
   
   .hero-cta:hover {
     transform: none;
+  }
+  
+  .urgency-icon {
+    animation: none;
   }
 }
 </style>
