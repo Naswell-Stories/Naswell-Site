@@ -23,6 +23,10 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 
 [📱 Book Your Free Discovery Session via WhatsApp](https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session)
 
+[💳 Pay for Your Session Package via PayPal](https://paypal.me/NasirAyanleh/54.50USD)
+
+*(200 AED, charged as $54.50 USD via PayPal)*
+
 **Only 6 founding client spots remaining - Don't miss this opportunity!**
 
 ---
