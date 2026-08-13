@@ -14,7 +14,8 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 ## What You'll Get
 
 - Free Discovery Session (30 minutes)
-- 3-Session Package for 200 AED
+- Single Session for 150 AED
+- 3-Session Package for 400 AED (Founding Client Price)
 - Bilingual Support (Arabic/English)
 - WhatsApp Support Between Sessions
 - The Storytelling Method
@@ -23,9 +24,15 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 
 [📱 Book Your Free Discovery Session via WhatsApp](https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session)
 
-[💳 Pay for Your Session Package via PayPal](https://paypal.me/NasirAyanleh/54.50USD)
+[💳 Pay for a Single Session via PayPal](https://paypal.me/NasirAyanleh/40.84USD)
 
-*(200 AED, charged as $54.50 USD via PayPal)*
+*(150 AED, charged as $40.84 USD via PayPal)*
+
+[💳 Pay for the 3-Session Package via PayPal](https://paypal.me/NasirAyanleh/108.92USD)
+
+*(400 AED, charged as $108.92 USD via PayPal)*
+
+**Booking directly here is the most affordable option** — other coaching platforms add service fees that increase the total cost.
 
 **Only 6 founding client spots remaining - Don't miss this opportunity!**
 

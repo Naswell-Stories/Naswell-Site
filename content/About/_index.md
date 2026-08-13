@@ -18,6 +18,8 @@ If you're feeling stuck or overwhelmed, we can work together to find that clarit
 
 I hold multiple certifications across diverse fields including artificial intelligence, coding and programming, social sciences, and Teaching English as a Foreign Language (TEFL). These qualifications reflect my commitment to continuous learning and professional development.
 
+I've logged over 200 hours of coaching experience, combining in-person and online sessions, and I'm active on multiple established coaching platforms including Fiverr, Clarity.fm, Paperbell, and CoachCompare.
+
 In addition to my work in life coaching, I provide freelance services in these areas. Whether you're looking for technical guidance, educational support, or expertise in any of these domains, I'd be glad to share what I know and explore how I might be able to help.
 
 I'm also part of the local volunteering community here in the UAE, contributing where I can to meaningful causes.
