@@ -2,6 +2,9 @@
 <div class="page-content">
     <div class="container">
         <article class="content-article">
+            <div class="about-photo-wrapper">
+                <img src="/images/nasir-headshot.jpeg" alt="{{ .Title }}" class="about-photo" loading="lazy">
+            </div>
             <div class="article-header">
                 <h1>{{ .Title }}</h1>
             </div>
@@ -11,4 +14,21 @@
         </article>
     </div>
 </div>
+
+<style>
+.about-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-photo {
+  width: clamp(140px, 22vw, 200px);
+  height: clamp(140px, 22vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+</style>
 {{ end }}

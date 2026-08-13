@@ -1,0 +1,90 @@
+<!-- قسم تعرف على المدرب -->
+<section class="meet-coach" dir="rtl">
+  <div class="section-container">
+    <div class="meet-coach-wrapper">
+      <div class="meet-coach-image-wrapper">
+        <img src="/images/nasir-headshot.jpeg"
+             alt="ناصر، مؤسس ناسويل ستوريز"
+             class="meet-coach-image"
+             loading="lazy">
+      </div>
+      <div class="meet-coach-content">
+        <h2 class="meet-coach-title">تعرف على ناسويل</h2>
+        <p class="meet-coach-text">
+          أنا ناصر — مدرب حياة معتمد وأدرس حالياً ماجستير في علم النفس، وقد عشت نسختي الخاصة من "الجمود": فقدت أكثر من 50 كجم، خرجت من الديون، وأعدت بناء حياتي من الصفر.
+        </p>
+        <a href="/ar/about/" class="meet-coach-link">اقرأ قصتي كاملة ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.meet-coach {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--bg-primary);
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.meet-coach-wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.meet-coach-image-wrapper {
+  flex-shrink: 0;
+  width: clamp(140px, 20vw, 200px);
+  height: clamp(140px, 20vw, 200px);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.meet-coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.meet-coach-content {
+  flex: 1;
+}
+
+.meet-coach-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.meet-coach-text {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.meet-coach-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #25D366;
+  text-decoration: none;
+}
+
+.meet-coach-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .meet-coach-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>

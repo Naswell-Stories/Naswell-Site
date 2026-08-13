@@ -169,11 +169,32 @@ themeToggle.addEventListener('click', () => {
            class="hero-cta hero-anim-5" 
            target="_blank" 
            rel="noopener">
-          Book Free Discovery Session →
+          <span class="cta-main-text">Book Free Discovery Session →</span>
+          <span class="cta-urgency">
+            <span class="urgency-icon">⚡</span>
+            Only <strong>6 spots left</strong> of 10
+          </span>
         </a>
       </div>
-      
-      <p class="hero-note hero-anim-6">10 founding spots • Arabic/English</p>
+
+      <div class="hero-paypal-wrapper">
+        <a href="https://paypal.me/NasirAyanleh/40.84USD"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 Pay for a Single Session via PayPal
+        </a>
+        <p class="hero-paypal-note">(150 AED, charged as $40.84 USD via PayPal)</p>
+
+        <a href="https://paypal.me/NasirAyanleh/108.92USD"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 Pay for the 3-Session Package via PayPal
+        </a>
+        <p class="hero-paypal-note">(400 AED, charged as $108.92 USD via PayPal)</p>
+        <p class="hero-paypal-cheaper-note">Booking directly here is the most affordable option — other coaching platforms add service fees that increase the total cost.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -293,14 +314,14 @@ themeToggle.addEventListener('click', () => {
 
 .hero-cta {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   background: #25D366;
   color: white;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 2.5rem 1rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -314,14 +335,42 @@ themeToggle.addEventListener('click', () => {
   background: #20bd5a;
 }
 
- 
-.hero-note {
-  margin-top: 1.5rem;
+.cta-main-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.cta-urgency {
   font-size: 0.9rem;
-  color: #6b6b6b;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
+  font-weight: 700;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.urgency-icon {
+  font-size: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.cta-urgency strong {
+  color: #ff8c00;
+  font-weight: 800;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+  }
 }
 
  
@@ -368,10 +417,6 @@ themeToggle.addEventListener('click', () => {
   animation: fadeInScale 0.5s ease-out 1.4s forwards;
 }
 
-.hero-anim-6 {
-  animation: fadeInUp 0.5s ease-out 1.7s forwards;
-}
-
  
 [data-theme="dark"] .hero-coaching::after {
   background: linear-gradient(135deg, 
@@ -392,8 +437,57 @@ themeToggle.addEventListener('click', () => {
   color: #b8b8b8;
 }
 
-[data-theme="dark"] .hero-note {
-  color: #888888;
+[data-theme="dark"] .cta-urgency {
+  color: #ffb84d;
+}
+
+[data-theme="dark"] .cta-urgency strong {
+  color: #ffa500;
+}
+
+.hero-paypal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.hero-paypal-link {
+  color: #5a5a5a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero-paypal-link:hover {
+  color: #2d2d2d;
+}
+
+.hero-paypal-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+
+.hero-paypal-cheaper-note {
+  font-size: 0.9rem;
+  color: #5a5a5a;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+[data-theme="dark"] .hero-paypal-link {
+  color: #b8b8b8;
+}
+
+[data-theme="dark"] .hero-paypal-link:hover {
+  color: #e8e8e8;
+}
+
+[data-theme="dark"] .hero-paypal-cheaper-note {
+  color: #b8b8b8;
 }
 
  
@@ -412,7 +506,15 @@ themeToggle.addEventListener('click', () => {
   
   .hero-cta {
     width: 90%;
-    justify-content: center;
+    padding: 1rem 2rem 0.9rem 2rem;
+  }
+  
+  .cta-main-text {
+    font-size: 1rem;
+  }
+  
+  .cta-urgency {
+    font-size: 0.85rem;
   }
 }
 
@@ -422,8 +524,7 @@ themeToggle.addEventListener('click', () => {
   .hero-anim-2,
   .hero-anim-3,
   .hero-anim-4,
-  .hero-anim-5,
-  .hero-anim-6 {
+  .hero-anim-5 {
     animation: none;
     opacity: 1;
     transform: none;
@@ -431,6 +532,10 @@ themeToggle.addEventListener('click', () => {
   
   .hero-cta:hover {
     transform: none;
+  }
+  
+  .urgency-icon {
+    animation: none;
   }
 }
 </style>
@@ -796,54 +901,154 @@ themeToggle.addEventListener('click', () => {
   }
 }
 </style>
+
+<section class="meet-coach">
+  <div class="section-container">
+    <div class="meet-coach-wrapper">
+      <div class="meet-coach-image-wrapper">
+        <img src="./images/nasir-headshot.jpeg"
+             alt="Nasir, founder of Naswell Stories"
+             class="meet-coach-image"
+             loading="lazy">
+      </div>
+      <div class="meet-coach-content">
+        <h2 class="meet-coach-title">Meet Naswell</h2>
+        <p class="meet-coach-text">
+          I'm Nasir — a certified life coach pursuing an MSc in Psychology, and I've lived through my own version of "stuck": lost 50+ kg, climbed out of debt, and rebuilt from the ground up.
+        </p>
+        <a href="./about/" class="meet-coach-link">Read my full story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.meet-coach {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--bg-primary);
+}
+
+.meet-coach-wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.meet-coach-image-wrapper {
+  flex-shrink: 0;
+  width: clamp(140px, 20vw, 200px);
+  height: clamp(140px, 20vw, 200px);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.meet-coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.meet-coach-content {
+  flex: 1;
+}
+
+.meet-coach-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.meet-coach-text {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.meet-coach-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #25D366;
+  text-decoration: none;
+}
+
+.meet-coach-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .meet-coach-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 <section class="testimonials">
   <div class="section-container">
     <h2 class="section-title">What People Say</h2>
-    <p class="section-subtitle">Real stories from real people.</p>
+    <p class="section-subtitle">From conversations I've had.</p>
     
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="testimonial-header">
           <div class="testimonial-avatar avatar-1">
-            <span>SM</span>
+            <span>ST</span>
           </div>
           <div class="testimonial-info">
-            <h3 class="testimonial-name">Sarah M.</h3>
-            <p class="testimonial-role">Marketing Professional</p>
+            <h3 class="testimonial-name">Someone facing a major transition</h3>
           </div>
         </div>
         <div class="testimonial-content">
-          <p class="testimonial-text">"I was stuck in analysis paralysis for months. One session helped me see my blind spots and take action. Finally moving forward."</p>
+          <p class="testimonial-text">"When everything felt overwhelming, he helped me compartmentalize and prioritize what actually mattered. The clarity I gained helped me manage the panic and face things one step at a time. The patience and respect throughout made all the difference."</p>
         </div>
       </div>
       
       <div class="testimonial-card">
         <div class="testimonial-header">
           <div class="testimonial-avatar avatar-2">
-            <span>AK</span>
+            <span>WG</span>
           </div>
           <div class="testimonial-info">
-            <h3 class="testimonial-name">Ahmed K.</h3>
-            <p class="testimonial-role">Software Engineer</p>
+            <h3 class="testimonial-name">Someone working toward a goal</h3>
           </div>
         </div>
         <div class="testimonial-content">
-          <p class="testimonial-text">"Clear, practical advice. No fluff. Exactly what I needed to break through my overthinking patterns."</p>
+          <p class="testimonial-text">"The encouragement and strategic thinking helped me break down my goals into actual steps I could take. It felt like talking to someone in your corner, not someone lecturing from above. That sense of comradery made everything easier."</p>
         </div>
       </div>
       
       <div class="testimonial-card">
         <div class="testimonial-header">
           <div class="testimonial-avatar avatar-3">
-            <span>MR</span>
+            <span>PL</span>
           </div>
           <div class="testimonial-info">
-            <h3 class="testimonial-name">Maya R.</h3>
-            <p class="testimonial-role">Graduate Student</p>
+            <h3 class="testimonial-name">Someone processing loss</h3>
           </div>
         </div>
         <div class="testimonial-content">
-          <p class="testimonial-text">"Felt understood without judgment. Got clarity on my next steps in one conversation. Worth every dirham."</p>
+          <p class="testimonial-text">"He offered a sympathetic and understanding ear during one of the hardest times in my life. The different perspectives he shared helped me see my grief in new ways without feeling rushed or judged."</p>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar avatar-4">
+            <span>WS</span>
+          </div>
+          <div class="testimonial-info">
+            <h3 class="testimonial-name">Someone working on themselves</h3>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p class="testimonial-text">"I found a nonjudgmental space to actually look at my flaws and patterns without shame. The different perspectives offered helped me dismantle negative thought loops I didn't even realize I had. Felt like a friend helping, not an expert fixing."</p>
         </div>
       </div>
     </div>
@@ -918,6 +1123,10 @@ themeToggle.addEventListener('click', () => {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
+.avatar-4 {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
 .testimonial-info {
   flex: 1;
 }
@@ -988,7 +1197,7 @@ themeToggle.addEventListener('click', () => {
       </p>
       
       <p class="reason-text">
-        For the first <strong>10 founding clients</strong>, I'm offering a 3-session package for <strong>200 AED</strong> (50% off the regular 400 AED price).
+        For the first <strong>10 founding clients</strong>, I'm offering a 3-session package for <strong>400 AED</strong> (33% off the regular 600 AED price). Single sessions are also available at <strong>150 AED</strong>.
       </p>
       
       <div class="commitment-box">
@@ -1089,6 +1298,7 @@ themeToggle.addEventListener('click', () => {
   }
 }
 </style>
+
 <section class="faq">
   <div class="section-container">
     <h2 class="section-title">Common Questions</h2>
@@ -1230,11 +1440,32 @@ themeToggle.addEventListener('click', () => {
          class="final-cta-button" 
          target="_blank" 
          rel="noopener">
-        Book Your Free Session →
+        <span class="cta-main-text">Book Your Free Session →</span>
+        <span class="cta-urgency">
+          <span class="urgency-icon">⚡</span>
+          Only <strong>6 spots left</strong> of 10
+        </span>
       </a>
+
+      <a href="https://paypal.me/NasirAyanleh/40.84USD"
+         class="paypal-cta-link"
+         target="_blank"
+         rel="noopener">
+        💳 Pay for a Single Session via PayPal
+      </a>
+      <p class="paypal-cta-note">(150 AED, charged as $40.84 USD via PayPal)</p>
+
+      <a href="https://paypal.me/NasirAyanleh/108.92USD"
+         class="paypal-cta-link"
+         target="_blank"
+         rel="noopener">
+        💳 Pay for the 3-Session Package via PayPal
+      </a>
+      <p class="paypal-cta-note">(400 AED, charged as $108.92 USD via PayPal)</p>
+      <p class="paypal-cheaper-note">Booking directly here is the most affordable option — other coaching platforms add service fees that increase the total cost.</p>
       
       <p class="final-cta-note">
-        Limited to 10 spots • Bilingual (Arabic/English) • No commitment required
+        Bilingual (Arabic/English) • No commitment required
       </p>
     </div>
   </div>
@@ -1269,14 +1500,14 @@ themeToggle.addEventListener('click', () => {
 
 .final-cta-button {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   background: #25D366;
   color: white;
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem 3.5rem 1.2rem 3.5rem;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 1.3rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
@@ -1289,21 +1520,100 @@ themeToggle.addEventListener('click', () => {
   background: #20bd5a;
 }
 
+.cta-main-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.cta-urgency {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.urgency-icon {
+  font-size: 1.1rem;
+  animation: pulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.cta-urgency strong {
+  color: #ff8c00;
+  font-weight: 800;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.95;
+  }
+}
+
 .final-cta-note {
   font-size: 1rem;
   color: var(--text-muted);
   margin: 0;
 }
 
+.paypal-cta-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+
+.paypal-cta-link:hover {
+  color: var(--text-primary);
+}
+
+.paypal-cta-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.paypal-cheaper-note {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 768px) {
   .final-cta-button {
-    width: 100%;
-    justify-content: center;
-    padding: 1.2rem 2rem;
+    width: 90%;
+    padding: 1.2rem 2rem 1rem 2rem;
+  }
+  
+  .cta-main-text {
     font-size: 1.1rem;
+  }
+  
+  .cta-urgency {
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .urgency-icon {
+    animation: none;
   }
 }
 </style>
+
     </main>
     
     <footer class="footer">
@@ -1333,7 +1643,7 @@ themeToggle.addEventListener('click', () => {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
         </a>
     </div>
-    <span>&copy; 2025 <a href="//localhost:1313/">Naswell – Stories &amp; Coaching</a></span>
+    <span>&copy; 2026 <a href="//localhost:1313/">Naswell – Stories &amp; Coaching</a></span>
     
     <span>
         Powered by

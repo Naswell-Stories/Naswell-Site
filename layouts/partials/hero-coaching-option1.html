@@ -22,38 +22,21 @@
         For adults still finding their footing.
       </p>
       
-      <!-- Centered CTA Button with Integrated Counter -->
+      <!-- Centered CTA Button -->
       <div class="hero-cta-wrapper">
         <a href="https://wa.me/971525704399?text=Hi%20Nasir%2C%20I'd%20like%20to%20book%20a%20free%20discovery%20session" 
            class="hero-cta hero-anim-5" 
            target="_blank" 
            rel="noopener">
-          <span class="cta-main-text">Book Free Discovery Session →</span>
-          <span class="cta-urgency">
-            <span class="urgency-icon">⚡</span>
-            Only <strong>6 spots left</strong> of 10
-          </span>
+          Book Free Discovery Session →
         </a>
       </div>
-
-      <div class="hero-paypal-wrapper">
-        <a href="https://paypal.me/NasirAyanleh/40.84USD"
-           class="hero-paypal-link"
-           target="_blank"
-           rel="noopener">
-          💳 Pay for a Single Session via PayPal
-        </a>
-        <p class="hero-paypal-note">(150 AED, charged as $40.84 USD via PayPal)</p>
-
-        <a href="https://paypal.me/NasirAyanleh/108.92USD"
-           class="hero-paypal-link"
-           target="_blank"
-           rel="noopener">
-          💳 Pay for the 3-Session Package via PayPal
-        </a>
-        <p class="hero-paypal-note">(400 AED, charged as $108.92 USD via PayPal)</p>
-        <p class="hero-paypal-cheaper-note">Booking directly here is the most affordable option — other coaching platforms add service fees that increase the total cost.</p>
-      </div>
+      
+      <p class="hero-note hero-anim-6">
+        <span class="urgency-icon">⚡</span>
+        <span class="urgency-text">Only <strong>6 spots left</strong> of 10</span>
+        <span class="urgency-cta">• Book now</span>
+      </p>
     </div>
   </div>
 </section>
@@ -164,7 +147,7 @@
   transform: translateY(30px);
 }
 
-/* Centered CTA Button with Integrated Counter */
+/* Centered CTA Button */
 .hero-cta-wrapper {
   display: flex;
   justify-content: center;
@@ -173,14 +156,14 @@
 
 .hero-cta {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   background: #25D366;
   color: white;
-  padding: 1.2rem 2.5rem 1rem 2.5rem;
+  padding: 1.2rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
@@ -194,31 +177,44 @@
   background: #20bd5a;
 }
 
-.cta-main-text {
+/* FLASHY Urgency Note - Option 1: Pulsing with Icon */
+.hero-note {
+  margin-top: 1.5rem;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: white;
-}
-
-.cta-urgency {
-  font-size: 0.9rem;
   font-weight: 700;
-  color: #ffa500;
+  color: #ff4d00;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .urgency-icon {
-  font-size: 1rem;
+  font-size: 1.3rem;
   animation: pulse 2s ease-in-out infinite;
   display: inline-block;
 }
 
-.cta-urgency strong {
-  color: #ff8c00;
-  font-weight: 800;
+.urgency-text {
+  color: #ff4d00;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.urgency-text strong {
+  color: #d63900;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(255, 77, 0, 0.3);
+}
+
+.urgency-cta {
+  color: #ff4d00;
+  font-weight: 600;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -227,8 +223,8 @@
     opacity: 1;
   }
   50% {
-    transform: scale(1.08);
-    opacity: 0.95;
+    transform: scale(1.05);
+    opacity: 0.9;
   }
 }
 
@@ -276,6 +272,10 @@
   animation: fadeInScale 0.5s ease-out 1.4s forwards;
 }
 
+.hero-anim-6 {
+  animation: fadeInUp 0.5s ease-out 1.7s forwards;
+}
+
 /* Dark Mode Support */
 [data-theme="dark"] .hero-coaching::after {
   background: linear-gradient(135deg, 
@@ -296,57 +296,21 @@
   color: #b8b8b8;
 }
 
-[data-theme="dark"] .cta-urgency {
-  color: #ffb84d;
+[data-theme="dark"] .hero-note {
+  color: #ff6b2b;
 }
 
-[data-theme="dark"] .cta-urgency strong {
-  color: #ffa500;
+[data-theme="dark"] .urgency-text {
+  color: #ff6b2b;
 }
 
-.hero-paypal-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0.5rem;
+[data-theme="dark"] .urgency-text strong {
+  color: #ff8a50;
+  text-shadow: 0 0 10px rgba(255, 107, 43, 0.4);
 }
 
-.hero-paypal-link {
-  color: #5a5a5a;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.hero-paypal-link:hover {
-  color: #2d2d2d;
-}
-
-.hero-paypal-note {
-  font-size: 0.8rem;
-  color: #888;
-  margin-top: 0.3rem;
-}
-
-.hero-paypal-cheaper-note {
-  font-size: 0.9rem;
-  color: #5a5a5a;
-  font-weight: 600;
-  margin-top: 0.8rem;
-  text-align: center;
-  max-width: 400px;
-}
-
-[data-theme="dark"] .hero-paypal-link {
-  color: #b8b8b8;
-}
-
-[data-theme="dark"] .hero-paypal-link:hover {
-  color: #e8e8e8;
-}
-
-[data-theme="dark"] .hero-paypal-cheaper-note {
-  color: #b8b8b8;
+[data-theme="dark"] .urgency-cta {
+  color: #ff6b2b;
 }
 
 /* Mobile Responsive */
@@ -365,15 +329,21 @@
   
   .hero-cta {
     width: 90%;
-    padding: 1rem 2rem 0.9rem 2rem;
+    justify-content: center;
   }
   
-  .cta-main-text {
+  .hero-note {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .urgency-text {
     font-size: 1rem;
   }
   
-  .cta-urgency {
-    font-size: 0.85rem;
+  .urgency-text strong {
+    font-size: 1.1rem;
   }
 }
 
@@ -383,7 +353,8 @@
   .hero-anim-2,
   .hero-anim-3,
   .hero-anim-4,
-  .hero-anim-5 {
+  .hero-anim-5,
+  .hero-anim-6 {
     animation: none;
     opacity: 1;
     transform: none;
@@ -393,7 +364,8 @@
     transform: none;
   }
   
-  .urgency-icon {
+  .urgency-icon,
+  .urgency-cta {
     animation: none;
   }
 }
