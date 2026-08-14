@@ -60,6 +60,14 @@
         </div>
       </div>
     </div>
+
+    <div class="live-reviews">
+      <h3 class="live-reviews-title">أحدث التقييمات</h3>
+      <div id="live-reviews-content">
+        <p class="live-reviews-loading">جارٍ التحميل...</p>
+      </div>
+      <a href="/ar/reviews/" class="live-reviews-link">شاهد جميع التقييمات أو أضف تقييمك ←</a>
+    </div>
   </div>
 </section>
 
@@ -197,4 +205,113 @@
     font-size: 1rem;
   }
 }
+
+.live-reviews {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--bg-accent);
+}
+
+.live-reviews-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.live-review-card {
+  background: var(--bg-accent);
+  padding: 1.5rem 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.live-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.live-review-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.live-review-stars {
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.live-review-message {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.live-reviews-loading, .live-reviews-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.live-reviews-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #25D366;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.live-reviews-link:hover {
+  text-decoration: underline;
+}
 </style>
+
+<script>
+(function() {
+  const SUPABASE_URL = 'https://gzquhzbrncduniayuzjs.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_2x0ZRbQL18aHM4RB9fuAtw__dHgR3po';
+  const listEl = document.getElementById('live-reviews-content');
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function loadLiveReviews() {
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?approved=eq.true&select=*&order=created_at.desc&limit=3', {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY
+        }
+      });
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) {
+        listEl.innerHTML = '<p class="live-reviews-empty">لا توجد تقييمات بعد. كن أول من يشارك!</p>';
+        return;
+      }
+      listEl.innerHTML = data.map(function(r) {
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        return '<div class="live-review-card">' +
+          '<div class="live-review-header">' +
+            '<span class="live-review-name">' + escapeHtml(r.name) + '</span>' +
+            '<span class="live-review-stars">' + stars + '</span>' +
+          '</div>' +
+          '<p class="live-review-message">' + escapeHtml(r.message) + '</p>' +
+        '</div>';
+      }).join('');
+    } catch (e) {
+      listEl.innerHTML = '<p class="live-reviews-empty">تعذر تحميل التقييمات.</p>';
+    }
+  }
+
+  loadLiveReviews();
+})();
+</script>
