@@ -64,12 +64,6 @@ url = "/coaching/"
 weight = 30
 
 [[languages.en.menu.main]]
-identifier = "blog"
-name = "Blog"
-url = "/blog/"
-weight = 40
-
-[[languages.en.menu.main]]
 identifier = "podcast"
 name = "Podcast"
 url = "/podcast/"
@@ -117,12 +111,6 @@ identifier = "coaching"
 name = "التدريب"
 url = "/ar/coaching/"
 weight = 30
-
-[[languages.ar.menu.main]]
-identifier = "blog"
-name = "المدونة"
-url = "/ar/blog/"
-weight = 40
 
 [[languages.ar.menu.main]]
 identifier = "podcast"
