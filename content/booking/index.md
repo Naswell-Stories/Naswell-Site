@@ -14,6 +14,7 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 ## What You'll Get
 
 - Free Discovery Session (30 minutes)
+- Half-Hour Session for 80 AED
 - Single Session for 150 AED
 - 3-Session Package for 400 AED (Founding Client Price)
 - Bilingual Support (Arabic/English)
@@ -23,6 +24,10 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 ## Ready to Get Started?
 
 [📱 Book Your Free Discovery Session via WhatsApp](https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session)
+
+[💳 Pay for a Half-Hour Session via PayPal](https://paypal.me/NasirAyanleh/21.78USD)
+
+*(80 AED, charged as $21.78 USD via PayPal)*
 
 [💳 Pay for a Single Session via PayPal](https://paypal.me/NasirAyanleh/40.84USD)
 
