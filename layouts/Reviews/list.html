@@ -1,1 +1,396 @@
-e30tIGRlZmluZSAibWFpbiIgfX0KCnt7LSBpZiBlcSAuU2l0ZS5MYW5ndWFnZS5MYW5nICJhciIgfX0KCjxkaXYgY2xhc3M9InJldmlld3MtcGFnZSIgZGlyPSJydGwiPgogIDxkaXYgY2xhc3M9InJldmlld3MtY29udGFpbmVyIj4KICAgIDxoMSBjbGFzcz0icmV2aWV3cy10aXRsZSI+2KfZhNiq2YLZitmK2YXYp9iqPC9oMT4KICAgIDxwIGNsYXNzPSJyZXZpZXdzLXN1YnRpdGxlIj7YtNin2LHZg9mG2Kcg2KrYrNix2KjYqtmDINmF2Lkg2YbYp9iz2YjZitmELCDYo9mIINin2LfZhNi5INi52YTZiSDYqtis2KfYsdioINin2YTYotiu2LHZitmGLjwvcD4KCiAgICA8ZGl2IGNsYXNzPSJyZXZpZXctZm9ybS1jYXJkIj4KICAgICAgPGgyPtij2LbZgSDYqtmC2YrZitmF2YM8L2gyPgogICAgICA8Zm9ybSBpZD0icmV2aWV3LWZvcm0iPgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ3ZWJzaXRlIiBjbGFzcz0iaHAtZmllbGQiIHRhYmluZGV4PSItMSIgYXV0b2NvbXBsZXRlPSJvZmYiPgoKICAgICAgICA8bGFiZWwgZm9yPSJyZXZpZXctbmFtZSI+2KfZhNin2LPZhTwvbGFiZWw+CiAgICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJyZXZpZXctbmFtZSIgbmFtZT0ibmFtZSIgcmVxdWlyZWQgbWF4bGVuZ3RoPSI4MCI+CgogICAgICAgIDxsYWJlbD7Yp9mE2KrZgtmK2YrZhTwvbGFiZWw+CiAgICAgICAgPGRpdiBjbGFzcz0ic3Rhci1pbnB1dCIgaWQ9InN0YXItaW5wdXQiIGRpcj0ibHRyIj4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icmF0aW5nIiBpZD0iYXItc3RhcjUiIHZhbHVlPSI1Ij48bGFiZWwgZm9yPSJhci1zdGFyNSIgZGF0YS12YWx1ZT0iNSI+4piFPC9sYWJlbD4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icmF0aW5nIiBpZD0iYXItc3RhcjQiIHZhbHVlPSI0Ij48bGFiZWwgZm9yPSJhci1zdGFyNCIgZGF0YS12YWx1ZT0iNCI+4piFPC9sYWJlbD4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icmF0aW5nIiBpZD0iYXItc3RhcjMiIHZhbHVlPSIzIj48bGFiZWwgZm9yPSJhci1zdGFyMyIgZGF0YS12YWx1ZT0iMyI+4piFPC9sYWJlbD4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icmF0aW5nIiBpZD0iYXItc3RhcjIiIHZhbHVlPSIyIj48bGFiZWwgZm9yPSJhci1zdGFyMiIgZGF0YS12YWx1ZT0iMiI+4piFPC9sYWJlbD4KICAgICAgICAgIDxpbnB1dCB0eXBlPSJyYWRpbyIgbmFtZT0icmF0aW5nIiBpZD0iYXItc3RhcjEiIHZhbHVlPSIxIj48bGFiZWwgZm9yPSJhci1zdGFyMSIgZGF0YS12YWx1ZT0iMSI+4piFPC9sYWJlbD4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGxhYmVsIGZvcj0icmV2aWV3LW1lc3NhZ2UiPtiq2KzYsdio2KrZgzwvbGFiZWw+CiAgICAgICAgPHRleHRhcmVhIGlkPSJyZXZpZXctbWVzc2FnZSIgbmFtZT0ibWVzc2FnZSIgcm93cz0iNCIgcmVxdWlyZWQgbWF4bGVuZ3RoPSI2MDAiPjwvdGV4dGFyZWE+CgogICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBpZD0icmV2aWV3LXN1Ym1pdC1idG4iPtil2LHYs9in2YQg2KfZhNiq2YLZitmK2YU8L2J1dHRvbj4KICAgICAgICA8cCBpZD0icmV2aWV3LXN0YXR1cyIgY2xhc3M9InJldmlldy1zdGF0dXMiPjwvcD4KICAgICAgICA8cCBjbGFzcz0icmV2aWV3LW5vdGUiPtiz2YrYuNmH2LEg2KrZgtmK2YrZhdmDINio2LnYryDZhdix2KfYrNi52KrZhyDZiNin2YTZhdmI2KfZgdmC2Kkg2LnZhNmK2YcuPC9wPgogICAgICA8L2Zvcm0+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJyZXZpZXdzLWxpc3QiPgogICAgICA8aDI+2KLYsdin2KEg2KfZhNi52YXZhNin2KE8L2gyPgogICAgICA8ZGl2IGlkPSJyZXZpZXdzLWxpc3QtY29udGVudCI+CiAgICAgICAgPHAgY2xhc3M9InJldmlld3MtbG9hZGluZyI+2KzYp9ix2Yog2KfZhNiq2K3ZhdmK2YQuLi48L3A+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+CjwvZGl2PgoKe3stIGVsc2UgfX0KCjxkaXYgY2xhc3M9InJldmlld3MtcGFnZSI+CiAgPGRpdiBjbGFzcz0icmV2aWV3cy1jb250YWluZXIiPgogICAgPGgxIGNsYXNzPSJyZXZpZXdzLXRpdGxlIj5SZXZpZXdzPC9oMT4KICAgIDxwIGNsYXNzPSJyZXZpZXdzLXN1YnRpdGxlIj5TaGFyZSB5b3VyIGV4cGVyaWVuY2Ugd2l0aCBOYXN3ZWxsLCBvciBzZWUgd2hhdCBvdGhlcnMgaGF2ZSBzYWlkLjwvcD4KCiAgICA8ZGl2IGNsYXNzPSJyZXZpZXctZm9ybS1jYXJkIj4KICAgICAgPGgyPkxlYXZlIGEgUmV2aWV3PC9oMj4KICAgICAgPGZvcm0gaWQ9InJldmlldy1mb3JtIj4KICAgICAgICA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0id2Vic2l0ZSIgY2xhc3M9ImhwLWZpZWxkIiB0YWJpbmRleD0iLTEiIGF1dG9jb21wbGV0ZT0ib2ZmIj4KCiAgICAgICAgPGxhYmVsIGZvcj0icmV2aWV3LW5hbWUiPk5hbWU8L2xhYmVsPgogICAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0icmV2aWV3LW5hbWUiIG5hbWU9Im5hbWUiIHJlcXVpcmVkIG1heGxlbmd0aD0iODAiPgoKICAgICAgICA8bGFiZWw+UmF0aW5nPC9sYWJlbD4KICAgICAgICA8ZGl2IGNsYXNzPSJzdGFyLWlucHV0IiBpZD0ic3Rhci1pbnB1dCI+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InJhdGluZyIgaWQ9InN0YXI1IiB2YWx1ZT0iNSI+PGxhYmVsIGZvcj0ic3RhcjUiIGRhdGEtdmFsdWU9IjUiPuKYhTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InJhdGluZyIgaWQ9InN0YXI0IiB2YWx1ZT0iNCI+PGxhYmVsIGZvcj0ic3RhcjQiIGRhdGEtdmFsdWU9IjQiPuKYhTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InJhdGluZyIgaWQ9InN0YXIzIiB2YWx1ZT0iMyI+PGxhYmVsIGZvcj0ic3RhcjMiIGRhdGEtdmFsdWU9IjMiPuKYhTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InJhdGluZyIgaWQ9InN0YXIyIiB2YWx1ZT0iMiI+PGxhYmVsIGZvcj0ic3RhcjIiIGRhdGEtdmFsdWU9IjIiPuKYhTwvbGFiZWw+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9InJhdGluZyIgaWQ9InN0YXIxIiB2YWx1ZT0iMSI+PGxhYmVsIGZvcj0ic3RhcjEiIGRhdGEtdmFsdWU9IjEiPuKYhTwvbGFiZWw+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxsYWJlbCBmb3I9InJldmlldy1tZXNzYWdlIj5Zb3VyIEV4cGVyaWVuY2U8L2xhYmVsPgogICAgICAgIDx0ZXh0YXJlYSBpZD0icmV2aWV3LW1lc3NhZ2UiIG5hbWU9Im1lc3NhZ2UiIHJvd3M9IjQiIHJlcXVpcmVkIG1heGxlbmd0aD0iNjAwIj48L3RleHRhcmVhPgoKICAgICAgICA8YnV0dG9uIHR5cGU9InN1Ym1pdCIgaWQ9InJldmlldy1zdWJtaXQtYnRuIj5TdWJtaXQgUmV2aWV3PC9idXR0b24+CiAgICAgICAgPHAgaWQ9InJldmlldy1zdGF0dXMiIGNsYXNzPSJyZXZpZXctc3RhdHVzIj48L3A+CiAgICAgICAgPHAgY2xhc3M9InJldmlldy1ub3RlIj5Zb3VyIHJldmlldyB3aWxsIGFwcGVhciBhZnRlciBpdCdzIGJlZW4gcmV2aWV3ZWQgYW5kIGFwcHJvdmVkLjwvcD4KICAgICAgPC9mb3JtPgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0icmV2aWV3cy1saXN0Ij4KICAgICAgPGgyPldoYXQgUGVvcGxlIEFyZSBTYXlpbmc8L2gyPgogICAgICA8ZGl2IGlkPSJyZXZpZXdzLWxpc3QtY29udGVudCI+CiAgICAgICAgPHAgY2xhc3M9InJldmlld3MtbG9hZGluZyI+TG9hZGluZy4uLjwvcD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Rpdj4KPC9kaXY+Cgp7ey0gZW5kIH19Cgo8c3R5bGU+CiAucmV2aWV3cy1wYWdlIHsKICBtYXgtd2lkdGg6IDgwMHB4OwogIG1hcmdpbjogNHJlbSBhdXRvOwogIHBhZGRpbmc6IDAgMnJlbTsKfQoKLnJldmlld3MtdGl0bGUgewogIGZvbnQtc2l6ZTogY2xhbXAoMi41cmVtLCA1dncsIDMuNXJlbSk7CiAgZm9udC13ZWlnaHQ6IDgwMDsKICBjb2xvcjogdmFyKC0tdGV4dC1wcmltYXJ5KTsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgbWFyZ2luLWJvdHRvbTogMC41cmVtOwp9CgoucmV2aWV3cy1zdWJ0aXRsZSB7CiAgdGV4dC1hbGlnbjogY2VudGVyOwogIGNvbG9yOiB2YXIoLS10ZXh0LXNlY29uZGFyeSk7CiAgZm9udC1zaXplOiAxLjE1cmVtOwogIG1hcmdpbi1ib3R0b206IDNyZW07Cn0KCi5yZXZpZXctZm9ybS1jYXJkIHsKICBiYWNrZ3JvdW5kOiB2YXIoLS1iZy1hY2NlbnQpOwogIHBhZGRpbmc6IDIuNXJlbTsKICBib3JkZXItcmFkaXVzOiAxNnB4OwogIG1hcmdpbi1ib3R0b206IDRyZW07Cn0KCi5yZXZpZXctZm9ybS1jYXJkIGgyIHsKICBjb2xvcjogdmFyKC0tdGV4dC1wcmltYXJ5KTsKICBtYXJnaW4tYm90dG9tOiAxLjVyZW07CiAgZm9udC1zaXplOiAxLjVyZW07Cn0KCiNyZXZpZXctZm9ybSBsYWJlbCB7CiAgZGlzcGxheTogYmxvY2s7CiAgY29sb3I6IHZhcigtLXRleHQtcHJpbWFyeSk7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBtYXJnaW4tYm90dG9tOiAwLjRyZW07CiAgbWFyZ2luLXRvcDogMS4ycmVtOwp9CgojcmV2aWV3LWZvcm0gaW5wdXRbdHlwZT0idGV4dCJdLAojcmV2aWV3LWZvcm0gdGV4dGFyZWEgewogIHdpZHRoOiAxMDAlOwogIHBhZGRpbmc6IDAuOHJlbSAxcmVtOwogIGJvcmRlci1yYWRpdXM6IDhweDsKICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS10ZXh0LW11dGVkLCAjOTk5KTsKICBiYWNrZ3JvdW5kOiB2YXIoLS1iZy1wcmltYXJ5KTsKICBjb2xvcjogdmFyKC0tdGV4dC1wcmltYXJ5KTsKICBmb250LXNpemU6IDFyZW07CiAgZm9udC1mYW1pbHk6IGluaGVyaXQ7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKLmhwLWZpZWxkIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgbGVmdDogLTk5OTlweDsKICBvcGFjaXR5OiAwOwogIGhlaWdodDogMDsKICBwb2ludGVyLWV2ZW50czogbm9uZTsKfQoKLnN0YXItaW5wdXQgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdy1yZXZlcnNlOwogIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7CiAgZ2FwOiAwLjJyZW07CiAgZm9udC1zaXplOiAycmVtOwp9Cgouc3Rhci1pbnB1dCBpbnB1dCB7CiAgZGlzcGxheTogbm9uZTsKfQoKLnN0YXItaW5wdXQgbGFiZWwgewogIGN1cnNvcjogcG9pbnRlcjsKICBjb2xvcjogdmFyKC0tdGV4dC1tdXRlZCwgIzk5OSk7CiAgdHJhbnNpdGlvbjogY29sb3IgMC4xNXMsIHRyYW5zZm9ybSAwLjE1czsKICBtYXJnaW46IDAgIWltcG9ydGFudDsKfQoKLnN0YXItaW5wdXQgbGFiZWwuZmlsbGVkIHsKICBjb2xvcjogI2Y1YTYyMzsKICB0cmFuc2Zvcm06IHNjYWxlKDEuMTIpOwp9CgojcmV2aWV3LXN1Ym1pdC1idG4gewogIG1hcmdpbi10b3A6IDEuNXJlbTsKICBiYWNrZ3JvdW5kOiAjMjVEMzY2OwogIGNvbG9yOiB3aGl0ZTsKICBib3JkZXI6IG5vbmU7CiAgcGFkZGluZzogMC45cmVtIDJyZW07CiAgYm9yZGVyLXJhZGl1czogNTBweDsKICBmb250LXNpemU6IDEuMDVyZW07CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBjdXJzb3I6IHBvaW50ZXI7CiAgdHJhbnNpdGlvbjogYWxsIDAuMjVzOwp9CgojcmV2aWV3LXN1Ym1pdC1idG46aG92ZXIgewogIGJhY2tncm91bmQ6ICMyMGJkNWE7CiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0ycHgpOwp9CgojcmV2aWV3LXN1Ym1pdC1idG46ZGlzYWJsZWQgewogIG9wYWNpdHk6IDAuNjsKICBjdXJzb3I6IG5vdC1hbGxvd2VkOwogIHRyYW5zZm9ybTogbm9uZTsKfQoKLnJldmlldy1zdGF0dXMgewogIG1hcmdpbi10b3A6IDFyZW07CiAgZm9udC13ZWlnaHQ6IDYwMDsKfQoKLnJldmlldy1zdGF0dXMuc3VjY2VzcyB7IGNvbG9yOiAjMjVEMzY2OyB9Ci5yZXZpZXctc3RhdHVzLmVycm9yIHsgY29sb3I6ICNlNzRjM2M7IH0KCi5yZXZpZXctbm90ZSB7CiAgbWFyZ2luLXRvcDogMC44cmVtOwogIGZvbnQtc2l6ZTogMC44NXJlbTsKICBjb2xvcjogdmFyKC0tdGV4dC1tdXRlZCk7Cn0KCi5yZXZpZXdzLWxpc3QgaDIgewogIGNvbG9yOiB2YXIoLS10ZXh0LXByaW1hcnkpOwogIG1hcmdpbi1ib3R0b206IDEuNXJlbTsKICBmb250LXNpemU6IDEuNXJlbTsKfQoKLnJldmlldy1jYXJkIHsKICBiYWNrZ3JvdW5kOiB2YXIoLS1iZy1hY2NlbnQpOwogIHBhZGRpbmc6IDEuNXJlbSAxLjhyZW07CiAgYm9yZGVyLXJhZGl1czogMTJweDsKICBtYXJnaW4tYm90dG9tOiAxLjJyZW07Cn0KCi5yZXZpZXctY2FyZC1oZWFkZXIgewogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgbWFyZ2luLWJvdHRvbTogMC42cmVtOwp9CgoucmV2aWV3LWNhcmQtbmFtZSB7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBjb2xvcjogdmFyKC0tdGV4dC1wcmltYXJ5KTsKfQoKLnJldmlldy1jYXJkLXN0YXJzIHsKICBjb2xvcjogI2Y1YTYyMzsKICBsZXR0ZXItc3BhY2luZzogMnB4Owp9CgoucmV2aWV3LWNhcmQtbWVzc2FnZSB7CiAgY29sb3I6IHZhcigtLXRleHQtc2Vjb25kYXJ5KTsKICBsaW5lLWhlaWdodDogMS42Owp9CgoucmV2aWV3cy1sb2FkaW5nLCAucmV2aWV3cy1lbXB0eSB7CiAgY29sb3I6IHZhcigtLXRleHQtbXV0ZWQpOwogIHRleHQtYWxpZ246IGNlbnRlcjsKICBwYWRkaW5nOiAycmVtIDA7Cn0KPC9zdHlsZT4KCjxzY3JpcHQ+CihmdW5jdGlvbigpIHsKICBjb25zdCBTVVBBQkFTRV9VUkwgPSAnaHR0cHM6Ly9nenF1aHpicm5jZHVuaWF5dXpqcy5zdXBhYmFzZS5jbyc7CiAgY29uc3QgU1VQQUJBU0VfS0VZID0gJ3NiX3B1Ymxpc2hhYmxlXzJ4MFpSYlFMMThhSE00UkI5ZnVBdHdfX2RIZ1IzcG8nOwogIGNvbnN0IGlzQXIgPSB7ey0gaWYgZXEgLlNpdGUuTGFuZ3VhZ2UuTGFuZyAiYXIiIH19dHJ1ZXt7LSBlbHNlIH19ZmFsc2V7ey0gZW5kIH19OwoKICBjb25zdCBmb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jldmlldy1mb3JtJyk7CiAgY29uc3Qgc3RhdHVzRWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmV2aWV3LXN0YXR1cycpOwogIGNvbnN0IHN1Ym1pdEJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyZXZpZXctc3VibWl0LWJ0bicpOwogIGNvbnN0IGxpc3RFbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyZXZpZXdzLWxpc3QtY29udGVudCcpOwoKICBmdW5jdGlvbiBlc2NhcGVIdG1sKHN0cikgewogICAgY29uc3QgZGl2ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgICBkaXYudGV4dENvbnRlbnQgPSBzdHI7CiAgICByZXR1cm4gZGl2LmlubmVySFRNTDsKICB9CgogIGZ1bmN0aW9uIHNldHVwU3RhcklucHV0KGNvbnRhaW5lcklkKSB7CiAgICBjb25zdCBjb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChjb250YWluZXJJZCk7CiAgICBpZiAoIWNvbnRhaW5lcikgcmV0dXJuOwogICAgY29uc3QgbGFiZWxzID0gQXJyYXkucHJvdG90eXBlLnNsaWNlLmNhbGwoY29udGFpbmVyLnF1ZXJ5U2VsZWN0b3JBbGwoJ2xhYmVsW2RhdGEtdmFsdWVdJykpOwoKICAgIGZ1bmN0aW9uIHBhaW50KHZhbHVlKSB7CiAgICAgIGxhYmVscy5mb3JFYWNoKGZ1bmN0aW9uKGxhYmVsKSB7CiAgICAgICAgY29uc3QgdiA9IHBhcnNlSW50KGxhYmVsLmdldEF0dHJpYnV0ZSgnZGF0YS12YWx1ZScpLCAxMCk7CiAgICAgICAgbGFiZWwuY2xhc3NMaXN0LnRvZ2dsZSgnZmlsbGVkJywgdiA8PSB2YWx1ZSk7CiAgICAgIH0pOwogICAgfQoKICAgIGZ1bmN0aW9uIGN1cnJlbnRDaGVja2VkKCkgewogICAgICBjb25zdCBjaGVja2VkID0gY29udGFpbmVyLnF1ZXJ5U2VsZWN0b3IoJ2lucHV0W25hbWU9InJhdGluZyJdOmNoZWNrZWQnKTsKICAgICAgcmV0dXJuIGNoZWNrZWQgPyBwYXJzZUludChjaGVja2VkLnZhbHVlLCAxMCkgOiAwOwogICAgfQoKICAgIGNvbnRhaW5lci5hZGRFdmVudExpc3RlbmVyKCdjaGFuZ2UnLCBmdW5jdGlvbihlKSB7CiAgICAgIGlmIChlLnRhcmdldCAmJiBlLnRhcmdldC5uYW1lID09PSAncmF0aW5nJykgewogICAgICAgIHBhaW50KHBhcnNlSW50KGUudGFyZ2V0LnZhbHVlLCAxMCkpOwogICAgICB9CiAgICB9KTsKCiAgICBsYWJlbHMuZm9yRWFjaChmdW5jdGlvbihsYWJlbCkgewogICAgICBsYWJlbC5hZGRFdmVudExpc3RlbmVyKCdtb3VzZWVudGVyJywgZnVuY3Rpb24oKSB7CiAgICAgICAgcGFpbnQocGFyc2VJbnQobGFiZWwuZ2V0QXR0cmlidXRlKCdkYXRhLXZhbHVlJyksIDEwKSk7CiAgICAgIH0pOwogICAgfSk7CgogICAgY29udGFpbmVyLmFkZEV2ZW50TGlzdGVuZXIoJ21vdXNlbGVhdmUnLCBmdW5jdGlvbigpIHsKICAgICAgcGFpbnQoY3VycmVudENoZWNrZWQoKSk7CiAgICB9KTsKCiAgICBwYWludChjdXJyZW50Q2hlY2tlZCgpKTsKICB9CgogIHNldHVwU3RhcklucHV0KCdzdGFyLWlucHV0Jyk7CgogIGFzeW5jIGZ1bmN0aW9uIGxvYWRSZXZpZXdzKCkgewogICAgdHJ5IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goU1VQQUJBU0VfVVJMICsgJy9yZXN0L3YxL3Jldmlld3M/YXBwcm92ZWQ9ZXEudHJ1ZSZzZWxlY3Q9KiZvcmRlcj1jcmVhdGVkX2F0LmRlc2MnLCB7CiAgICAgICAgaGVhZGVyczogewogICAgICAgICAgJ2FwaWtleSc6IFNVUEFCQVNFX0tFWSwKICAgICAgICAgICdBdXRob3JpemF0aW9uJzogJ0JlYXJlciAnICsgU1VQQUJBU0VfS0VZCiAgICAgICAgfQogICAgICB9KTsKICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKCk7CiAgICAgIGlmICghQXJyYXkuaXNBcnJheShkYXRhKSB8fCBkYXRhLmxlbmd0aCA9PT0gMCkgewogICAgICAgIGxpc3RFbC5pbm5lckhUTUwgPSAnPHAgY2xhc3M9InJldmlld3MtZW1wdHkiPicgKyAoaXNBciA/ICfZhNinINiq2YjYrNivINiq2YLZitmK2YXYp9iqINio2LnYry4g2YPZhiDYo9mI2YQg2YXZhiDZiti02KfYsdmDIScgOiAnTm8gcmV2aWV3cyB5ZXQuIEJlIHRoZSBmaXJzdCB0byBzaGFyZSEnKSArICc8L3A+JzsKICAgICAgICByZXR1cm47CiAgICAgIH0KICAgICAgbGlzdEVsLmlubmVySFRNTCA9IGRhdGEubWFwKGZ1bmN0aW9uKHIpIHsKICAgICAgICBjb25zdCBzdGFycyA9ICfimIUnLnJlcGVhdChyLnJhdGluZykgKyAn4piGJy5yZXBlYXQoNSAtIHIucmF0aW5nKTsKICAgICAgICByZXR1cm4gJzxkaXYgY2xhc3M9InJldmlldy1jYXJkIj4nICsKICAgICAgICAgICc8ZGl2IGNsYXNzPSJyZXZpZXctY2FyZC1oZWFkZXIiPicgKwogICAgICAgICAgICAnPHNwYW4gY2xhc3M9InJldmlldy1jYXJkLW5hbWUiPicgKyBlc2NhcGVIdG1sKHIubmFtZSkgKyAnPC9zcGFuPicgKwogICAgICAgICAgICAnPHNwYW4gY2xhc3M9InJldmlldy1jYXJkLXN0YXJzIj4nICsgc3RhcnMgKyAnPC9zcGFuPicgKwogICAgICAgICAgJzwvZGl2PicgKwogICAgICAgICAgJzxwIGNsYXNzPSJyZXZpZXctY2FyZC1tZXNzYWdlIj4nICsgZXNjYXBlSHRtbChyLm1lc3NhZ2UpICsgJzwvcD4nICsKICAgICAgICAnPC9kaXY+JzsKICAgICAgfSkuam9pbignJyk7CiAgICB9IGNhdGNoIChlKSB7CiAgICAgIGxpc3RFbC5pbm5lckhUTUwgPSAnPHAgY2xhc3M9InJldmlld3MtZW1wdHkiPicgKyAoaXNBciA/ICfYqti52LDYsSDYqtit2YXZitmEINin2YTYqtmC2YrZitmF2KfYqi4nIDogJ0NvdWxkIG5vdCBsb2FkIHJldmlld3MuJykgKyAnPC9wPic7CiAgICB9CiAgfQoKICBmb3JtLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGFzeW5jIGZ1bmN0aW9uKGUpIHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKCiAgICBpZiAoZm9ybS53ZWJzaXRlLnZhbHVlKSByZXR1cm47IC8vIGhvbmV5cG90IHRyaWdnZXJlZCwgc2lsZW50bHkgaWdub3JlCgogICAgY29uc3QgbmFtZSA9IGZvcm0ubmFtZS52YWx1ZS50cmltKCk7CiAgICBjb25zdCByYXRpbmdJbnB1dCA9IGZvcm0ucXVlcnlTZWxlY3RvcignaW5wdXRbbmFtZT0icmF0aW5nIl06Y2hlY2tlZCcpOwogICAgY29uc3QgbWVzc2FnZSA9IGZvcm0ubWVzc2FnZS52YWx1ZS50cmltKCk7CgogICAgaWYgKCFuYW1lIHx8ICFyYXRpbmdJbnB1dCB8fCAhbWVzc2FnZSkgewogICAgICBzdGF0dXNFbC50ZXh0Q29udGVudCA9IGlzQXIgPyAn2YrYsdis2Ykg2KrYudio2KbYqSDYrNmF2YrYuSDYp9mE2K3ZgtmI2YQg2YjYp9iu2KrZitin2LEg2KrZgtmK2YrZhS4nIDogJ1BsZWFzZSBmaWxsIGluIGFsbCBmaWVsZHMgYW5kIHNlbGVjdCBhIHJhdGluZy4nOwogICAgICBzdGF0dXNFbC5jbGFzc05hbWUgPSAncmV2aWV3LXN0YXR1cyBlcnJvcic7CiAgICAgIHJldHVybjsKICAgIH0KCiAgICBzdWJtaXRCdG4uZGlzYWJsZWQgPSB0cnVlOwogICAgc3RhdHVzRWwudGV4dENvbnRlbnQgPSAnJzsKICAgIHN0YXR1c0VsLmNsYXNzTmFtZSA9ICdyZXZpZXctc3RhdHVzJzsKCiAgICB0cnkgewogICAgICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChTVVBBQkFTRV9VUkwgKyAnL3Jlc3QvdjEvcmV2aWV3cycsIHsKICAgICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgICBoZWFkZXJzOiB7CiAgICAgICAgICAnYXBpa2V5JzogU1VQQUJBU0VfS0VZLAogICAgICAgICAgJ0F1dGhvcml6YXRpb24nOiAnQmVhcmVyICcgKyBTVVBBQkFTRV9LRVksCiAgICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICAgJ1ByZWZlcic6ICdyZXR1cm49bWluaW1hbCcKICAgICAgICB9LAogICAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsKICAgICAgICAgIG5hbWU6IG5hbWUsCiAgICAgICAgICByYXRpbmc6IHBhcnNlSW50KHJhdGluZ0lucHV0LnZhbHVlLCAxMCksCiAgICAgICAgICBtZXNzYWdlOiBtZXNzYWdlLAogICAgICAgICAgYXBwcm92ZWQ6IGZhbHNlCiAgICAgICAgfSkKICAgICAgfSk7CgogICAgICBpZiAocmVzLm9rKSB7CiAgICAgICAgc3RhdHVzRWwudGV4dENvbnRlbnQgPSBpc0FyID8gJ9i02YPYsdin2Ysg2YTZgyEg2LPZiti42YfYsSDYqtmC2YrZitmF2YMg2KjYudivINin2YTZhdmI2KfZgdmC2Kkg2LnZhNmK2YcuJyA6ICdUaGFuayB5b3UhIFlvdXIgcmV2aWV3IHdpbGwgYXBwZWFyIG9uY2UgYXBwcm92ZWQuJzsKICAgICAgICBzdGF0dXNFbC5jbGFzc05hbWUgPSAncmV2aWV3LXN0YXR1cyBzdWNjZXNzJzsKICAgICAgICBmb3JtLnJlc2V0KCk7CiAgICAgICAgc2V0dXBTdGFySW5wdXQoJ3N0YXItaW5wdXQnKTsKICAgICAgfSBlbHNlIHsKICAgICAgICB0aHJvdyBuZXcgRXJyb3IoJ1N1Ym1pdCBmYWlsZWQnKTsKICAgICAgfQogICAgfSBjYXRjaCAoZSkgewogICAgICBzdGF0dXNFbC50ZXh0Q29udGVudCA9IGlzQXIgPyAn2K3Yr9irINiu2LfYoy4g2YrYsdis2Ykg2KfZhNmF2K3Yp9mI2YTYqSDZhdix2Kkg2KPYrtix2YkuJyA6ICdTb21ldGhpbmcgd2VudCB3cm9uZy4gUGxlYXNlIHRyeSBhZ2Fpbi4nOwogICAgICBzdGF0dXNFbC5jbGFzc05hbWUgPSAncmV2aWV3LXN0YXR1cyBlcnJvcic7CiAgICB9IGZpbmFsbHkgewogICAgICBzdWJtaXRCdG4uZGlzYWJsZWQgPSBmYWxzZTsKICAgIH0KICB9KTsKCiAgbG9hZFJldmlld3MoKTsKfSkoKTsKPC9zY3JpcHQ+Cgp7ey0gZW5kIH19Cg==
+{{- define "main" }}
+
+{{- if eq .Site.Language.Lang "ar" }}
+
+<div class="reviews-page" dir="rtl">
+  <div class="reviews-container">
+    <h1 class="reviews-title">التقييمات</h1>
+    <p class="reviews-subtitle">شاركنا تجربتك مع ناسويل، أو اطّلع على تجارب الآخرين.</p>
+
+    <div class="review-form-card">
+      <h2>أضف تقييمك</h2>
+      <form id="review-form">
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <label for="review-name">الاسم</label>
+        <input type="text" id="review-name" name="name" required maxlength="80">
+
+        <label>التقييم</label>
+        <div class="star-input" id="star-input" dir="ltr">
+          <input type="radio" name="rating" id="ar-star5" value="5"><label for="ar-star5" data-value="5">★</label>
+          <input type="radio" name="rating" id="ar-star4" value="4"><label for="ar-star4" data-value="4">★</label>
+          <input type="radio" name="rating" id="ar-star3" value="3"><label for="ar-star3" data-value="3">★</label>
+          <input type="radio" name="rating" id="ar-star2" value="2"><label for="ar-star2" data-value="2">★</label>
+          <input type="radio" name="rating" id="ar-star1" value="1"><label for="ar-star1" data-value="1">★</label>
+        </div>
+
+        <label for="review-message">تجربتك</label>
+        <textarea id="review-message" name="message" rows="4" required maxlength="600"></textarea>
+
+        <button type="submit" id="review-submit-btn">إرسال التقييم</button>
+        <p id="review-status" class="review-status"></p>
+        <p class="review-note">سيظهر تقييمك بعد مراجعته والموافقة عليه.</p>
+      </form>
+    </div>
+
+    <div class="reviews-list">
+      <h2>آراء العملاء</h2>
+      <div id="reviews-list-content">
+        <p class="reviews-loading">جارٍ التحميل...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- else }}
+
+<div class="reviews-page">
+  <div class="reviews-container">
+    <h1 class="reviews-title">Reviews</h1>
+    <p class="reviews-subtitle">Share your experience with Naswell, or see what others have said.</p>
+
+    <div class="review-form-card">
+      <h2>Leave a Review</h2>
+      <form id="review-form">
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <label for="review-name">Name</label>
+        <input type="text" id="review-name" name="name" required maxlength="80">
+
+        <label>Rating</label>
+        <div class="star-input" id="star-input">
+          <input type="radio" name="rating" id="star5" value="5"><label for="star5" data-value="5">★</label>
+          <input type="radio" name="rating" id="star4" value="4"><label for="star4" data-value="4">★</label>
+          <input type="radio" name="rating" id="star3" value="3"><label for="star3" data-value="3">★</label>
+          <input type="radio" name="rating" id="star2" value="2"><label for="star2" data-value="2">★</label>
+          <input type="radio" name="rating" id="star1" value="1"><label for="star1" data-value="1">★</label>
+        </div>
+
+        <label for="review-message">Your Experience</label>
+        <textarea id="review-message" name="message" rows="4" required maxlength="600"></textarea>
+
+        <button type="submit" id="review-submit-btn">Submit Review</button>
+        <p id="review-status" class="review-status"></p>
+        <p class="review-note">Your review will appear after it's been reviewed and approved.</p>
+      </form>
+    </div>
+
+    <div class="reviews-list">
+      <h2>What People Are Saying</h2>
+      <div id="reviews-list-content">
+        <p class="reviews-loading">Loading...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- end }}
+
+<style>
+.reviews-page {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.reviews-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.review-form-card {
+  background: var(--bg-accent);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+}
+
+.review-form-card h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#review-form label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 1.2rem;
+}
+
+#review-form input[type="text"],
+#review-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--text-muted, #999);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.star-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  font-size: 2rem;
+}
+
+.star-input input {
+  display: none;
+}
+
+.star-input label {
+  cursor: pointer;
+  color: var(--text-muted, #999);
+  transition: color 0.15s, transform 0.15s;
+  margin: 0 !important;
+}
+
+.star-input label.filled {
+  color: #f5a623;
+  transform: scale(1.12);
+}
+
+#review-submit-btn {
+  margin-top: 1.5rem;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#review-submit-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+#review-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.review-status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.review-status.success { color: #25D366; }
+.review-status.error { color: #e74c3c; }
+
+.review-note {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.reviews-list h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.review-card {
+  background: var(--bg-accent);
+  padding: 1.5rem 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.review-card-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.review-card-stars {
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.review-card-message {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.reviews-loading, .reviews-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem 0;
+}
+</style>
+
+<script>
+(function() {
+  const SUPABASE_URL = 'https://gzquhzbrncduniayuzjs.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_2x0ZRbQL18aHM4RB9fuAtw__dHgR3po';
+  const isAr = {{ if eq .Site.Language.Lang "ar" }}true{{ else }}false{{ end }};
+
+  const form = document.getElementById('review-form');
+  const statusEl = document.getElementById('review-status');
+  const submitBtn = document.getElementById('review-submit-btn');
+  const listEl = document.getElementById('reviews-list-content');
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function setupStarInput(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const labels = Array.prototype.slice.call(container.querySelectorAll('label[data-value]'));
+
+    function paint(value) {
+      labels.forEach(function(label) {
+        const v = parseInt(label.getAttribute('data-value'), 10);
+        label.classList.toggle('filled', v <= value);
+      });
+    }
+
+    function currentChecked() {
+      const checked = container.querySelector('input[name="rating"]:checked');
+      return checked ? parseInt(checked.value, 10) : 0;
+    }
+
+    container.addEventListener('change', function(e) {
+      if (e.target && e.target.name === 'rating') {
+        paint(parseInt(e.target.value, 10));
+      }
+    });
+
+    labels.forEach(function(label) {
+      label.addEventListener('mouseenter', function() {
+        paint(parseInt(label.getAttribute('data-value'), 10));
+      });
+    });
+
+    container.addEventListener('mouseleave', function() {
+      paint(currentChecked());
+    });
+
+    paint(currentChecked());
+  }
+
+  setupStarInput('star-input');
+
+  async function loadReviews() {
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?approved=eq.true&select=*&order=created_at.desc', {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY
+        }
+      });
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) {
+        listEl.innerHTML = '<p class="reviews-empty">' + (isAr ? 'لا توجد تقييمات بعد. كن أول من يشارك!' : 'No reviews yet. Be the first to share!') + '</p>';
+        return;
+      }
+      listEl.innerHTML = data.map(function(r) {
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        return '<div class="review-card">' +
+          '<div class="review-card-header">' +
+            '<span class="review-card-name">' + escapeHtml(r.name) + '</span>' +
+            '<span class="review-card-stars">' + stars + '</span>' +
+          '</div>' +
+          '<p class="review-card-message">' + escapeHtml(r.message) + '</p>' +
+        '</div>';
+      }).join('');
+    } catch (e) {
+      listEl.innerHTML = '<p class="reviews-empty">' + (isAr ? 'تعذر تحميل التقييمات.' : 'Could not load reviews.') + '</p>';
+    }
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    if (form.website.value) return; // honeypot triggered, silently ignore
+
+    const name = form.name.value.trim();
+    const ratingInput = form.querySelector('input[name="rating"]:checked');
+    const message = form.message.value.trim();
+
+    if (!name || !ratingInput || !message) {
+      statusEl.textContent = isAr ? 'يرجى تعبئة جميع الحقول واختيار تقييم.' : 'Please fill in all fields and select a rating.';
+      statusEl.className = 'review-status error';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    statusEl.textContent = '';
+    statusEl.className = 'review-status';
+
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          name: name,
+          rating: parseInt(ratingInput.value, 10),
+          message: message,
+          approved: false
+        })
+      });
+
+      if (res.ok) {
+        statusEl.textContent = isAr ? 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.' : 'Thank you! Your review will appear once approved.';
+        statusEl.className = 'review-status success';
+        form.reset();
+        setupStarInput('star-input');
+      } else {
+        throw new Error('Submit failed');
+      }
+    } catch (e) {
+      statusEl.textContent = isAr ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.';
+      statusEl.className = 'review-status error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  loadReviews();
+})();
+</script>
+
+{{- end }}
