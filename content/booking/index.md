@@ -25,15 +25,15 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 
 [📱 Book Your Free Discovery Session via WhatsApp](https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20session)
 
-[💳 Pay for a Half-Hour Session via PayPal](https://paypal.me/NasirAyanleh/21.78USD)
+[💳 Pay for a Half-Hour Session via PayPal](https://www.paypal.com/ncp/payment/THCQJQFJP8UTC)
 
 *(80 AED, charged as $21.78 USD via PayPal)*
 
-[💳 Pay for a Single Session via PayPal](https://paypal.me/NasirAyanleh/40.84USD)
+[💳 Pay for a Single Session via PayPal](https://www.paypal.com/ncp/payment/TUNATVC7K9X7G)
 
 *(150 AED, charged as $40.84 USD via PayPal)*
 
-[💳 Pay for the 3-Session Package via PayPal](https://paypal.me/NasirAyanleh/108.92USD)
+[💳 Pay for the 3-Session Package via PayPal](https://www.paypal.com/ncp/payment/X8LVJ3ZG6VM48)
 
 *(400 AED, charged as $108.92 USD via PayPal)*
 
