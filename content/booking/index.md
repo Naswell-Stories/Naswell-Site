@@ -39,7 +39,7 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 
 **Booking directly here is the most affordable option** — other coaching platforms add service fees that increase the total cost.
 
-**Only 6 founding client spots remaining - Don't miss this opportunity!**
+**Only 2 founding client spots remaining - Don't miss this opportunity!**
 
 ---
 
