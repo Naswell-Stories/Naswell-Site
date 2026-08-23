@@ -45,11 +45,11 @@ I'm offering **FREE discovery sessions** followed by affordable coaching package
 
 ## Want Deeper, Sustained Support?
 
-**Extensive Coaching** — twice-weekly sessions for those who want ongoing, intensive support. Pricing is tailored to your specific needs, so let's talk first.
+**Extensive Coaching** — for those who want ongoing, intensive support beyond a single package. Frequency and pricing are tailored case-by-case, so let's talk first.
 
 *Limited to 2-3 clients at a time.*
 
-[💬 Let's Discuss Your Needs](https://wa.me/971525704399?text=Hi%20Nasir%2C%20I%27m%20interested%20in%20Extensive%20Coaching%20-%20two%20sessions%20per%20week.%20I%27d%20like%20to%20discuss%20what%20I%20need%20and%20pricing.)
+[💬 Let's Discuss Your Needs](https://wa.me/971525704399?text=Hi%20Nasir%2C%20I%27m%20interested%20in%20Extensive%20Coaching.%20I%27d%20like%20to%20discuss%20what%20I%20need%20and%20pricing.)
 
 ---
 
