@@ -287,7 +287,8 @@
       }
       listEl.innerHTML = data.map(function(r) {
         const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
-        const displayMessage = (isAr && r.message_ar) ? r.message_ar : r.message;
+        var displayMessage = r.message;
+        if (isAr && r.message_ar) { displayMessage = r.message_ar; }
         return '<div class="review-card">' +
           '<div class="review-card-header">' +
             '<span class="review-card-name">' + escapeHtml(r.name) + '</span>' +
