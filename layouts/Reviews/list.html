@@ -17,11 +17,11 @@
 
         <label>التقييم</label>
         <div class="star-input" id="star-input" dir="ltr">
-          <input type="radio" name="rating" id="ar-star5" value="5"><label for="ar-star5" data-value="5">★</label>
-          <input type="radio" name="rating" id="ar-star4" value="4"><label for="ar-star4" data-value="4">★</label>
-          <input type="radio" name="rating" id="ar-star3" value="3"><label for="ar-star3" data-value="3">★</label>
-          <input type="radio" name="rating" id="ar-star2" value="2"><label for="ar-star2" data-value="2">★</label>
-          <input type="radio" name="rating" id="ar-star1" value="1"><label for="ar-star1" data-value="1">★</label>
+          <input type="radio" name="rating" id="ar-star5" value="5"><label for="ar-star5">★</label>
+          <input type="radio" name="rating" id="ar-star4" value="4"><label for="ar-star4">★</label>
+          <input type="radio" name="rating" id="ar-star3" value="3"><label for="ar-star3">★</label>
+          <input type="radio" name="rating" id="ar-star2" value="2"><label for="ar-star2">★</label>
+          <input type="radio" name="rating" id="ar-star1" value="1"><label for="ar-star1">★</label>
         </div>
 
         <label for="review-message">تجربتك</label>
@@ -59,11 +59,11 @@
 
         <label>Rating</label>
         <div class="star-input" id="star-input">
-          <input type="radio" name="rating" id="star5" value="5"><label for="star5" data-value="5">★</label>
-          <input type="radio" name="rating" id="star4" value="4"><label for="star4" data-value="4">★</label>
-          <input type="radio" name="rating" id="star3" value="3"><label for="star3" data-value="3">★</label>
-          <input type="radio" name="rating" id="star2" value="2"><label for="star2" data-value="2">★</label>
-          <input type="radio" name="rating" id="star1" value="1"><label for="star1" data-value="1">★</label>
+          <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+          <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+          <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+          <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+          <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
         </div>
 
         <label for="review-message">Your Experience</label>
@@ -165,13 +165,14 @@
 .star-input label {
   cursor: pointer;
   color: var(--text-muted, #999);
-  transition: color 0.15s, transform 0.15s;
+  transition: color 0.15s;
   margin: 0 !important;
 }
 
-.star-input label.filled {
+.star-input input:checked ~ label,
+.star-input label:hover,
+.star-input label:hover ~ label {
   color: #f5a623;
-  transform: scale(1.12);
 }
 
 #review-submit-btn {
@@ -271,44 +272,6 @@
     return div.innerHTML;
   }
 
-  function setupStarInput(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    const labels = Array.prototype.slice.call(container.querySelectorAll('label[data-value]'));
-
-    function paint(value) {
-      labels.forEach(function(label) {
-        const v = parseInt(label.getAttribute('data-value'), 10);
-        label.classList.toggle('filled', v <= value);
-      });
-    }
-
-    function currentChecked() {
-      const checked = container.querySelector('input[name="rating"]:checked');
-      return checked ? parseInt(checked.value, 10) : 0;
-    }
-
-    container.addEventListener('change', function(e) {
-      if (e.target && e.target.name === 'rating') {
-        paint(parseInt(e.target.value, 10));
-      }
-    });
-
-    labels.forEach(function(label) {
-      label.addEventListener('mouseenter', function() {
-        paint(parseInt(label.getAttribute('data-value'), 10));
-      });
-    });
-
-    container.addEventListener('mouseleave', function() {
-      paint(currentChecked());
-    });
-
-    paint(currentChecked());
-  }
-
-  setupStarInput('star-input');
-
   async function loadReviews() {
     try {
       const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?approved=eq.true&select=*&order=created_at.desc', {
@@ -324,12 +287,13 @@
       }
       listEl.innerHTML = data.map(function(r) {
         const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        const displayMessage = (isAr && r.message_ar) ? r.message_ar : r.message;
         return '<div class="review-card">' +
           '<div class="review-card-header">' +
             '<span class="review-card-name">' + escapeHtml(r.name) + '</span>' +
             '<span class="review-card-stars">' + stars + '</span>' +
           '</div>' +
-          '<p class="review-card-message">' + escapeHtml(r.message) + '</p>' +
+          '<p class="review-card-message">' + escapeHtml(displayMessage) + '</p>' +
         '</div>';
       }).join('');
     } catch (e) {
@@ -347,7 +311,7 @@
     const message = form.message.value.trim();
 
     if (!name || !ratingInput || !message) {
-      statusEl.textContent = isAr ? 'يرجى تعبئة جميع الحقول واختيار تقييم.' : 'Please fill in all fields and select a rating.';
+      statusEl.textContent = isAr ? 'يرجى تعبئة جميع الحقول واختيار تقييم.';
       statusEl.className = 'review-status error';
       return;
     }
@@ -374,10 +338,9 @@
       });
 
       if (res.ok) {
-        statusEl.textContent = isAr ? 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.' : 'Thank you! Your review will appear once approved.';
+        statusEl.textContent = isAr ? 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.';
         statusEl.className = 'review-status success';
         form.reset();
-        setupStarInput('star-input');
       } else {
         throw new Error('Submit failed');
       }
