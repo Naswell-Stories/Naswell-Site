@@ -282,7 +282,9 @@
       });
       const data = await res.json();
       if (!Array.isArray(data) || data.length === 0) {
-        listEl.innerHTML = '<p class="reviews-empty">' + (isAr ? 'لا توجد تقييمات بعد. كن أول من يشارك!' : 'No reviews yet. Be the first to share!') + '</p>';
+        var emptyMsg = 'No reviews yet. Be the first to share!';
+        if (isAr) { emptyMsg = 'لا توجد تقييمات بعد. كن أول من يشارك!'; }
+        listEl.innerHTML = '<p class="reviews-empty">' + emptyMsg + '</p>';
         return;
       }
       listEl.innerHTML = data.map(function(r) {
@@ -298,7 +300,9 @@
         '</div>';
       }).join('');
     } catch (e) {
-      listEl.innerHTML = '<p class="reviews-empty">' + (isAr ? 'تعذر تحميل التقييمات.' : 'Could not load reviews.') + '</p>';
+      var errMsg = 'Could not load reviews.';
+      if (isAr) { errMsg = 'تعذر تحميل التقييمات.'; }
+      listEl.innerHTML = '<p class="reviews-empty">' + errMsg + '</p>';
     }
   }
 
@@ -312,7 +316,8 @@
     const message = form.message.value.trim();
 
     if (!name || !ratingInput || !message) {
-      statusEl.textContent = isAr ? 'يرجى تعبئة جميع الحقول واختيار تقييم.';
+      statusEl.textContent = 'Please fill in all fields and select a rating.';
+      if (isAr) { statusEl.textContent = 'يرجى تعبئة جميع الحقول واختيار تقييم.'; }
       statusEl.className = 'review-status error';
       return;
     }
@@ -339,14 +344,16 @@
       });
 
       if (res.ok) {
-        statusEl.textContent = isAr ? 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.';
+        statusEl.textContent = 'Thank you! Your review will appear once approved.';
+        if (isAr) { statusEl.textContent = 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.'; }
         statusEl.className = 'review-status success';
         form.reset();
       } else {
         throw new Error('Submit failed');
       }
     } catch (e) {
-      statusEl.textContent = isAr ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.';
+      statusEl.textContent = 'Something went wrong. Please try again.';
+      if (isAr) { statusEl.textContent = 'حدث خطأ. يرجى المحاولة مرة أخرى.'; }
       statusEl.className = 'review-status error';
     } finally {
       submitBtn.disabled = false;
