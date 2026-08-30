@@ -1,8 +1,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Naswell Stories</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults navigating post-COVID transitions{{ end }}">
+    <title>{{ .Title }} - Naswell Stories | Nasir Ayanleh</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching with Nasir Ayanleh for adults navigating post-COVID transitions{{ end }}">
+    <meta name="author" content="Nasir Ayanleh">
     
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +25,33 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:title" content="{{ .Title }} - Naswell Stories">
+    <meta property="og:title" content="{{ .Title }} - Naswell Stories | Nasir Ayanleh">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
     <meta property="og:image" content="https://naswellstories.com/images/naswell-logo.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@NaswellStories">
-    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories">
+    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories | Nasir Ayanleh">
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
     <meta name="twitter:image" content="https://naswellstories.com/images/naswell-logo.png">
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nasir Ayanleh",
+      "url": "https://naswellstories.com",
+      "image": "https://naswellstories.com/images/nasir-headshot.jpeg",
+      "jobTitle": "Life Coach",
+      "sameAs": [
+        "https://www.linkedin.com/in/naswell-stories-7b9b52389/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Naswell Stories"
+      }
+    }
+    </script>
 </head>
