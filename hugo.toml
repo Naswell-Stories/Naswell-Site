@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://naswellstories.com/"
 defaultContentLanguage = "en"
 title = "Naswell – Stories & Coaching"
 theme = "PaperMod"
@@ -41,12 +41,6 @@ relativeURLs = true
   disableFingerprinting = true
   disableHLJS = true
 
-# Footer social icons are hidden from view until the accounts are fully activated.
-# The links themselves stay defined in layouts/partials/footer.html - just flip
-# this to true when ready to show them again.
-[params.display]
-  socialLinksVisible = false
-
 [pagination]
   pagerSize = 10
 
@@ -69,14 +63,11 @@ name = "Coaching"
 url = "/coaching/"
 weight = 30
 
-# Podcast nav link hidden until launch - page is marked draft in content/podcast/_index.md
-# Restore both this menu entry and the Arabic one below, and remove draft:true from
-# content/podcast/_index.md and content/ar/podcast/_index.md, to reactivate.
-# [[languages.en.menu.main]]
-# identifier = "podcast"
-# name = "Podcast"
-# url = "/podcast/"
-# weight = 42
+[[languages.en.menu.main]]
+identifier = "podcast"
+name = "Podcast"
+url = "/podcast/"
+weight = 42
 
 [[languages.en.menu.main]]
 identifier = "booking"
@@ -121,11 +112,11 @@ name = "التدريب"
 url = "/ar/coaching/"
 weight = 30
 
-# [[languages.ar.menu.main]]
-# identifier = "podcast"
-# name = "بودكاست"
-# url = "/ar/podcast/"
-# weight = 42
+[[languages.ar.menu.main]]
+identifier = "podcast"
+name = "بودكاست"
+url = "/ar/podcast/"
+weight = 42
 
 [[languages.ar.menu.main]]
 identifier = "booking"
