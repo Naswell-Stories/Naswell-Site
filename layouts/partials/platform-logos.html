@@ -1,0 +1,84 @@
+<!-- Verified Platforms Section -->
+<section class="platform-logos">
+  <div class="section-container">
+    <p class="platform-logos-label">Certified &amp; Approved On</p>
+    <div class="platform-logos-row">
+      <span class="platform-logo-item" title="LiftTalk">
+        <img src="/images/platforms/lifttalk.svg" alt="Verified coach on LiftTalk" class="platform-logo-img" loading="lazy">
+      </span>
+      <span class="platform-logo-item" title="Fiverr">
+        <img src="/images/platforms/fiverr.svg" alt="Verified coach on Fiverr" class="platform-logo-img" loading="lazy">
+      </span>
+      <span class="platform-logo-item" title="Clarity.fm">
+        <img src="/images/platforms/clarity-fm.svg" alt="Verified coach on Clarity.fm" class="platform-logo-img" loading="lazy">
+      </span>
+      <span class="platform-logo-item" title="CoachCompare">
+        <img src="/images/platforms/coachcompare.svg" alt="Verified coach on CoachCompare" class="platform-logo-img" loading="lazy">
+      </span>
+      <span class="platform-logo-item" title="Paperbell">
+        <img src="/images/platforms/paperbell.svg" alt="Verified coach on Paperbell" class="platform-logo-img" loading="lazy">
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+.platform-logos {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  background: var(--bg-primary);
+  text-align: center;
+}
+
+.platform-logos-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.platform-logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.platform-logo-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* No cursor:pointer, no href — informational only, not a link */
+}
+
+.platform-logo-img {
+  height: 28px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.platform-logo-item:hover .platform-logo-img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+[data-theme="dark"] .platform-logo-img {
+  filter: grayscale(100%) invert(0.85);
+  opacity: 0.55;
+}
+
+[data-theme="dark"] .platform-logo-item:hover .platform-logo-img {
+  filter: grayscale(0%) invert(0);
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .platform-logo-img {
+    height: 22px;
+  }
+}
+</style>
