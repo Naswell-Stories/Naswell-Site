@@ -1,5 +1,6 @@
 +++
 title = "Stories"
+translationKey = "stories"
 +++
 
 ## Share your story
