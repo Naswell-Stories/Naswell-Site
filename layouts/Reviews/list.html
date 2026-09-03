@@ -1,0 +1,367 @@
+{{- define "main" }}
+
+{{- if eq .Site.Language.Lang "ar" }}
+
+<div class="reviews-page" dir="rtl">
+  <div class="reviews-container">
+    <h1 class="reviews-title">التقييمات</h1>
+    <p class="reviews-subtitle">شاركنا تجربتك مع ناسويل، أو اطّلع على تجارب الآخرين.</p>
+
+    <div class="review-form-card">
+      <h2>أضف تقييمك</h2>
+      <form id="review-form">
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <label for="review-name">الاسم</label>
+        <input type="text" id="review-name" name="name" required maxlength="80">
+
+        <label>التقييم</label>
+        <div class="star-input" id="star-input" dir="ltr">
+          <input type="radio" name="rating" id="ar-star5" value="5"><label for="ar-star5">★</label>
+          <input type="radio" name="rating" id="ar-star4" value="4"><label for="ar-star4">★</label>
+          <input type="radio" name="rating" id="ar-star3" value="3"><label for="ar-star3">★</label>
+          <input type="radio" name="rating" id="ar-star2" value="2"><label for="ar-star2">★</label>
+          <input type="radio" name="rating" id="ar-star1" value="1"><label for="ar-star1">★</label>
+        </div>
+
+        <label for="review-message">تجربتك</label>
+        <textarea id="review-message" name="message" rows="4" required maxlength="600"></textarea>
+
+        <button type="submit" id="review-submit-btn">إرسال التقييم</button>
+        <p id="review-status" class="review-status"></p>
+        <p class="review-note">سيظهر تقييمك بعد مراجعته والموافقة عليه.</p>
+      </form>
+    </div>
+
+    <div class="reviews-list">
+      <h2>آراء العملاء</h2>
+      <div id="reviews-list-content">
+        <p class="reviews-loading">جارٍ التحميل...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- else }}
+
+<div class="reviews-page">
+  <div class="reviews-container">
+    <h1 class="reviews-title">Reviews</h1>
+    <p class="reviews-subtitle">Share your experience with Naswell, or see what others have said.</p>
+
+    <div class="review-form-card">
+      <h2>Leave a Review</h2>
+      <form id="review-form">
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <label for="review-name">Name</label>
+        <input type="text" id="review-name" name="name" required maxlength="80">
+
+        <label>Rating</label>
+        <div class="star-input" id="star-input">
+          <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+          <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+          <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+          <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+          <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+        </div>
+
+        <label for="review-message">Your Experience</label>
+        <textarea id="review-message" name="message" rows="4" required maxlength="600"></textarea>
+
+        <button type="submit" id="review-submit-btn">Submit Review</button>
+        <p id="review-status" class="review-status"></p>
+        <p class="review-note">Your review will appear after it's been reviewed and approved.</p>
+      </form>
+    </div>
+
+    <div class="reviews-list">
+      <h2>What People Are Saying</h2>
+      <div id="reviews-list-content">
+        <p class="reviews-loading">Loading...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- end }}
+
+<style>
+.reviews-page {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.reviews-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.review-form-card {
+  background: var(--bg-accent);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+}
+
+.review-form-card h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#review-form label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 1.2rem;
+}
+
+#review-form input[type="text"],
+#review-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--text-muted, #999);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.star-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  font-size: 2rem;
+}
+
+.star-input input {
+  display: none;
+}
+
+.star-input label {
+  cursor: pointer;
+  color: var(--text-muted, #999);
+  transition: color 0.15s;
+  margin: 0 !important;
+}
+
+.star-input input:checked ~ label,
+.star-input label:hover,
+.star-input label:hover ~ label {
+  color: #f5a623;
+}
+
+#review-submit-btn {
+  margin-top: 1.5rem;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#review-submit-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+#review-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.review-status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.review-status.success { color: #25D366; }
+.review-status.error { color: #e74c3c; }
+
+.review-note {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.reviews-list h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.review-card {
+  background: var(--bg-accent);
+  padding: 1.5rem 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.review-card-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.review-card-stars {
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.review-card-message {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.reviews-loading, .reviews-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem 0;
+}
+</style>
+
+<script>
+(function() {
+  const SUPABASE_URL = 'https://gzquhzbrncduniayuzjs.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_2x0ZRbQL18aHM4RB9fuAtw__dHgR3po';
+  const isAr = {{ if eq .Site.Language.Lang "ar" }}true{{ else }}false{{ end }};
+
+  const form = document.getElementById('review-form');
+  const statusEl = document.getElementById('review-status');
+  const submitBtn = document.getElementById('review-submit-btn');
+  const listEl = document.getElementById('reviews-list-content');
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function loadReviews() {
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/reviews?approved=eq.true&select=*&order=created_at.desc', {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY
+        }
+      });
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) {
+        var emptyMsg = 'No reviews yet. Be the first to share!';
+        if (isAr) { emptyMsg = 'لا توجد تقييمات بعد. كن أول من يشارك!'; }
+        listEl.innerHTML = '<p class="reviews-empty">' + emptyMsg + '</p>';
+        return;
+      }
+      listEl.innerHTML = data.map(function(r) {
+        const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+        var displayMessage = r.message;
+        if (isAr && r.message_ar) { displayMessage = r.message_ar; }
+        return '<div class="review-card">' +
+          '<div class="review-card-header">' +
+            '<span class="review-card-name">' + escapeHtml(r.name) + '</span>' +
+            '<span class="review-card-stars">' + stars + '</span>' +
+          '</div>' +
+          '<p class="review-card-message">' + escapeHtml(displayMessage) + '</p>' +
+        '</div>';
+      }).join('');
+    } catch (e) {
+      var errMsg = 'Could not load reviews.';
+      if (isAr) { errMsg = 'تعذر تحميل التقييمات.'; }
+      listEl.innerHTML = '<p class="reviews-empty">' + errMsg + '</p>';
+    }
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    if (form.website.value) return; // honeypot triggered, silently ignore
+
+    const name = form.name.value.trim();
+    const ratingInput = form.querySelector('input[name="rating"]:checked');
+    const message = form.message.value.trim();
+
+    if (!name || !ratingInput || !message) {
+      statusEl.textContent = 'Please fill in all fields and select a rating.';
+      if (isAr) { statusEl.textContent = 'يرجى تعبئة جميع الحقول واختيار تقييم.'; }
+      statusEl.className = 'review-status error';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    statusEl.textContent = '';
+    statusEl.className = 'review-status';
+
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          name: name,
+          rating: parseInt(ratingInput.value, 10),
+          message: message,
+          approved: false
+        })
+      });
+
+      if (res.ok) {
+        statusEl.textContent = 'Thank you! Your review will appear once approved.';
+        if (isAr) { statusEl.textContent = 'شكراً لك! سيظهر تقييمك بعد الموافقة عليه.'; }
+        statusEl.className = 'review-status success';
+        form.reset();
+      } else {
+        throw new Error('Submit failed');
+      }
+    } catch (e) {
+      statusEl.textContent = 'Something went wrong. Please try again.';
+      if (isAr) { statusEl.textContent = 'حدث خطأ. يرجى المحاولة مرة أخرى.'; }
+      statusEl.className = 'review-status error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  loadReviews();
+})();
+</script>
+
+{{- end }}
