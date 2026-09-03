@@ -1,3 +1,4 @@
 ---
 title: "التقييمات"
+translationKey: "reviews"
 ---
