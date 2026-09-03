@@ -1,5 +1,6 @@
 +++
 title = "Coaching"
+translationKey = "coaching"
 +++
 
 ## Coaching with Naswell

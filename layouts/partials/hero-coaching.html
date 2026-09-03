@@ -15,29 +15,37 @@
         <span class="hero-line">BECOME</span>
         <span class="hero-line-small">who you're meant to be.</span>
       </h1>
-      
+
       <!-- Centered Subtitle -->
       <p class="hero-subtitle hero-anim-4">
         Post-COVID clarity sessions.<br>
         For adults still finding their footing.
       </p>
-      
+
       <!-- Centered CTA Button with Integrated Counter -->
       <div class="hero-cta-wrapper">
-        <a href="https://wa.me/971525704399?text=Hi%20Nasir%2C%20I'd%20like%20to%20book%20a%20free%20discovery%20session" 
-           class="hero-cta hero-anim-5" 
-           target="_blank" 
+        <a href="https://wa.me/971525704399?text=Hi%20Nasir%2C%20I'd%20like%20to%20book%20a%20free%20discovery%20session"
+           class="hero-cta hero-anim-5"
+           target="_blank"
            rel="noopener">
           <span class="cta-main-text">Book Free Discovery Session →</span>
           <span class="cta-urgency">
             <span class="urgency-icon">⚡</span>
-            Only <strong>6 spots left</strong> of 10
+            Only <strong>2 spots left</strong> of 10
           </span>
         </a>
       </div>
 
       <div class="hero-paypal-wrapper">
-        <a href="https://paypal.me/NasirAyanleh/40.84USD"
+        <a href="https://www.paypal.com/ncp/payment/THCQJQFJP8UTC"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 Pay for a Half-Hour Session via PayPal
+        </a>
+        <p class="hero-paypal-note">(80 AED, charged as $21.78 USD via PayPal)</p>
+
+        <a href="https://www.paypal.com/ncp/payment/TUNATVC7K9X7G"
            class="hero-paypal-link"
            target="_blank"
            rel="noopener">
@@ -45,7 +53,7 @@
         </a>
         <p class="hero-paypal-note">(150 AED, charged as $40.84 USD via PayPal)</p>
 
-        <a href="https://paypal.me/NasirAyanleh/108.92USD"
+        <a href="https://www.paypal.com/ncp/payment/X8LVJ3ZG6VM48"
            class="hero-paypal-link"
            target="_blank"
            rel="noopener">
@@ -53,6 +61,16 @@
         </a>
         <p class="hero-paypal-note">(400 AED, charged as $108.92 USD via PayPal)</p>
         <p class="hero-paypal-cheaper-note">Booking directly here is the most affordable option — other coaching platforms add service fees that increase the total cost.</p>
+      </div>
+
+      <div class="hero-extensive-wrapper">
+        <p class="hero-extensive-text"><strong>Extensive Coaching</strong> — ongoing, intensive support tailored case-by-case.</p>
+        <a href="https://wa.me/971525704399?text=Hi%20Nasir%2C%20I%27m%20interested%20in%20Extensive%20Coaching.%20I%27d%20like%20to%20discuss%20what%20I%20need%20and%20pricing."
+           class="hero-extensive-link"
+           target="_blank"
+           rel="noopener">
+          💬 Let's Discuss Your Needs
+        </a>
       </div>
     </div>
   </div>
@@ -93,8 +111,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(245, 241, 237, 0.60) 0%, 
+  background: linear-gradient(135deg,
+    rgba(245, 241, 237, 0.60) 0%,
     rgba(232, 221, 211, 0.65) 100%
   );
   z-index: 1;
@@ -278,8 +296,8 @@
 
 /* Dark Mode Support */
 [data-theme="dark"] .hero-coaching::after {
-  background: linear-gradient(135deg, 
-    rgba(26, 26, 26, 0.60) 0%, 
+  background: linear-gradient(135deg,
+    rgba(26, 26, 26, 0.60) 0%,
     rgba(45, 45, 45, 0.65) 100%
   );
 }
@@ -349,12 +367,38 @@
   color: #b8b8b8;
 }
 
+.hero-extensive-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero-extensive-text {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin-bottom: 0.8rem;
+}
+
+.hero-extensive-link {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 0.7rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+[data-theme="dark"] .hero-extensive-text {
+  color: #b8b8b8;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .hero-coaching {
     min-height: 100vh;
   }
-  
+
   /* Remove stair effect on mobile */
   .stair-1,
   .stair-2,
@@ -362,16 +406,16 @@
     text-align: center;
     padding-left: 0;
   }
-  
+
   .hero-cta {
     width: 90%;
     padding: 1rem 2rem 0.9rem 2rem;
   }
-  
+
   .cta-main-text {
     font-size: 1rem;
   }
-  
+
   .cta-urgency {
     font-size: 0.85rem;
   }
@@ -388,11 +432,11 @@
     opacity: 1;
     transform: none;
   }
-  
+
   .hero-cta:hover {
     transform: none;
   }
-  
+
   .urgency-icon {
     animation: none;
   }

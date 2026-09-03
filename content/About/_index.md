@@ -1,10 +1,10 @@
 +++
-title = "About Naswell"
+title = "About Nasir Ayanleh"
 +++
 
-## About Naswell
+## About Nasir Ayanleh
 
-I'm a licensed and certified life coach currently pursuing an MSc in Psychology to deepen my ability to help others navigate life's transitions.
+I'm Nasir Ayanleh, a licensed and certified life coach currently pursuing an MSc in Psychology to deepen my ability to help others navigate life's transitions.
 
 I don't claim to have all the answers or the perfect path. What I offer is a clear, nonjudgmental space to help you sift through the noise and find your own direction. Think of me as a friendly drawing board—not a professional therapist, but someone who can help you untangle your thoughts and see patterns you might miss on your own.
 

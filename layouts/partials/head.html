@@ -1,8 +1,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Naswell Stories</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults navigating post-COVID transitions{{ end }}">
+    <title>{{ .Title }} - Naswell Stories | Nasir Ayanleh</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching with Nasir Ayanleh for adults navigating post-COVID transitions{{ end }}">
+    <meta name="author" content="Nasir Ayanleh">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- hreflang: tells Google which language version to show, and links each page to its translated counterpart -->
+    {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ range .AllTranslations }}
+    {{ if eq .Language.Lang "en" }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ end }}
+    {{ end }}
     
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +38,78 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:title" content="{{ .Title }} - Naswell Stories">
+    <meta property="og:title" content="{{ .Title }} - Naswell Stories | Nasir Ayanleh">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
     <meta property="og:image" content="https://naswellstories.com/images/naswell-logo.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@NaswellStories">
-    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories">
+    <meta name="twitter:title" content="{{ .Title }} - Naswell Stories | Nasir Ayanleh">
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching for adults{{ end }}">
     <meta name="twitter:image" content="https://naswellstories.com/images/naswell-logo.png">
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nasir Ayanleh",
+      "url": "https://naswellstories.com",
+      "image": "https://naswellstories.com/images/nasir-headshot.jpeg",
+      "jobTitle": "Life Coach",
+      "description": "Bilingual (Arabic/English) life coach helping young adults navigate post-COVID life transitions. Certified life coach with additional certifications in anxiety coaching and emotional coaching.",
+      "sameAs": [
+        "https://www.lifttalk.com/coach/715131?ms=coach-share&tag=715131.90031000",
+        "https://www.fiverr.com/s/9d2rKYd",
+        "https://clarity.fm/nasirayanleh",
+        "https://coachcompare.com/coach/19240-nasir-ayanleh"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Naswell Stories",
+        "url": "https://naswellstories.com"
+      },
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Arabic"
+        },
+        {
+          "@type": "Language",
+          "name": "English"
+        },
+        {
+          "@type": "Language",
+          "name": "Urdu"
+        }
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Derby"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Certified Life Coach"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Professional Anxiety Coach"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "Emotional Coach"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "diploma",
+          "name": "Diploma in Psychology of Everyday Life"
+        }
+      ]
+    }
+    </script>
 </head>

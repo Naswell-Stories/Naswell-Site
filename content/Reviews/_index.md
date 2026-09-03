@@ -1,3 +1,4 @@
 +++
 title = "Reviews"
+translationKey = "reviews"
 +++

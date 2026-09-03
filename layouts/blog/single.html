@@ -10,6 +10,245 @@
                 {{ .Content }}
             </div>
         </article>
+
+        <div class="comments-section" {{ if eq .Site.Language.Lang "ar" }}dir="rtl"{{ end }}>
+            <hr class="comments-divider">
+            <h2 class="comments-title">💬 {{ if eq .Site.Language.Lang "ar" }}التعليقات{{ else }}Comments{{ end }}</h2>
+
+            <form id="comment-form">
+                <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+                <label for="comment-name">{{ if eq .Site.Language.Lang "ar" }}الاسم{{ else }}Name{{ end }}</label>
+                <input type="text" id="comment-name" name="name" required maxlength="80">
+
+                <label for="comment-message">{{ if eq .Site.Language.Lang "ar" }}تعليقك{{ else }}Your Comment{{ end }}</label>
+                <textarea id="comment-message" name="message" rows="3" required maxlength="600"></textarea>
+
+                <button type="submit" id="comment-submit-btn">{{ if eq .Site.Language.Lang "ar" }}إرسال التعليق{{ else }}Post Comment{{ end }}</button>
+                <p id="comment-status" class="comment-status"></p>
+                <p class="comment-note">{{ if eq .Site.Language.Lang "ar" }}سيظهر تعليقك بعد مراجعته والموافقة عليه.{{ else }}Your comment will appear after it's been reviewed and approved.{{ end }}</p>
+            </form>
+
+            <div id="comments-list-content">
+                <p class="comments-loading">{{ if eq .Site.Language.Lang "ar" }}جارٍ التحميل...{{ else }}Loading...{{ end }}</p>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+.comments-section {
+  max-width: 800px;
+  margin: 3rem auto 5rem;
+  padding: 0 2rem;
+}
+
+.comments-divider {
+  border: none;
+  border-top: 2px solid var(--bg-accent);
+  margin: 0 0 2.5rem;
+}
+
+.comments-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+#comment-form {
+  background: var(--bg-accent);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+#comment-form label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+#comment-form input[type="text"],
+#comment-form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--text-muted, #999);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+#comment-submit-btn {
+  margin-top: 1.2rem;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#comment-submit-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+#comment-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.comment-status {
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+.comment-status.success { color: #25D366; }
+.comment-status.error { color: #e74c3c; }
+
+.comment-note {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.comment-card {
+  background: var(--bg-accent);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.comment-card-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.comment-card-message {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.comments-loading, .comments-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+</style>
+
+<script>
+(function() {
+  const SUPABASE_URL = 'https://gzquhzbrncduniayuzjs.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_2x0ZRbQL18aHM4RB9fuAtw__dHgR3po';
+  const isAr = {{ if eq .Site.Language.Lang "ar" }}true{{ else }}false{{ end }};
+  const postSlug = {{ .File.ContentBaseName }};
+
+  const form = document.getElementById('comment-form');
+  const statusEl = document.getElementById('comment-status');
+  const submitBtn = document.getElementById('comment-submit-btn');
+  const listEl = document.getElementById('comments-list-content');
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function loadComments() {
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/comments?post_slug=eq.' + encodeURIComponent(postSlug) + '&approved=eq.true&select=*&order=created_at.desc', {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY
+        }
+      });
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) {
+        listEl.innerHTML = '<p class="comments-empty">' + (isAr ? 'لا توجد تعليقات بعد. كن أول من يعلّق!' : 'No comments yet. Be the first!') + '</p>';
+        return;
+      }
+      listEl.innerHTML = data.map(function(c) {
+        return '<div class="comment-card">' +
+          '<span class="comment-card-name">' + escapeHtml(c.name) + '</span>' +
+          '<p class="comment-card-message">' + escapeHtml(c.message) + '</p>' +
+        '</div>';
+      }).join('');
+    } catch (e) {
+      listEl.innerHTML = '<p class="comments-empty">' + (isAr ? 'تعذر تحميل التعليقات.' : 'Could not load comments.') + '</p>';
+    }
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    if (form.website.value) return; // honeypot
+
+    const name = form.name.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !message) {
+      statusEl.textContent = isAr ? 'يرجى تعبئة جميع الحقول.' : 'Please fill in all fields.';
+      statusEl.className = 'comment-status error';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    statusEl.textContent = '';
+    statusEl.className = 'comment-status';
+
+    try {
+      const res = await fetch(SUPABASE_URL + '/rest/v1/comments', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          post_slug: postSlug,
+          name: name,
+          message: message,
+          approved: false
+        })
+      });
+
+      if (res.ok) {
+        statusEl.textContent = isAr ? 'شكراً لك! سيظهر تعليقك بعد الموافقة عليه.' : 'Thank you! Your comment will appear once approved.';
+        statusEl.className = 'comment-status success';
+        form.reset();
+      } else {
+        throw new Error('Submit failed');
+      }
+    } catch (e) {
+      statusEl.textContent = isAr ? 'حدث خطأ. يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.';
+      statusEl.className = 'comment-status error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  loadComments();
+})();
+</script>
 {{ end }}

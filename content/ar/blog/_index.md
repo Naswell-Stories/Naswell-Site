@@ -1,6 +1,14 @@
 ---
 title: "المدونة"
 description: "مقالات وأفكار حول الحياة بعد كوفيد"
+_build:
+  render: false
+  list: false
+cascade:
+  _build:
+    render: false
+    list: false
+    publishResources: false
 ---
 
 # المدونة
