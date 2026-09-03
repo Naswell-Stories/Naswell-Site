@@ -1,6 +1,7 @@
 ---
 title: "التدريب"
 description: "جلسات تدريب شخصية لمساعدتك"
+translationKey: "coaching"
 ---
 
 ## التدريب مع ناسويل
