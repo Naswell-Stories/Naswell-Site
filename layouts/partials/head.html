@@ -5,6 +5,18 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Progress Through Stories - Bilingual life coaching with Nasir Ayanleh for adults navigating post-COVID transitions{{ end }}">
     <meta name="author" content="Nasir Ayanleh">
     <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- hreflang: tells Google which language version to show, and links each page to its translated counterpart -->
+    {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ range .AllTranslations }}
+    {{ if eq .Language.Lang "en" }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ end }}
+    {{ end }}
     
     <!-- Google Fonts for Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
