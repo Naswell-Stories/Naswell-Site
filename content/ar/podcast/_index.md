@@ -2,6 +2,14 @@
 title: "البودكاست"
 description: "بودكاست ناسويل - الحياة بعد كوفيد"
 draft: true
+_build:
+  render: false
+  list: false
+cascade:
+  _build:
+    render: false
+    list: false
+    publishResources: false
 ---
 
 # بودكاست ناسويل
