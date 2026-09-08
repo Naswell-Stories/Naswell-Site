@@ -2,6 +2,14 @@
 title: "Podcast"
 description: "Naswell Stories Podcast - Life After COVID"
 draft: true
+_build:
+  render: false
+  list: false
+cascade:
+  _build:
+    render: false
+    list: false
+    publishResources: false
 ---
 
 # Naswell Stories Podcast
