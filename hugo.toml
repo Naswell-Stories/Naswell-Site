@@ -64,12 +64,6 @@ url = "/coaching/"
 weight = 30
 
 [[languages.en.menu.main]]
-identifier = "podcast"
-name = "Podcast"
-url = "/podcast/"
-weight = 42
-
-[[languages.en.menu.main]]
 identifier = "booking"
 name = "Book Session"
 url = "/booking/"
@@ -111,12 +105,6 @@ identifier = "coaching"
 name = "التدريب"
 url = "/ar/coaching/"
 weight = 30
-
-[[languages.ar.menu.main]]
-identifier = "podcast"
-name = "بودكاست"
-url = "/ar/podcast/"
-weight = 42
 
 [[languages.ar.menu.main]]
 identifier = "booking"
