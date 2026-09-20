@@ -7,21 +7,29 @@ description: "Bilingual coaching sessions for adults navigating post-COVID life"
 
 **Haven't gotten back on your feet after COVID? You're not alone.**
 
-## Session Options
-
-- Half-Hour Session — 100 AED (~$27 USD)
-- One-Hour Session — 200 AED (~$54 USD)
-- 3-Session Package (3× one-hour sessions) — 500 AED (~$136 USD)
-- 4-Session Package (4× one-hour sessions) — 750 AED (~$204 USD)
-- Bilingual Support (Arabic/English)
-- WhatsApp Support Between Sessions
-- The Storytelling Method
-
 ## Ready to Get Started?
 
 [📱 Book Your First Session via WhatsApp](https://wa.me/971525704399?text=Hi%2C%20I%27d%20like%20to%20book%20a%20coaching%20session)
 
-*Payment links coming soon — message me on WhatsApp to arrange payment for now.*
+[💳 Pay for a Half-Hour Session via PayPal](https://www.paypal.com/ncp/payment/THCQJQFJP8UTC)
+
+*(100 AED, ~$27 USD via PayPal)*
+
+[💳 Pay for a One-Hour Session via PayPal](https://www.paypal.com/ncp/payment/TUNATVC7K9X7G)
+
+*(200 AED, ~$54 USD via PayPal)*
+
+[💳 Pay for the 3-Session Package via PayPal](https://www.paypal.com/ncp/payment/X8LVJ3ZG6VM48)
+
+*(500 AED, ~$136 USD via PayPal — 3× one-hour sessions)*
+
+[💳 Pay for the 4-Session Package via PayPal](https://www.paypal.com/ncp/payment/EXUCNJ6WHBWKL)
+
+*(750 AED, ~$204 USD via PayPal — 4× one-hour sessions)*
+
+- Bilingual Support (Arabic/English)
+- WhatsApp Support Between Sessions
+- The Storytelling Method
 
 **Booking directly here is the most affordable option** — other coaching platforms add service fees that increase the total cost.
 
