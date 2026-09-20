@@ -33,10 +33,37 @@
       </div>
 
       <div class="hero-paypal-wrapper">
-        <p class="hero-paypal-note">جلسة نصف ساعة — 100 درهم (~27 دولار أمريكي)</p>
-        <p class="hero-paypal-note">جلسة ساعة كاملة — 200 درهم (~54 دولار أمريكي)</p>
-        <p class="hero-paypal-note">باقة 3 جلسات — 500 درهم (~136 دولار أمريكي)</p>
-        <p class="hero-paypal-note">باقة 4 جلسات — 750 درهم (~204 دولار أمريكي)</p>
+        <a href="https://www.paypal.com/ncp/payment/THCQJQFJP8UTC"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 ادفع لجلسة نصف ساعة عبر باي بال
+        </a>
+        <p class="hero-paypal-note">(100 درهم، ~27 دولار أمريكي عبر باي بال)</p>
+
+        <a href="https://www.paypal.com/ncp/payment/TUNATVC7K9X7G"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 ادفع لجلسة ساعة كاملة عبر باي بال
+        </a>
+        <p class="hero-paypal-note">(200 درهم، ~54 دولار أمريكي عبر باي بال)</p>
+
+        <a href="https://www.paypal.com/ncp/payment/X8LVJ3ZG6VM48"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 ادفع لباقة 3 جلسات عبر باي بال
+        </a>
+        <p class="hero-paypal-note">(500 درهم، ~136 دولار أمريكي عبر باي بال)</p>
+
+        <a href="https://www.paypal.com/ncp/payment/EXUCNJ6WHBWKL"
+           class="hero-paypal-link"
+           target="_blank"
+           rel="noopener">
+          💳 ادفع لباقة 4 جلسات عبر باي بال
+        </a>
+        <p class="hero-paypal-note">(750 درهم، ~204 دولار أمريكي عبر باي بال)</p>
         <p class="hero-paypal-cheaper-note">الحجز مباشرة من هنا هو الخيار الأكثر توفيراً — المنصات الأخرى تضيف رسوم خدمة تزيد التكلفة الإجمالية.</p>
       </div>
 
@@ -267,11 +294,21 @@
   margin-top: 0.5rem;
 }
 
-.hero-paypal-note {
-  font-size: 0.9rem;
+.hero-paypal-link {
   color: #5a5a5a;
+  font-size: 0.95rem;
   font-weight: 600;
-  margin: 0.3rem 0;
+  text-decoration: underline;
+}
+
+.hero-paypal-link:hover {
+  color: #2d2d2d;
+}
+
+.hero-paypal-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
 }
 
 .hero-paypal-cheaper-note {
@@ -283,8 +320,12 @@
   max-width: 400px;
 }
 
-[data-theme="dark"] .hero-paypal-note {
+[data-theme="dark"] .hero-paypal-link {
   color: #b8b8b8;
+}
+
+[data-theme="dark"] .hero-paypal-link:hover {
+  color: #e8e8e8;
 }
 
 [data-theme="dark"] .hero-paypal-cheaper-note {
